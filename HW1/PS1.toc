@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{Instructions}{1}{section*.2}%
+\contentsline {section}{Honor Code (Make Sure to Virtually Sign)}{2}{section*.3}%
+\contentsline {section}{\numberline {1}Standard 1: Proof by Induction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Problem \ref {Induction1}}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem \ref {Induction2}}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Problem \ref {Induction3}}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Standard 2: BFS and DFS}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.4}Problem \ref {DFS1}}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Problem \ref {DFS2}}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Problem \ref {DFS4}}{11}{subsection.2.6}%
