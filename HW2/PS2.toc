@@ -10,6 +10,6 @@
 \contentsline {section}{\numberline {4}Standard 4 -- Examples Where Greedy Algorithms Fail}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.3}Problem \ref {GreedyFail1}}{9}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Problem \ref {GreedyFail3}}{11}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Standard 5 -- Exchange Arguments}{12}{section.5}%
-\contentsline {subsection}{\numberline {5.5}Problem \ref {Exchange1}}{12}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Problem \ref {Exchange2}}{13}{subsection.5.6}%
+\contentsline {section}{\numberline {5}Standard 5 -- Exchange Arguments}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.5}Problem \ref {Exchange1}}{13}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Problem \ref {Exchange2}}{14}{subsection.5.6}%

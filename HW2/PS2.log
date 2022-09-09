@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  8 SEP 2022 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  8 SEP 2022 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1609,18 +1609,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
-[11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 518--520
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
-[12] [13] (./PS2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
+
+ []
+
+[13] [14] (./PS2.aux)
 Package rerunfilecheck Info: File `PS2.out' has not changed.
 (rerunfilecheck)             Checksum: 06C3285258AC366CC610DC0ABE81F9FF;2168.
  ) 
 Here is how much of TeX's memory you used:
- 57333 strings out of 478268
- 1380921 string characters out of 5846347
+ 57334 strings out of 478268
+ 1380928 string characters out of 5846347
  1970353 words of memory out of 5000000
  74830 multiletter control sequences out of 15000+600000
  479343 words of font info for 65 fonts, out of 8000000 for 9000
@@ -1643,10 +1708,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS2.pdf (13 pages, 221907 bytes).
+Output written on PS2.pdf (14 pages, 225805 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

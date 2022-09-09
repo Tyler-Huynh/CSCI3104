@@ -515,12 +515,76 @@ Consider now the \textsf{Weighted Interval Scheduling} problem, where each inter
 
 
 \begin{proof}[Answer]
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % YOUR ANSWER GOES HERE: type your answer in below                             %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For the weighted interval scheduling problem we will implement the same greedy algorithm where the priority queue will be sorted by earliest start time to the latest start time. Then we will disprove this by using a more optimal solution. Such that we maximize the sum of the weights within our set. \\
+\textbf{The Greedy Algorithm:}\\
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | }
+ \hline
+ Interval:& a & b & c & d & e & f\\  
+ \hline
+ Time: & $1:00 - 4:00$ & $2:00 - 3:00$ & $2:15 - 3:45$ & $3:15 - 3:45$ & $3:45 - 4:30$ & $4:30 - 5:30$\\
+  \hline
+  Weights: & 4 & 5 & 2 & 3 & 9 & 3 \\
+  \hline
+\end{tabular}
+\end{center}
+The algorithm will first pop the interval of "a" and add it to the set of $S$ with the weight of 4 attached since there are no overlaps present, such that: \\
+\begin{center}
+Sum of set $S: \{[1:00 - 4: 00]\} = 4$\\
+\end{center}
 \end{proof}
 
+The algorithm will not pop off the interval of "b" because there exists an overlap with the interval of "a". \\
+The algorithm will not pop off the interval of "c" because there exists an overlap with the intervals of "a, b". \\
+The algorithm will not pop off the interval of "d" because there exists an overlap with the intervals of "a, b, c". \\
+The algorithm will not pop off the interval of "e" because there exists an overlap with the intervals of "a, b, c, d". \\
 
+The algorithm will pop of the interval of "f" because there exists no overlap and add it to the set of $S$ along with it corresponding weight, such that: \\
+\begin{center}
+Sum of set $S: \{[1:00 - 4: 00], [4:30 - 5:30]\} = 7$\\
+\end{center}
+We can see from the above algorithm that the sum of set $S$ is equal: $3 + 4 = 7$. This does not allow for us to maximize the sum of the weights from the set of $S$. \\
+
+\textbf{The  Most Optimal Solution:}
+For the most optimal solution that would yield us with the largest sum within the set. We will order the priority queue from the earliest end time to the latest end time. \\
+
+Let $T$ represent a set of intervals that will be added to from our priority queue where our priority queue is sorted from earliest end time to latest end time, such that: \\
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | }
+ \hline
+ Interval:& a & b & c & d & e & f\\  
+ \hline
+ Time: & $2:00 - 3:00$ & $2:15 - 3:45$ & $3:15 - 3:45$ & $1:00 - 4:00$  & $3:45 - 4:30$ & $4:30 - 5:30$\\
+  \hline
+  Weights: & 4 & 5 & 2 & 3 & 9 & 3 \\
+  \hline
+\end{tabular}
+\end{center}
+
+The algorithm will first pop the interval of "a" and add it to the set of $T$ since there are no overlaps present along with its corresponding weight, such that: \\
+\begin{center}
+Set $T: \{[2:00 - 3:00]\} = 4$\\
+\end{center}
+
+The algorithm will not pop off the interval of "b" because there exists an overlap with the interval of "a". \\
+
+The algorithm will pop of the interval of "c" because there exists no overlap and add it to the set of $T$ along with its corresponding weight, such that: \\
+\begin{center}
+Set $T: \{[2:00 - 3:00], [3:15 - 3:45]\} = 4 + 2$\\
+\end{center}
+
+The algorithm will not pop off the interval of "d" because there exists an overlap with the interval of "a, b, c". \\
+
+The algorithm will pop of the interval of "e" because there exists no overlap and add it to the set of $T$ along with its corresponding weight, such that: \\
+\begin{center}
+Set $T: \{[2:00 - 3:00], [3:15 - 3:45], [3:45 - 4:30]\} = 4 + 2 + 9$\\
+\end{center}
+The algorithm will pop of the interval of "e" because there exists no overlap and add it to the set of $T$ along with its corresponding weight, such that: \\
+\begin{center}
+Set $T: \{[2:00 - 3:00], [3:15 - 3:45], [3:45 - 4:30], [4:30 - 5:30]\} = 4 + 2 + 9 + 3$\\
+\end{center}
+We can see from the above algorithm that the sum of set $T$ is equal: $4 + 2 + 9 + 3 = 18$. This does not allow for us to maximize the sum of the weights from the set of $T$. \\
+We can see from this solution that it will allow for us to have a maximized sum of weights within the set of $T$. Clearly, this shows that the greedy algorithm from problem 3 is not the most optimal solution as the sum of the set $S = 7 < T = 18$. 
 
 
 \newpage
@@ -534,9 +598,7 @@ Recall the Making Change problem, where we have an infinite supply of pennies (w
 \end{required}
 
 \begin{proof}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% YOUR ANSWER GOES HERE: type your answer in below                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{proof}
 
 
