@@ -539,7 +539,7 @@ The algorithm will not pop off the interval of "c" because there exists an overl
 The algorithm will not pop off the interval of "d" because there exists an overlap with the intervals of "a, b, c". \\
 The algorithm will not pop off the interval of "e" because there exists an overlap with the intervals of "a, b, c, d". \\
 
-The algorithm will pop of the interval of "f" because there exists no overlap and add it to the set of $S$ along with it corresponding weight, such that: \\
+The algorithm will pop off the interval of "f" because there exists no overlap and add it to the set of $S$ along with it corresponding weight, such that: \\
 \begin{center}
 Sum of set $S: \{[1:00 - 4: 00], [4:30 - 5:30]\} = 7$\\
 \end{center}
@@ -598,7 +598,32 @@ Recall the Making Change problem, where we have an infinite supply of pennies (w
 \end{required}
 
 \begin{proof} Referenced Levet notes to solve this problem. \\
-For this problem we shall use 
+\textbf{Proof By Contradiction} \\
+\textbf{Non - Optimal Solution:} \\
+The least optimal solution would be one that would have more than two dimes. 
+Consider:
+\begin{center}
+$d > 2$
+\end{center}
+If the value of dimes were to be higher than two dimes than it would not become optimal. \\
+Let "j" be an arbitrary natural number and let "r" be some arbitrary natural number, such that where 3 represents the amount of coins: \\
+\begin{center}
+$d = 3j + r$ 
+\end{center}
+For this proof we will prove that we use at most two dimes. \\
+
+\textbf{Optimal Solution:}\\
+We will now exchange this for a more optimal solution that uses at most 2 dimes. \\
+Such that we will exchange $3j$ dimes for an arbitrary amount of $j$ quarters and $j$ nickels. \\
+We will then have a total of $2j$ combination of quarters and nickels., such that:
+\begin{center}
+$d = 2j + r$
+\end{center}
+
+From the above proof we can see that $2j < 3j$, thus we see that we have reached the most optimal solution such that we are using at most 2 dimes. 
+
+
+
 \end{proof}
 
 
@@ -631,10 +656,41 @@ Let $G=(V, E)$ be a graph. A \emph{vertex cover} of $G$ is a set of vertices $C$
     Let $u$ be the unique neighbor of $v$ in $T$, and let $C' = (C \setminus \{v\}) \cup \{u\}$ be the set of vertices obtained from $C$ by obtained from $C$ by removing $v$ and adding (if it is not already present) $u$. Carefully explain why $C'$ is a vertex cover of $T$.
 \end{enumerate}
 
-\begin{proof}[Answer]
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % YOUR ANSWER GOES HERE: type your answer in below                             %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}[Answer] 
+\textbf{Part A:}\\
+A vertex cover for the graph $T$ is one that will cover all edges on the graph, such that:
+\begin{center}
+Let $C$ be the set of vertices who's edges cover the entire graph: \\
+$C$\{w, y, v\} \\
+\end{center}
+
+If we were to remove the vertex of $v$ and add the vertex of $u$ it would still be a vertex cover of $T$ because due to the vertex of $u$ being in the middle of the vertexes of $v$ and $w$ it still allows for a complete cover of the graph $T$. \\
+The vertex cover with $v$ removed: $C$\{w, y, u\}
+
+\textbf{Part B:}\\
+I will now prove this property that C' is a vertex cover for an arbitrary tree $T$ such that $v$ is a leaf node and $u$ is it's neighbor. If the vertex cover for the graph $T$ has either the vertices of $u$ or $v$ in it then it would be a valid vertex cover. Take for example: \\
+Assume C' is not a vertex cover such that: \\
+\begin{center}
+We will first start off with the valid vertex cover $C$ who's arbitrary graph $S$ is: \\
+
+    \begin{tikzpicture}[scale=2]
+            \node (u) at (0,0) {$v$};
+            \node (v) at (1,0) {$u$};
+            \draw (u) -- (v);
+            \draw (v) -- (w);
+        \end{tikzpicture}\\
+Where $u$ is connected to a random vertex such that it allows for a valid vertex cover of $C$ for the graph of $S$. \\   
+
+We will now remove the vertex of v from the vertex cover where the vertex cover of $C$ is no longer a valid vertex cover, since neither the vertexes of $u$ or $v$ are no longer covered.\\
+
+We will now add in the vertex of $u$ into our vertex cover to then connect the vertex of $v$ again allowing for a valid vertex cover. \\
+Now both the vertices $u$ and $v$ are covered by our vertex cover.\\
+\end{center}
+
+Thus, we have reached a contradiction, as since all the vertices in the example graph of $S$ is still covered even if we remove the vertex of $v$, since $v$ has only one neighbor of $u$ it must still be a valid vertex cover if we add in the vertex of $u$. \\
+Thus, C' is a valid vertex cover.
+
+
 \end{proof}
 
 
