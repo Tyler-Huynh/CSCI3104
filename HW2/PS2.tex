@@ -156,7 +156,7 @@ Collaborators \dotfill \textbf{List Your Collaborators Here}
 %\noindent In the specified region below, clearly indicate that you have upheld the Honor Code. Then type your name. 
 \end{requiredHC}
 
-\begin{proof}[Agreed (signature here).]
+\begin{proof}[I agree to the above, Tyler Huynh.]
 %% Typing "I agree to the above," followed by your name is sufficient.
 \end{proof}
 
@@ -385,21 +385,31 @@ You have three batteries, with capacities of 40, 25, and 16 Ah (Amp-hours), resp
 	\subsubsection{Problem 2\ref{Dijkstra2a}}
 	\item \label{Dijkstra2a} Rephrase this is as a graph problem. Give a precise definition of how to model this problem as a graph, and state the specific question about this graph that must be answered. [\textbf{Note:} While you are welcome to draw the graph, it is enough to provide 1-2 sentences clearly describing what the vertices are and when two vertices are adjacent. If the graph is weighted, clearly specify what the edge weights are.]
 	
-	\begin{proof}[Answer]
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR ANSWER GOES HERE: type your answer in below                             %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\end{proof}
+\begin{proof}[Answer]
+This problem can be rephrased into a graph problem by the following: \\
+\begin{center}
+The state of the batteries who's capacities are 40Ah, 25Ah, 16Ah represent the vertices in the graph. \\
+The edges between the vertices within the graph represent the transfer of battery in Ah. \\
+The edge weights of the edges represent the amount of battery in Ah that is being transferred to another battery and how much money we would spend. \\
+\end{center}
+Note: If two vertices are adjacent within the graph it represents that a transfer will occur within the graph. \\
+
+The question for this graph would be from the Problem description, how would we be able to leave 10 Ah in either the 25 Ah or the 16 Ah battery while also using the least amount of money possible to achieve this. This would be a clear indication to use Dijkstra's algorithm as it is designed to find the shortest path possible, but in this case the shortest path would represent how little money we would use, thus the SSSPT would be a tree where we would use the least amount of money possible while also achieving our goal.
+	
+\end{proof}
 
 	\newpage
 	\subsubsection{Problem 2\ref{Dijkstra2b}}
 	\item \label{Dijkstra2b} Clearly describe an algorithm to solve this problem. If you use an algorithm covered in class, it is enough to state that. If you modify an algorithm from class, clearly outline any modifications. Make sure to explicitly specify any parameters that need to be passed to the initial function call. You need not write the algorithm.
 	
-	\begin{proof}[Answer]
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR ANSWER GOES HERE: type your answer in below                             %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\end{proof}
+\begin{proof}[Answer]
+For this problem we would utilize Dijkstra's algorithm where in the algorithm itself it uses a priority queue in order to store the distances from our starting vertex. From here, it will traverse through each neighbor vertex of the graph and mark the current vertex as visited and continue traversing through the graph until there are no more unvisited vertices left. \\
+
+In the context of this problem Dijkstra's algorithm would be the most optimal algorithm as it would find the shortest path from the source vertex to the target vertex. This algorithm would require modifications as there is the case that multiple target batteries where only $10Ah$ remain in either the 25Ah or 16 Ah battery, could exist such that we must be able to find the shortest distance from the source vertex as possible. The algorithm from here would then take these different paths to the target vertices where only $10Ah$ remain in either the 25Ah or 16 Ah battery and compare the amount of Ah has been transferred and the amount of money that was used in order to find the shortest path, thus the cheapest option. These modifications would run after Dijkstra's original algorithm is done traversing through the graph.
+
+\textbbf{Pseudocode for the modifications:}
+
+\end{proof}
 
 
 	\newpage
