@@ -469,7 +469,7 @@ Priority Queue: [$(b, 25), (d, 32), (c, 40)$]
 
 We will pop $b$ off of our priority queue and visit its neighbors of $e$ and $f$. It's tuples will look like this \{40, 0, 1\} and \{25, 16, 0\}, we will now update our priority queue and our table.
 \begin{center}
-dist[$e$] = dist[$b$]  + $w$[$b \rightarrow e$] = 16 + 24 = 40 \\
+dist[$e$] = dist[$b$]  + $w$[$b \rightarrow e$] = 15 + 25 = 40 \\
 dist[$f$] = dist[$b$] + $w$[$b \rightarrow f$] = 25 + 16 = 41\\
 \begin{tabular}{ | c | c | c | c | c | c |}
  \hline
@@ -604,19 +604,51 @@ dist[$n$] = dist[$l$]  + $w$[$l \rightarrow n$] = 57 + 25 = 82 \\
 Priority Queue: [$(k,62), (i, 65), (m, 66), (n, 82)$]
 \end{center}
 
-We will pop $k$ off of our priority queue and visit its neighbors of $n$. $l$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{7, 25, 9\}, we will now update our priority queue and our table.
+We will pop $k$ off of our priority queue and visit its neighbors of $o$. $k$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{8, 17, 16\}, we will now update our priority queue and our table.
 \begin{center}
-dist[$n$] = dist[$l$]  + $w$[$l \rightarrow n$] = 57 + 25 = 82 \\
+dist[$o$] = dist[$k$]  + $w$[$k \rightarrow o$] = 62 + 16 = 78 \\
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
  \hline
- Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$\\ 
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$ & $k$\\ 
  \hline
- Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 \\  
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 & 62 \\  
  \hline
 \end{tabular}
 \end{center}
 \begin{center}
-Priority Queue: [$(k,62), (i, 65), (m, 66), (n, 82)$]
+Priority Queue: [$(i, 65), (m, 66), (n, 82), (o, 88)$]
+\end{center}
+
+We will pop $i$ off of our priority queue and visit its neighbors of $p$. $i$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{15, 10, 16\}, we will now update our priority queue and our table. As we can see this is a possible target node as the 25 Ah battery only has 10 Ah left in it.
+\begin{center}
+dist[$p$] = dist[$i$]  + $w$[$i \rightarrow p$] = 65 + 15 = 80 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$ & $k$ & $i$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 & 62 & 65 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(m, 66), (p, 80), (n, 82), (o, 88)$]
+\end{center}
+
+As we can see this algorithm could search this tree for a very long time, such that we would run out of letters to use. We can stop the use of Dijkstra's algorithm here as anything higher than vertex $p$ would not be the shortest path as specified by Dijkstra's algorithm. Such that our solution, with consideration of the weights would be: \\
+\begin{center}
+The Shortest Path:\\
+$s:(0, 25, 16)(0)$ \\
+$\downarrow$\\
+$b:(25, 0, 16)(25)$ \\
+$\downarrow$\\
+$e:(40, 0, 1)(15)$ \\
+$\downarrow$\\
+$i:(15, 25, 1)(25)$ \\
+$\downarrow$\\
+$p:(15, 10, 16)(15)$ \\
+
+$s(0) + b(25) + e(15) + i(25) + p(15) = 80$ dollars from the source vertex of $s$
+
 \end{center}
 
 	\end{proof}
