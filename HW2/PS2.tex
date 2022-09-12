@@ -409,7 +409,7 @@ In the context of this problem Dijkstra's algorithm would be the most optimal al
 
 \textbf{Description of modifications:}\\
 1. The first step in the modifications would be to traverse through all the vertices that we have visited and checking if either the 25 Ah or 16 Ah has only 10 Ah left in the battery, this would be our target nodes.\\
-2. The next step would be to traverse through these nodes further in order to find the ones with the shortest distance, thus making it our final target node.\\
+2. The next step would be to traverse through these nodes further in order to find the ones with the shortest distance using the distance array, thus making it our final target node.\\
 3. Finally, we would finally return the target node that has the shortest path as per Dijkstra's algorithm and my own modifications.
 
 
@@ -422,9 +422,203 @@ In the context of this problem Dijkstra's algorithm would be the most optimal al
 	\textbf{Note: }For full credits make sure to draw the graph with all the battery states. Then apply the algorithm that you have described until the desired final states are reached.
 
 	\begin{proof}[Answer]
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR ANSWER GOES HERE: type your answer in below                             %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	I will now run through my algorithm to find a target, we will start with an empty distance array and an empty priority queue as per Dijkstra's specifications. We will have a starting vertex of $s$ where it will have a tuple of \{0, 25, 16\} with the 1st, 2nd, and 3rd position representing the empty 40 Ah, 25Ah, and 16 Ah battery respectively. You can see a visual representation below: \\
+	
+We will initialize an empty table of the distances of each vertex from the source and their distance values as well. \\
+\begin{center}
+\begin{tabular}{ | c | c |}
+ \hline
+ Vertex:& $s$ \\ 
+ \hline
+ Distances from Source:& 0 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(s, 0)$]
+\end{center}
+From here we will then visit the neighbors of $s$ after popping it off of our priority queue with those being $a$ and $b$, who's tuple looks like \{16, 25, 0\} and \{25, 0, 16\} respectively. We will now push $a$ and $b$ to our priority queue and update their distances \\
+\begin{center}
+\begin{tabular}{ | c | c | }
+ \hline
+ Vertex:& $s$\\ 
+ \hline
+ Distances from Source:& 0 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(a, 16), (b, 25)$]
+\end{center}
+We will pop $a$ off of our priority queue and visit its neighbors of $c$ and $d$. It's tuples will look like this \{40, 1, 0\} and \{16, 9, 16\}. We will now update our priority queue and our table. \\
+\begin{center}
+dist[$c$] = dist[$a$]  + $w$[$a \rightarrow c$] = 16 + 24 = 40 \\
+dist[$d$] = dist[$a$] + $w$[$a \rightarrow d$] = 16 + 16 = 32\\
+
+\begin{tabular}{ | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$\\ 
+ \hline
+ Distances from Source:& 0 & 16 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(b, 25), (d, 32), (c, 40)$]
+\end{center}
+
+We will pop $b$ off of our priority queue and visit its neighbors of $e$ and $f$. It's tuples will look like this \{40, 0, 1\} and \{25, 16, 0\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$e$] = dist[$b$]  + $w$[$b \rightarrow e$] = 16 + 24 = 40 \\
+dist[$f$] = dist[$b$] + $w$[$b \rightarrow f$] = 25 + 16 = 41\\
+\begin{tabular}{ | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(d, 32), (c, 40), (e, 40), (f, 41)$]
+\end{center}
+
+We will pop $d$ off of our priority queue and visit its neighbors of $g$. This is $d's$ only neighbor because any other combination of tuples for $d$ is a vertex we have already visited. It's tuples will look like this \{32, 9, 0\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$g$] = dist[$d$]  + $w$[$d \rightarrow g$] = 32 + 16 = 48 \\
+\begin{tabular}{ | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $ d $\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(c, 40), (e, 40), (f, 41), (g, 48)$]
+\end{center}
+
+We will pop $c$ off of our priority queue and visit its neighbors of $e$ and $h$. $e$ is a neighbor of $c$ because there exists no other combinations such that $c$ would not have it as it's neighbor. It's tuples will look like this \{40, 0, 1\} and \{24, 1, 16\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$e$] = dist[$c$]  + $w$[$c \rightarrow e$] = 40 + 1 = 41 $>$ 40 (We will not update E because 41 would make the distance larger) \\
+dist[$h$] = dist[$c$] + $w$[$c \rightarrow h$] = 40 + 16 = 46\\
+\begin{tabular}{ | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(e, 40), (f, 41), (h, 46, (g, 48))$]
+\end{center}
+
+We will pop $e$ off of our priority queue and visit its neighbors of $i$. $e$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{15, 25, 1\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$i$] = dist[$e$]  + $w$[$e \rightarrow i$] = 40 + 25 = 65 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(f, 41), (h, 46), (g, 48), (i, 65)$]
+\end{center}
+
+We will pop $f$ off of our priority queue and visit its neighbors of $j$. $f$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{9, 16, 16\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$j$] = dist[$f$]  + $w$[$f \rightarrow j$] = 41 + 16 = 57 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(h, 46), (g, 48), (j, 57), (i, 65)$]
+\end{center}
+
+We will pop $h$ off of our priority queue and visit its neighbors of $k$. $h$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{24, 17, 0\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$k$] = dist[$h$]  + $w$[$h \rightarrow k$] = 46 + 16 = 62 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(g, 48), (j, 57), (k,62), (i, 65)$]
+\end{center}
+
+We will pop $g$ off of our priority queue and visit its neighbors of $l$. $g$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{32, 0, 9\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$l$] = dist[$g$]  + $w$[$g \rightarrow l$] = 48 + 9 = 57 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(j, 57), (l, 57), (k,62), (i, 65)$]
+\end{center}
+
+We will pop $j$ off of our priority queue and visit its neighbors of $m$. $j$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{9, 25, 7\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$m$] = dist[$j$]  + $w$[$j \rightarrow m$] = 57 + 9 = 66 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(l, 57), (k,62), (i, 65), (m, 66)$]
+\end{center}
+
+We will pop $l$ off of our priority queue and visit its neighbors of $n$. $l$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{7, 25, 9\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$n$] = dist[$l$]  + $w$[$l \rightarrow n$] = 57 + 25 = 82 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(k,62), (i, 65), (m, 66), (n, 82)$]
+\end{center}
+
+We will pop $k$ off of our priority queue and visit its neighbors of $n$. $l$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{7, 25, 9\}, we will now update our priority queue and our table.
+\begin{center}
+dist[$n$] = dist[$l$]  + $w$[$l \rightarrow n$] = 57 + 25 = 82 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 \\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(k,62), (i, 65), (m, 66), (n, 82)$]
+\end{center}
+
 	\end{proof}
 \end{enumerate}
 \end{required}
