@@ -407,7 +407,11 @@ For this problem we would utilize Dijkstra's algorithm where in the algorithm it
 
 In the context of this problem Dijkstra's algorithm would be the most optimal algorithm as it would find the shortest path from the source vertex to the target vertex. This algorithm would require modifications as there is the case that multiple target batteries where only $10Ah$ remain in either the 25Ah or 16 Ah battery, could exist such that we must be able to find the shortest distance from the source vertex as possible. The algorithm from here would then take these different paths to the target vertices where only $10Ah$ remain in either the 25Ah or 16 Ah battery and compare the amount of Ah has been transferred and the amount of money that was used in order to find the shortest path, thus the cheapest option. These modifications would run after Dijkstra's original algorithm is done traversing through the graph.
 
-\textbbf{Pseudocode for the modifications:}
+\textbf{Description of modifications:}\\
+1. The first step in the modifications would be to traverse through all the vertices that we have visited and checking if either the 25 Ah or 16 Ah has only 10 Ah left in the battery, this would be our target nodes.\\
+2. The next step would be to traverse through these nodes further in order to find the ones with the shortest distance, thus making it our final target node.\\
+3. Finally, we would finally return the target node that has the shortest path as per Dijkstra's algorithm and my own modifications.
+
 
 \end{proof}
 
