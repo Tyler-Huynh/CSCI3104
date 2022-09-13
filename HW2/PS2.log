@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  12 SEP 2022 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  12 SEP 2022 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1575,13 +1575,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--667
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 693--694
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 695--696
+<CSCI3104_HW2_Q2PC.pdf, id=159, 670.505pt x 614.295pt>
+File: CSCI3104_HW2_Q2PC.pdf Graphic file (type pdf)
+<use CSCI3104_HW2_Q2PC.pdf>
+Package pdftex.def Info: CSCI3104_HW2_Q2PC.pdf  used on input line 685.
+(pdftex.def)             Requested size: 271.0125pt x 248.29132pt.
+[11] [12 <./CSCI3104_HW2_Q2PC.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
@@ -1591,59 +1596,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 701--702
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 703--705
+Underfull \hbox (badness 10000) in paragraph at lines 707--708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--715
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--723
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 725--729
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--733
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 737--739
 
  []
 
-[12
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+
+ []
+
+[13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--751
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--753
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
 
@@ -1652,68 +1652,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 763--764
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--789
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 800--801
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 806--810
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 817--819
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 820--821
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 833--834
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 838--839
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 793--795
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--846
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
+Underfull \hbox (badness 10000) in paragraph at lines 812--816
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--825
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 826--827
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
 
  []
 
@@ -1722,47 +1722,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 851--852
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 864--865
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 877--879
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 882--883
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 939--942
+Underfull \hbox (badness 10000) in paragraph at lines 870--871
 
  []
 
-[17] (./PS2.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Underfull \hbox (badness 10000) in paragraph at lines 883--885
+
+ []
 
 
-Package rerunfilecheck Warning: File `PS2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 
-Package rerunfilecheck Info: Checksums for `PS2.out':
-(rerunfilecheck)             Before: 765E1F0E903B9E5BA9061271762CCA2A;2165
-(rerunfilecheck)             After:  06C3285258AC366CC610DC0ABE81F9FF;2168.
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 945--948
+
+ []
+
+[18] (./PS2.aux)
+Package rerunfilecheck Info: File `PS2.out' has not changed.
+(rerunfilecheck)             Checksum: 06C3285258AC366CC610DC0ABE81F9FF;2168.
  ) 
 Here is how much of TeX's memory you used:
- 57359 strings out of 478268
- 1381359 string characters out of 5846347
+ 57367 strings out of 478268
+ 1381568 string characters out of 5846347
  1971354 words of memory out of 5000000
- 74849 multiletter control sequences out of 15000+600000
+ 74855 multiletter control sequences out of 15000+600000
  479343 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,7n,94p,1601b,1171s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,7n,94p,1601b,1183s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1780,10 +1781,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS2.pdf (17 pages, 246517 bytes).
+Output written on PS2.pdf (18 pages, 469341 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
