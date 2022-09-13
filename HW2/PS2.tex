@@ -634,7 +634,36 @@ dist[$p$] = dist[$i$]  + $w$[$i \rightarrow p$] = 65 + 15 = 80 \\
 Priority Queue: [$(m, 66), (p, 80), (n, 82), (o, 88)$]
 \end{center}
 
-As we can see this algorithm could search this tree for a very long time, such that we would run out of letters to use. We can stop the use of Dijkstra's algorithm here as anything higher than vertex $p$ would not be the shortest path as specified by Dijkstra's algorithm. Such that our solution, with consideration of the weights would be: \\
+We will pop $m$ off of our priority queue and $m$ will have no neighbors because there are no combinations of tuples that we have not visited that is valid. 
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$ & $k$ & $i$ & $m$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 & 62 & 65 & 66\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(p, 80), (n, 82), (o, 88)$]
+\end{center}
+
+We will pop $p$ off of our priority queue and $r$. $p$ would only have one neighbor as there are no other combinations of tuples that we have not visited that would be valid. It's tuple will look like this \{31, 10, 0\}, we will now update our priority queue and our table. As we can see this is a possible target node as the 25 Ah battery only has 10 Ah left in it.
+\begin{center}
+dist[$r$] = dist[$p$]  + $w$[$p \rightarrow r$] = 80 + 16 = 96 \\
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertex:& $s$ & $a$ & $b$ & $d$ & $c$ & $e$ & $f$ & $h$ & $g$ & $j$ & $l$ & $k$ & $i$ & $m$ & $p$\\ 
+ \hline
+ Distances from Source:& 0 & 16 & 25 & 32 & 40 & 40 & 41 & 46 & 48 & 57 & 57 & 62 & 65 & 66 & 80\\  
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Priority Queue: [$(n, 82), (o, 88), (r, 96)$]
+\end{center}
+
+As we can see this algorithm could search this tree for a very long time, such that we would run out of letters to use. We can stop the use of Dijkstra's algorithm here as anything higher than vertex $p$ would not be the shortest path as specified by Dijkstra's algorithm. This is because everything that is still on the priority queue is greater than 80, meaning that even if we were to find another target vertex it wouldn't matter, since we have already found the shortest path. Such that our solution, with consideration of the weights would be: \\
 \begin{center}
 The Shortest Path:\\
 $s:(0, 25, 16)(0)$ \\
