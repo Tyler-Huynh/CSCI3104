@@ -4,4 +4,4 @@
 \contentsline {section}{\numberline {6}Standard 6 -- Safe and Useless Edges}{3}{section.6}%
 \contentsline {section}{\numberline {7}Standard 7: Kruskal's MST Algorithm}{4}{section.7}%
 \contentsline {section}{\numberline {8}Standard 8: Prim's MST Algorithm}{6}{section.8}%
-\contentsline {section}{\numberline {9}Standard 9: Huffman Coding}{7}{section.9}%
+\contentsline {section}{\numberline {9}Standard 9: Huffman Coding}{8}{section.9}%

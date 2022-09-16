@@ -337,6 +337,65 @@ Consider the weighted graph $G(V, E, w)$ below. Clearly list the order in which 
 \begin{proof}
 Prim's algorithm by definition will traverse the graph by pushing on the source vertex then popping it off and visiting itS neighbors. Then we would check if one endpoint is in our minimum-weight spanning tree and if one is not, then we would add it into our tree, if both are in our minimum-weight spanning tree than it would create a cycle. We would further repeat this process until the priority queue is empty and have achieved our minimum-weight spanning tree. \\
 
+\begin{center}
+We will first begin by initializing an empty priority queue: \\
+Priority Queue: [] \\
+\end{center}
+
+\begin{center}
+We will now push on the edges of $\{A, G\}$ and $\{A, B\}$ as well as their weights\\
+Priority Queue: [$(\{A, G\},2)$, $(\{A, B\},4)$] \\
+\end{center}
+
+\begin{center}
+From here we will pop off the edge of $\{A, G\}$ and add it to our minimum-weight spanning tree. Further, after we pop off this edge we will push on the neighbors of G.\\
+\end{center}
+
+\begin{center}
+We will now push on the edges of $\{G, B\}$, $\{G, F\}$, and $\{G, E\}$ as well as their weights\\
+Priority Queue: [$(\{G, B\},1)$, $(\{A, B\},4)$, $(\{G, F\},9)$, $(\{G, E\},12)$] \\
+\end{center}
+
+\begin{center}
+We will now pop off the edge of $\{G, B\}$ and add it to our minimum-weight spanning tree, since the the vertex of $G$ is already present than we do not need to add it only the vertex of $B$.
+\end{center}
+
+\begin{center}
+We will now push on the neighbor edges of $B$ to our priority queue, such that the edge to be added would be $\{B, C\}$ as well as their respective weight. \\
+Priority Queue: [$(\{A, B\},4)$, $(\{B, C\},8)$, $(\{G, F\},9)$, $(\{G, E\},12)$] \\
+\end{center}
+
+\begin{center}
+We will pop off the edge of $\{A, B\}$, but not add it to our minimum-weight spanning tree because it would create a cycle within our graph.
+\end{center}
+
+\begin{center}
+We will pop off the edge of $\{B, C\}$ and add it to our minimum-weight spanning tree because it would not create a cycle since the vertex of $C$ is not present in the minimum-weight spanning tree.
+\end{center}
+
+Further after we perform Prim's algorithm on this graph further we would be left with this graph as our final graph: \\
+\begin {center}
+\begin{tikzpicture}[scale=0.4, auto, node distance=3cm, every loop/.style={},
+  thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+\node[main node] (A) {A};
+\node[main node] (B) [right of=A] {B};
+\node[main node] (C) [above right of=B] {C};
+\node[main node] (D) [below right of=C] {D};
+\node[main node] (E) [below left of=D] {E};
+\node[main node] (F) [below left of=E] {F};
+\node[main node] (G) [above left of=F] {G};
+
+\path[line width=0.25mm, every node/.style={font=\sffamily\small}]
+(B) edge node [left]  {8} (C)
+(C) edge node [right] {7}  (D)
+(D) edge node [right] {6} (E)
+(G) edge node [left]  {1} (B)
+(E) edge node [below] {5} (F)
+(A) edge node [left] {2} (G)
+;
+\end{tikzpicture}
+\end{center}
 
 \end{proof}
 
