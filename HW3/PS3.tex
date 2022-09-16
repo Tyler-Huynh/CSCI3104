@@ -248,60 +248,56 @@ We will initialize a priority queue containing all the vertices and their respec
 \end{tabular}
 \end{center}
 
-Kruskal's Algorithm first three steps: \\
-\begin {center}
-\textbf{1st.} The first step in this algorithm would be to pop off the shortest edge in the priority queue of vertices \{G, B\}. Then we will now check if it creates a cycle in our tree, which it does not and add it to our minimum weight spanning tree of G.\\
-\textbf{2nd.} The second step in this algorithm would be to pop off the next shortest edge in the priority queue of vertices \{A, G\}. We will now check if this set of vertices creates a cycle in our tree, which it does not, thus we will add it to our minimum weight spanning tree of G. \\
-\textbf{3rd.} The third step in this algorithm would be to pop off the next shortest edge in the priority queue of vertices \{A, B\}. We will now check if this set of vertices creates a cycle in our tree, which it does not, thus we will add it to our minimum weight spanning tree of G. \\
-\end{center}
-
 From the above we will now select the edges such that we will create a minimum edge weight spanning tree of G:
 \begin{center}
-Priority Queue: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]
+Priority Queue: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}] \\
 \end{center}
 
 We will first pop off the vertices of \{G, B\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
 \begin{center}
 Priority Queue: [\{A, G\}, \{A, B\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}]
+Minimum Weight Spanning Tree $G$: [\{G, B\}] \\
 \end{center}
 
 We will now pop off the vertices of \{A, G\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
 \begin{center}
 Priority Queue: [\{A, B\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}]
+Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}] \\
 \end{center}
 
-We will now pop off the vertices of \{A, B\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
+The vertex of \{A, B\} will be popped off the priority queue, but will not be added into the Minimum Weight Spanning Tree of G because it will create a cycle in the graph. . \\
 \begin{center}
 Priority Queue: [\{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}]
+Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}] \\
 \end{center}
 
-We will now pop off the vertices of \{E, F\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
+After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it: \\
 \begin{center}
-Priority Queue: \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}] \\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}]
+Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}]
 \end{center}
+The Minimum Weight Spanning Tree of $G$ would look like this:
+\begin {center}
+\begin{tikzpicture}[scale=0.4, auto, node distance=3cm, every loop/.style={},
+  thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
 
-We will now pop off the vertices of \{E, D\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
-\begin{center}
-Priority Queue: [\{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}, \{E, D\}]
+\node[main node] (A) {A};
+\node[main node] (B) [right of=A] {B};
+\node[main node] (C) [above right of=B] {C};
+\node[main node] (D) [below right of=C] {D};
+\node[main node] (E) [below left of=D] {E};
+\node[main node] (F) [below left of=E] {F};
+\node[main node] (G) [above left of=F] {G};
+
+\path[line width=0.25mm, every node/.style={font=\sffamily\small}]
+(B) edge node [left]  {8} (C)
+(C) edge node [right] {7}  (D)
+(D) edge node [right] {6} (E)
+(G) edge node [left]  {1} (B)
+(E) edge node [below] {5} (F)
+(A) edge node [left] {2} (G)
+;
+\end{tikzpicture}
 \end{center}
-
-We will now pop off the vertices of \{C, D\} from our priority queue and check if it creates a cycle, which it does not and add it to our tree of G. \\
-\begin{center}
-Priority Queue: [\{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}, \{E, D\, \{C, D\}}]
-\end{center}
-
-The vertex of . \\
-\begin{center}
-Priority Queue: [\{B, C\}, \{G, F\}, \{G, E\}, \{B, E\}]\\
-Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}, \{E, F\}, \{E, D\, \{C, D\}}]
-\end{center}
-
 \end{proof}
 
 
@@ -339,8 +335,13 @@ Consider the weighted graph $G(V, E, w)$ below. Clearly list the order in which 
 \end{required}
 
 \begin{proof}
-%YOUR ANSWER HERE
+Prim's algorithm by definition will traverse the graph by pushing on the source vertex then popping it off and visiting itS neighbors. Then we would check if one endpoint is in our minimum-weight spanning tree and if one is not, then we would add it into our tree, if both are in our minimum-weight spanning tree than it would create a cycle. We would further repeat this process until the priority queue is empty and have achieved our minimum-weight spanning tree. \\
+
+
 \end{proof}
+
+
+
 
 
 \newpage
