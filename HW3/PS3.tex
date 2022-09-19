@@ -357,7 +357,7 @@ Priority Queue: [$(\{G, B\},1)$, $(\{A, B\},4)$, $(\{G, F\},9)$, $(\{G, E\},12)$
 \end{center}
 
 \begin{center}
-We will now pop off the edge of $\{G, B\}$ and add it to our minimum-weight spanning tree, since the the vertex of $G$ is already present than we do not need to add it only the vertex of $B$.
+We will now pop off the edge of $\{G, B\}$ and add it to our minimum-weight spanning tree, since the the vertex of $G$ is already present in the MST but $B$ is not.
 \end{center}
 
 \begin{center}
@@ -373,6 +373,10 @@ We will pop off the edge of $\{A, B\}$, but not add it to our minimum-weight spa
 We will pop off the edge of $\{B, C\}$ and add it to our minimum-weight spanning tree because it would not create a cycle since the vertex of $C$ is not present in the minimum-weight spanning tree.
 \end{center}
 
+After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it: \\
+\begin{center}
+Minimum Weight Spanning Tree $G$: [\{A, G\}, \{G, B\}, \{B, C\}, \{C, D\}, \{D, E\}, \{E, F\}]
+\end{center}
 Further after we perform Prim's algorithm on this graph further we would be left with this graph as our final graph: \\
 \begin {center}
 \begin{tikzpicture}[scale=0.4, auto, node distance=3cm, every loop/.style={},
@@ -418,8 +422,20 @@ S_{n-1} + S_{n-2} & n \geq 2.
 For an alphabet $\Sigma = \{a,b,c,d,e,f,g,h\}$ with frequencies given by the first $|\Sigma|$ many numbers $S_0, S_1, \dotsc, S_{|\Sigma|-1}$, give an optimal Huffman code and its corresponding encoding tree. Specify the frequencies of each letter, and for each stage of the algorithm, the subtrees merged at that stage, and the resulting total frequency for the new merged subtree.
 \end{required}
 
-\begin{proof}
-% YOUR ANSWER HERE
+\begin{proof} 
+We will first find our frequencies given our position within the $|\Sigma|$ $-1$: \\
+\begin{center}
+Frequencies are $= \{a = 3\},$\\
+$\{b = 6\},$ \\
+$\{c = 9\},$ \\
+$\{d = 15\},$ \\
+$\{e = 24\},$ \\
+$\{f = 39\},$ \\
+$\{g = 63\},$ \\
+$\{h = 102\}$ \\
+\end{center}
+We will now find the optimal Huffman code and it's corresponding tree: \\
+
 \end{proof}
 
 
