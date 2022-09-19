@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  18 SEP 2022 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  18 SEP 2022 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1525,15 +1525,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-[8] (./PS3.aux)
+<Huff_Hw3_CSCI3104.pdf, id=85, 614.295pt x 642.4pt>
+File: Huff_Hw3_CSCI3104.pdf Graphic file (type pdf)
+<use Huff_Hw3_CSCI3104.pdf>
+Package pdftex.def Info: Huff_Hw3_CSCI3104.pdf  used on input line 439.
+(pdftex.def)             Requested size: 325.2183pt x 340.0979pt.
+<Huff1_Hw3_CSCI3104.pdf, id=86, 606.265pt x 794.97pt>
+File: Huff1_Hw3_CSCI3104.pdf Graphic file (type pdf)
+<use Huff1_Hw3_CSCI3104.pdf>
+Package pdftex.def Info: Huff1_Hw3_CSCI3104.pdf  used on input line 440.
+(pdftex.def)             Requested size: 379.41585pt x 497.5222pt.
+<Huff2_Hw3_CSCI3104.pdf, id=87, 527.9725pt x 794.97pt>
+File: Huff2_Hw3_CSCI3104.pdf Graphic file (type pdf)
+<use Huff2_Hw3_CSCI3104.pdf>
+Package pdftex.def Info: Huff2_Hw3_CSCI3104.pdf  used on input line 441.
+(pdftex.def)             Requested size: 379.41585pt x 571.28624pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--442
+
+ []
+
+[8 <./Huff_Hw3_CSCI3104.pdf>] [9 <./Huff1_Hw3_CSCI3104.pdf>] [10 <./Huff2_Hw3_C
+SCI3104.pdf>] (./PS3.aux)
 Package rerunfilecheck Info: File `PS3.out' has not changed.
 (rerunfilecheck)             Checksum: A24A66AD0749CF9F6258C5411B790383;1238.
  ) 
 Here is how much of TeX's memory you used:
- 57249 strings out of 478268
- 1379762 string characters out of 5846347
- 1960283 words of memory out of 5000000
- 74763 multiletter control sequences out of 15000+600000
+ 57272 strings out of 478268
+ 1380395 string characters out of 5846347
+ 1960285 words of memory out of 5000000
+ 74781 multiletter control sequences out of 15000+600000
  479475 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,8n,94p,1601b,976s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1553,10 +1574,10 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS3.pdf (8 pages, 200871 bytes).
+Output written on PS3.pdf (10 pages, 703663 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -186,15 +186,15 @@ Consider the weighted graph $G(V, E, w)$ below. Let $\mathcal{F} = \{ \{A, B\}, 
 \item The edge $\{A,G\}$ is... useless \\% safe/useless/undecided
 This is because ...this edge from \{A,G\} is useless because by the definition of a useless edge the vertex of A and G both reside in the same spanning forest.
 \item The edge $\{G,F\}$ is... safe\\% safe/useless/undecided
-This is because ... .this edge is safe because from the vertex {G, F} it would have the minimum edge weight of 9. Further, it is also an edge that is between two different forest . %Your answer here
+This is because ... .this edge is safe because from the vertex {G, F} it would have the minimum edge weight of 9. Further, it is also an edge that is between two different forests. %Your answer here
 \item The edge $\{G,E\}$ is... undecided\\% safe/useless/undecided
-This is because ... .this edge is safe because from the vertex {G, E} it is not the minimum weight edge, but it is also an edge that is between two different forest .
+This is because ... .this edge is safe because from the vertex {G, E} it is not the minimum weight edge, but it is also an edge that is between two different forests.
 \item The edge $\{B,E\}$ is... undecided\\% safe/useless/undecided
-This is because ... this edge is undecided because it exists in the span of two different forest and  is not a minimum edge weight.%Your answer here
+This is because ... this edge is undecided because it exists in the span of two different forests and  is not a minimum edge weight.%Your answer here
 \item The edge $\{B,C\}$ is... safe \\% safe/useless/undecided
 This is because ... this edge is safe because there exists a light edge that belongs to the vertex of C, further it is a minimum edge weight as well.%Your answer here
 \item The edge $\{C,D\}$ is... undecided \\% safe/useless/undecided
-This is because ... This edge would be neither safe or useless since the vertex of c and d do not lie within the spanning forest of \{a, b, g\} or \{e and f\}
+This is because ... This edge would be neither safe or useless since the vertex of c and d do not lie within the spanning forest of \{a, b, g\} or \{e and f\}, but it is not the minimum edge weight.
 \item The edge $\{D,E\}$ is... safe\\% safe/useless/undecided
 This is because ... This edge would be safe because there exists a light edge that belongs to the vertex of C, further it is a minimum weight edge weight. %Your answer here
 \end{itemize}
@@ -271,7 +271,7 @@ Priority Queue: [\{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}, \{G, F\}, \{G, E\}, \{B
 Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{A, B\}] \\
 \end{center}
 
-After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it: \\
+After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it. From left to right is the order in which they were added. \\
 \begin{center}
 Minimum Weight Spanning Tree $G$: [\{G, B\}, \{A, G\}, \{E, F\}, \{E, D\}, \{C, D\}, \{B, C\}]
 \end{center}
@@ -335,7 +335,7 @@ Consider the weighted graph $G(V, E, w)$ below. Clearly list the order in which 
 \end{required}
 
 \begin{proof}
-Prim's algorithm by definition will traverse the graph by pushing on the source vertex then popping it off and visiting itS neighbors. Then we would check if one endpoint is in our minimum-weight spanning tree and if one is not, then we would add it into our tree, if both are in our minimum-weight spanning tree than it would create a cycle. We would further repeat this process until the priority queue is empty and have achieved our minimum-weight spanning tree. \\
+Prim's algorithm by definition will traverse the graph by pushing on the source vertex then popping it off and visiting its neighbors. Then we would check if one endpoint is in our minimum-weight spanning tree and if one is not, then we would add it into our tree, if both are in our minimum-weight spanning tree than it would create a cycle. We would further repeat this process until the priority queue is empty and have achieved our minimum-weight spanning tree. \\
 
 \begin{center}
 We will first begin by initializing an empty priority queue: \\
@@ -373,7 +373,7 @@ We will pop off the edge of $\{A, B\}$, but not add it to our minimum-weight spa
 We will pop off the edge of $\{B, C\}$ and add it to our minimum-weight spanning tree because it would not create a cycle since the vertex of $C$ is not present in the minimum-weight spanning tree.
 \end{center}
 
-After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it: \\
+After running the priority queue our Minimum Weight Spanning Tree of G will have this set of vertices within it:. From left to right is the order in which they were added.\\
 \begin{center}
 Minimum Weight Spanning Tree $G$: [\{A, G\}, \{G, B\}, \{B, C\}, \{C, D\}, \{D, E\}, \{E, F\}]
 \end{center}
@@ -425,7 +425,8 @@ For an alphabet $\Sigma = \{a,b,c,d,e,f,g,h\}$ with frequencies given by the fir
 \begin{proof} 
 We will first find our frequencies given our position within the $|\Sigma|$ $-1$: \\
 \begin{center}
-Frequencies are $= \{a = 3\},$\\
+Frequencies are: \\
+ $ \{a = 3\},$\\
 $\{b = 6\},$ \\
 $\{c = 9\},$ \\
 $\{d = 15\},$ \\
@@ -435,6 +436,10 @@ $\{g = 63\},$ \\
 $\{h = 102\}$ \\
 \end{center}
 We will now find the optimal Huffman code and it's corresponding tree: \\
+\includegraphics[width=0.6\textwidth]{Huff_Hw3_CSCI3104.pdf}\\
+\includegraphics[width=0.7\textwidth]{Huff1_Hw3_CSCI3104.pdf}\\
+\includegraphics[width=0.7\textwidth]{Huff2_Hw3_CSCI3104.pdf}\\
+
 
 \end{proof}
 
