@@ -401,7 +401,7 @@ This would be the maximum amount of flow that can be pushed through on this flow
     \item \label{ff3d} Using the flow configuration from part (c), finish executing the Ford--Fulkerson algorithm. Include the following here: (i) your flow network, reflecting the maximum-valued flow configuration you found, and (ii) the corresponding minimum capacity cut. There may be multiple minimum capacity cuts, but you should identify the one corresponding to your maximum-valued flow configuration. Then (iii) finally, compare the value of your flow to the capacity of the cut. \\
 
     \begin{proof}[Answer]
-    Our final flow-augmenting path would be from  $s \to u \to w \to x \to t$, with a maximum capacity of 1. This path would only have a maximum capacity of 1 because from the edge $u \to w$ we have already pushed a flow on one through it thus, it can only hold a maximum flow of 1. 
+    Our final flow-augmenting path would be from  $s \to u \to w \to x \to t$, with a maximum capacity of 1. This path would only have a maximum capacity of 1 because from the edge $u \to w$ we have already pushed a flow of 1 through it thus, it can only hold a maximum flow of 1. 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % YOUR ANSWER GOES HERE: type your answer in below                             %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -434,7 +434,11 @@ This would be the maximum amount of flow that can be pushed through on this flow
 		\draw[directed] (w) to [edge label =4/8] (x);
 		\draw[directed] (x) to [edge label'=4/4] (t);
 	\end{tikzpicture}
-\end{center}
+\end{center} 
+We will make cuts on the flow network on the edges of $\{u, w\}$, $\{u, v\}$, and $\{s, v\}$. We are making our minimum cuts here because from the vertex of $s$ we can only traverse to the vertex of $u$, such that we can push positive flow on the edge from $\{s, u\}$. Below we have the image with the corresponding minimum cuts of the flow network. \\
+
+\includegraphics[scale=0.5]{Huynh_CSCI3104_HW4Pic.pdf} \\
+The value of our flow after making these cuts, would be 4 as we are pushing a total of 4 flow through the edge of $\{s, u\}$. The total capacity of our cut is 7. Thus, we can push through a total of 4 flow as $4 < 7$.
 \end{proof}
     
 \end{enumerate}
