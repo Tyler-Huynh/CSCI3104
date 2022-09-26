@@ -231,7 +231,7 @@ D cannot push and flow backward from D $\rightarrow$ E. This is due to the fact 
 \item How much \textit{additional} flow can be pushed along the flow-augmenting path $s \to B \to E \to t$? Do not include the current flow along these edges. Justify using 1-2 sentences.
 
 \begin{proof}[Answer]
-The additional flow that can be pushed along the flow-augmenting path from $s \to B \to E \to t$ would be a total of 3. This is due to the fact that there is already a flow of 3 from $E \to B$, the maximum amount of flow that we can push back to E on the edge of $B \to E$ would be three, thus the total amount of additional flow would be 3.
+The additional flow that can be pushed along the flow-augmenting path from $s \to B \to E \to t$ would be a total of 3. On the edge of  $s \to B$ we are able to push an additional 6 flow. From here we see that there is a flow of 3 from $E \to B$, the maximum amount of flow that we can push back to E on the edge of $B \to E$ would be 3. On the edge of  $E \to t$ we can push an additional flow of 4. However since we can only push a maximum flow of 3 on the edge of $B \to E$ the additional amount of flow we can push is 3, thus the total amount of additional flow would be 3.
 \end{proof}
 
 
@@ -239,7 +239,7 @@ The additional flow that can be pushed along the flow-augmenting path from $s \t
 \item Find a second flow-augmenting path and indicate the maximum amount of additional flow that can be pushed along the path. Assume that the flow-augmenting path from part (d) has \textbf{not} been applied. Justify using 1-2 sentences.
 
 \begin{proof}[Answer]
-A second flow-augmenting path would be the from $s \to C \to E \to t$, for an additional flow of 3. This is due to the fact that from $S \to C$ we can only push a flow of 3 as the capacity is only 6 with a total flow of 3 already, thus our additional flow would be 3 on this flow-augmenting path from $s \to C \to E \to t$.
+A second flow-augmenting path would be the from $s \to C \to E \to t$, for an additional flow of 3. This is due to the fact that from $S \to C$ we can only push a flow of 3 as the capacity is only 6 with a total flow of 3 already. On the edge of $C \to E$ we can push an additional flow of 6 and on the edge of $E \to t$ we can push an additional flow of 4. On the edge from $S \to C$ we can only push a flow of 3 as the capacity is only 6 with a total flow of 3 already. Thus our additional flow would be 3 on this flow-augmenting path from $s \to C \to E \to t$.
 \end{proof}
 \end{enumerate}
 \end{required}
@@ -400,8 +400,8 @@ This would be the maximum amount of flow that can be pushed through on this flow
     \subsection{Problem 11\ref{ff3d}}
     \item \label{ff3d} Using the flow configuration from part (c), finish executing the Ford--Fulkerson algorithm. Include the following here: (i) your flow network, reflecting the maximum-valued flow configuration you found, and (ii) the corresponding minimum capacity cut. There may be multiple minimum capacity cuts, but you should identify the one corresponding to your maximum-valued flow configuration. Then (iii) finally, compare the value of your flow to the capacity of the cut. \\
 
-    \begin{proof}[Answer]
-    Our final flow-augmenting path would be from  $s \to u \to w \to x \to t$, with a maximum capacity of 1. This path would only have a maximum capacity of 1 because from the edge $u \to w$ we have already pushed a flow of 1 through it thus, it can only hold a maximum flow of 1. 
+    \begin{proof}[Answer] \textbf {Used Michael Levet notes to help formulate an answer.} \\
+    Our final flow-augmenting path would be from  $s \to u \to w \to x \to t$, with a maximum capacity of 1. This path would only have a maximum capacity of 1 because from the edge $u \to w$ we have already pushed a flow of 1 through it thus, it can only hold a maximum flow of 1. Thus, we have now finished the Ford-Fulkerson algorithm as there are no more flow augmenting paths in the flow network.
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % YOUR ANSWER GOES HERE: type your answer in below                             %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -435,10 +435,10 @@ This would be the maximum amount of flow that can be pushed through on this flow
 		\draw[directed] (x) to [edge label'=4/4] (t);
 	\end{tikzpicture}
 \end{center} 
-We will make cuts on the flow network on the edges of $\{u, w\}$, $\{u, v\}$, and $\{s, v\}$. We are making our minimum cuts here because from the vertex of $s$ we can only traverse to the vertex of $u$, such that we can push positive flow on the edge from $\{s, u\}$. Below we have the image with the corresponding minimum cuts of the flow network. \\
+We will make cuts on the flow network on the edges of $c\{u, w\}$, $c\{u, v\}$, and $c\{s, v\}$ as these are the edges that are directly adjacent to our source vertex of $s$ where the capacity of the edge is full,  making the total value of our minimum cut is 7 such that 2 + 2 + 3 = 7. We are making our minimum cuts here because from the vertex of $s$ we can only traverse to the vertex of $u$, such that we can push positive flow on the edge from $\{s, u\}$. Below we have the image with the corresponding minimum cuts of the flow network. \\
 
 \includegraphics[scale=0.5]{Huynh_CSCI3104_HW4Pic.pdf} \\
-The value of our flow after making these cuts, would be 4 as we are pushing a total of 4 flow through the edge of $\{s, u\}$. The total capacity of our cut is 7. Thus, we can push through a total of 4 flow as $4 < 7$.
+The value of our flow after making these cuts, would be 7 as we are pushing a total of 4 flow through the edge of $\{s, u\}$ and 3 through the edge of $\{s, v\}$  . The total capacity of our minimum cut is 7. Since our max flow on this network is 7 from the edges of $\{s, u\}$ and $\{s, v\}$ and our total capacity of our minimum cut is 7 this will then satisfy the max flow-min cut theorem since the total flow of our network and the total capacity of our minimum cut are equal to one another.
 \end{proof}
     
 \end{enumerate}

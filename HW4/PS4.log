@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  25 SEP 2022 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  26 SEP 2022 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1482,18 +1482,9 @@ File: Huynh_CSCI3104_HW4Pic.pdf Graphic file (type pdf)
 <use Huynh_CSCI3104_HW4Pic.pdf>
 Package pdftex.def Info: Huynh_CSCI3104_HW4Pic.pdf  used on input line 440.
 (pdftex.def)             Requested size: 397.48402pt x 257.96312pt.
-[8 <./Huynh_CSCI3104_HW4Pic.pdf>] [9] (./PS4.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `PS4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `PS4.out':
-(rerunfilecheck)             Before: CD1206BD825D121771356883D670F6A5;1396
-(rerunfilecheck)             After:  45E66DAE7B0F46E8B2D6E83236F9F797;1440.
+[8] [9 <./Huynh_CSCI3104_HW4Pic.pdf>] (./PS4.aux)
+Package rerunfilecheck Info: File `PS4.out' has not changed.
+(rerunfilecheck)             Checksum: 45E66DAE7B0F46E8B2D6E83236F9F797;1440.
  ) 
 Here is how much of TeX's memory you used:
  57354 strings out of 478268
@@ -1502,7 +1493,7 @@ Here is how much of TeX's memory you used:
  74862 multiletter control sequences out of 15000+600000
  478870 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,94p,1601b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,94p,1601b,1137s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1515,7 +1506,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS4.pdf (9 pages, 519937 bytes).
+Output written on PS4.pdf (9 pages, 521891 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  143 compressed objects within 2 object streams
