@@ -121,7 +121,7 @@ Instructors: Prof. Grochow and Nagesh} \\
 Due Date \dotfill September 26, 2022 8pm MT\\
 Name \dotfill \textbf{Tyler Huynh} \\
 Student ID \dotfill \textbf{109603994} \\
-Collaborators \dotfill \textbf{List Your Collaborators Here}
+Collaborators \dotfill \textbf{N/A}
 
 \tableofcontents
 
@@ -155,7 +155,7 @@ Collaborators \dotfill \textbf{List Your Collaborators Here}
 %\noindent In the specified region below, clearly indicate that you have upheld the Honor Code. Then type your name. 
 \end{requiredHC}
 
-\begin{proof}[Agreed (signature here).]
+\begin{proof}[I agree to the above, Tyler Huynh.]
 %% Typing "I agree to the above," followed by your name is sufficient.
 \end{proof}
 
@@ -435,10 +435,10 @@ This would be the maximum amount of flow that can be pushed through on this flow
 		\draw[directed] (x) to [edge label'=4/4] (t);
 	\end{tikzpicture}
 \end{center} 
-We will make cuts on the flow network on the edges of $c\{u, w\}$, $c\{u, v\}$, and $c\{s, v\}$ as these are the edges that are directly adjacent to our source vertex of $s$ where the capacity of the edge is full,  making the total value of our minimum cut is 7 such that 2 + 2 + 3 = 7. We are making our minimum cuts here because from the vertex of $s$ we can only traverse to the vertex of $u$, such that we can push positive flow on the edge from $\{s, u\}$. Below we have the image with the corresponding minimum cuts of the flow network. \\
+From the source vertex of $s$ we can only traverse to the vertex of $u$, such that we can push positive flow on the edge from $\{s, u\}$. We will make cuts on the flow network on the edges of $c\{u, w\}$, $c\{u, v\}$, and $c\{s, v\}$ as these are the edges that are directly adjacent to our source vertex of $s$ and the vertex of $u$ where these edge's capacities are full not allowing for any additional positive flow to go, making the total value of our minimum cut 7 such that 2 + 2 + 3 = 7. Below we have the image with the corresponding minimum cuts of the flow network. \\
 
 \includegraphics[scale=0.5]{Huynh_CSCI3104_HW4Pic.pdf} \\
-The value of our flow after making these cuts, would be 7 as we are pushing a total of 4 flow through the edge of $\{s, u\}$ and 3 through the edge of $\{s, v\}$  . The total capacity of our minimum cut is 7. Since our max flow on this network is 7 from the edges of $\{s, u\}$ and $\{s, v\}$ and our total capacity of our minimum cut is 7 this will then satisfy the max flow-min cut theorem since the total flow of our network and the total capacity of our minimum cut are equal to one another.
+The value of our flow after making these cuts, would be 7 as we are pushing a total of 4 flow through the edge of $\{s, u\}$ and 3 through the edge of $\{s, v\}$. The total capacity of our minimum cut is 7. Since our max flow on this network is 7 from the edges of $\{s, u\}$ and $\{s, v\}$ and our total capacity of our minimum cut is 7 this will then satisfy the max flow-min cut theorem since the total flow of our network and the total capacity of our minimum cut are equal to one another.
 \end{proof}
     
 \end{enumerate}
