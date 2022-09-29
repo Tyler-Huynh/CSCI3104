@@ -1,0 +1,203 @@
+\documentclass[11pt]{article} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[siunitx]{circuitikz}
+\usepackage{tikz}
+\usepackage[colorinlistoftodos, color=orange!50]{todonotes}
+\usepackage{hyperref}
+\usepackage[numbers, square]{natbib}
+\usepackage{fancybox}
+\usepackage{epsfig}
+\usepackage{soul}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage[version=4]{mhchem}
+\usepackage{multicol}
+
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{subfiles}
+\usepackage{tkz-berge}
+
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{cor}{Corollary}[prop]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{required}{Problem}
+\newtheorem*{requiredHC}{Problem HC}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+
+
+\setlength{\marginparwidth}{3.4cm}
+%#########################################################
+
+%To use symbols for footnotes
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%To change footnotes back to numbers uncomment the following line
+%\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Enable this command to adjust line spacing for inline math equations.
+% \everymath{\displaystyle}
+
+% _______ _____ _______ _      ______ 
+%|__   __|_   _|__   __| |    |  ____|
+%   | |    | |    | |  | |    | |__   
+%   | |    | |    | |  | |    |  __|  
+%   | |   _| |_   | |  | |____| |____ 
+%   |_|  |_____|  |_|  |______|______|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+\normalfont \normalsize 
+\textsc{CSCI 3104 Fall 2022 \\ 
+Instructors: Prof. Grochow and Chandra Kanth Nagesh} \\
+[10pt] 
+\rule{\linewidth}{0.5pt} \\[6pt] 
+\huge Quiz 3 S6 \\
+\rule{\linewidth}{2pt}  \\[10pt]
+}
+%\author{Your Name}
+\date{}
+
+\begin{document}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+\definecolor{processred}{rgb}{200, 0, 0}
+\definecolor{processgreen}{rgb}{0, 255, 0}
+\DeclareGraphicsExtensions{.png}
+\DeclareGraphicsExtensions{.gif}
+\DeclareGraphicsExtensions{.jpg}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%FILL IN YOUR NAME%%%%%%%
+%%%%%%%%%%AND STUDENT ID%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+Due Date \dotfill Thursday Sep 29, 2022 8pm MT \\
+Name \dotfill \textbf{Tyler Huynh} \\
+Student ID \dotfill \textbf{109603994} \\
+Quiz Code (enter in Canvas to get access to the LaTeX template) \dotfill \textbf{NGTYH}
+
+
+\tableofcontents
+
+\section*{Instructions}
+\addcontentsline{toc}{section}{Instructions}
+ \begin{itemize}
+	\item You may either type your work using this template, or you may handwrite your work and embed it as an image in this template. \textbf{If you choose to handwrite your work, the image must be legible, and oriented so that we do not have to rotate our screens to grade your work.} We have included some helpful LaTeX commands for including and rotating images commented out near the end of the LaTeX template.
+	\item You should submit your work through the \textbf{class Gradescope page} only. Please submit one PDF file, compiled using this \LaTeX \ template.
+	\item You may not need a full page for your solutions; pagebreaks are there to help Gradescope automatically find where each problem is. Even if you do not attempt every problem, please submit this document with no fewer pages than the blank template (or Gradescope has issues with it).
+
+	\item You \textbf{may not collaborate with other students}. \textbf{Copying from any source is an Honor Code violation. Furthermore, all submissions must be in your own words and reflect your understanding of the material.} If there is any confusion about this policy, it is your responsibility to clarify before the due date. 
+
+	\item Posting to \textbf{any} service including, but not limited to Chegg, Discord, Reddit, StackExchange, etc., for help on an assignment is a violation of the Honor Code.
+
+	\item You \textbf{must} virtually sign the Honor Code (see Section \ref{HonorCode}). Failure to do so will result in your assignment not being graded.
+\end{itemize}
+
+
+\newpage
+\section*{Honor Code (Make Sure to Virtually Sign)} \label{HonorCode}
+\addcontentsline{toc}{section}{Honor Code (Make Sure to Virtually Sign)}
+\hypertarget{HonorCode}{}
+
+\begin{requiredHC}
+\begin{itemize}
+\item My submission is in my own words and reflects my understanding of the material.
+\item Any collaborations and external sources have been clearly cited in this document.
+\item I have not posted to external services including, but not limited to Chegg, Reddit, StackExchange, etc.
+\item I have neither copied nor provided others solutions they can copy.
+\end{itemize}
+
+%\noindent In the specified region below, clearly indicate that you have upheld the Honor Code. Then type your name. 
+\end{requiredHC}
+
+\begin{proof}[I agree to the above, Tyler Huynh.]
+%% Typing "I agree to the above," followed by your name is sufficient.
+\end{proof}
+
+
+\newpage
+\setcounter{section}{5}
+\section{Standard 6: Safe and Useless Edges}
+
+\setcounter{required}{5}
+\begin{required} \label{Safe1}
+Consider the following graph $G(V, E, w)$. Suppose we have the intermediate spanning forest $\mathcal{F}$ (indicated using thick edges) consisting of the edges $\{A, C\}$, $\{D, E\}$, and $\{E, F\}$. Clearly identify the safe, useless, and undecided edges, and justify your reasoning. [\textbf{Hint:} You may find Corollary 61 on page 42 of M. Levet's typed lecture notes to be helpful.]
+\begin{center}
+\begin {tikzpicture}[semithick]
+\tikzstyle{blue}=[circle ,top color =white , bottom color = processblue!20 ,draw,processblue , text=blue , minimum width =1 cm];
+\tikzstyle{red}=[circle ,top color =white , bottom color = processred!20 ,draw, processred , text=blue , minimum width =1 cm];
+\tikzstyle{green}=[circle ,top color =white , bottom color = processgreen!20 ,draw, processgreen , text=blue , minimum width =1 cm];
+
+	\node[blue] (A) {$A$};
+	\node[blue] (B) [above right = of A] {$B$};
+	\node[blue] (C) [below right = of A] {$C$};
+	\node[blue] (D) [right = of B] {$D$};
+	\node[blue] (E) [right = of C] {$E$};
+	\node[blue] (F) [below right = of D] {$F$};
+	
+	\path (A) edge node[above] {$4$} (B);
+	\draw[line width=3pt] (A) edge node[right] {$3$} (C);
+	\path (B) edge node[left] {$8$} (C);
+	\path (B) edge node[above] {$6$} (D);
+	\path (C) edge node[above] {$7$} (E);
+	\draw[line width=3pt] (E) edge node[right] {$1$} (D);
+	\path (D) edge node[above] {$8$} (F);
+	\draw[line width=3pt] (E) edge node[below] {$2$} (F);
+	\end{tikzpicture}  
+\end{center}
+\end{required}
+
+
+\begin{proof}[Answer]
+\begin{itemize}
+\item The edge $\{A,B\}$ is... \textbf{safe} \\ % safe/useless/undecided
+because ... the edge from $\{A,B\}$ is safe because from the component of $\{A,C\}$ this is the minimum edge weight to come from this component. Further, the edge $\{A,B\}$ does not create a cycle if it were to be added to the intermediate spanning forest of $\mathcal{F}$.%Your answer here
+\item The edge $\{B,C\}$ is... \textbf{undecided} \\ % safe/useless/undecided
+because ... this edge is not the minimum edge coming out of the component of $\{A,C\}$, however it does not create a cycle within our intermediate spanning forest of $\mathcal{F}$. %Your answer here
+\item The edge $\{B, D\}$ is... \textbf{safe} \\% safe/useless/undecided
+because ... the edge from $\{B,D\}$ is safe because from the component of $\{D, E, F\}$ it is the minimum edge weight that is coming out of this component. Further the edge of $\{B,D\}$ does not create a cycle within our intermediate spanning tree of $\mathcal{F}$. %Your answer here
+\item The edge $\{C, E\}$ is... \textbf{undecided} \\ % safe/useless/undecided
+because ... the edge of $\{C,E\}$ is undecided because it is an edge that exists between two different components where it is not the minimum edge weight to come out of either component. Further, it does not create a cycle within our intermediate spanning forest of $\mathcal{F}$.%Your answer here
+\item The edge $\{D, F\}$ is... \textbf{useless} \\ % safe/useless/undecided
+because ... the edge $\{D, F\}$ is useless because by the definition of a useless edge it will create a cycle within the component of $\{D, E, F\}$.%Your answer here
+\end{itemize}
+\end{proof}
+
+% Either type your answer in below, or uncomment the \includegraphics command
+% and use it to insert an approprate image. Try experimenting with the scale 
+% 0.9 the width option to resize your image if necessary.
+
+%\includegraphics[width=0.9\textwidth]{solution.jpg}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document} % NOTHING AFTER THIS LINE IS PART OF THE DOCUMENT
+
+
+
