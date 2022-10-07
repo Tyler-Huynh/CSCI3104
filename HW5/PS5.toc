@@ -1,11 +1,11 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{Instructions}{1}{section*.2}%
-\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{1}{section*.3}%
+\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{2}{section*.3}%
 \contentsline {section}{\numberline {12}Standard 12- Asymptotics I (Calculus I techniques)}{3}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Problem 12\ref {1a}}{4}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}Problem 12\ref {1b}}{6}{subsection.12.2}%
-\contentsline {section}{\numberline {13}Standard 13- Asymptotics II (Calculus II techniques): }{7}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Problem 13\ref {2a}}{7}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Problem 13\ref {2b}}{8}{subsection.13.2}%
-\contentsline {section}{\numberline {14}Standard 14- Analyzing Code I: (Independent nested loops)}{9}{section.14}%
-\contentsline {section}{\numberline {15}Standard 15- Analyzing Code II: (Dependent nested loops)}{10}{section.15}%
+\contentsline {section}{\numberline {13}Standard 13- Asymptotics II (Calculus II techniques): }{10}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Problem 13\ref {2a}}{10}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Problem 13\ref {2b}}{11}{subsection.13.2}%
+\contentsline {section}{\numberline {14}Standard 14- Analyzing Code I: (Independent nested loops)}{12}{section.14}%
+\contentsline {section}{\numberline {15}Standard 15- Analyzing Code II: (Dependent nested loops)}{13}{section.15}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  5 OCT 2022 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 OCT 2022 00:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1277,25 +1277,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+(./PS5.toc)
 \tf@toc=\write8
 \openout8 = `PS5.toc'.
 
-[1
+ [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 [3]
-
-LaTeX Warning: Reference `1a' on page 4 undefined on input line 177.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
@@ -1336,41 +1329,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--221
  []
 
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
-LaTeX Warning: Reference `1b' on page 6 undefined on input line 225.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
-LaTeX Warning: Reference `2a' on page 7 undefined on input line 244.
+ []
 
 [7]
+Overfull \vbox (112.1142pt too high) has occurred while \output is active []
 
-LaTeX Warning: Reference `2b' on page 8 undefined on input line 251.
 
-[8]
+[8] [9] [10] [11]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 270.
- [9] [10] (./PS5.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `PS5.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `PS5.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  E454C638AD70A4E5AECE128181E7A1CC;2321.
+put line 353.
+ [12] [13] (./PS5.aux)
+Package rerunfilecheck Info: File `PS5.out' has not changed.
+(rerunfilecheck)             Checksum: AE4ECE4EC5772B9BDF4A3887022691C4;2365.
  ) 
 Here is how much of TeX's memory you used:
- 37841 strings out of 478268
- 806909 string characters out of 5846347
- 1162128 words of memory out of 5000000
- 55448 multiletter control sequences out of 15000+600000
+ 37857 strings out of 478268
+ 807088 string characters out of 5846347
+ 1171366 words of memory out of 5000000
+ 55459 multiletter control sequences out of 15000+600000
  479038 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,94p,1601b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1388,14 +1386,15 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
 ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS5.pdf (10 pages, 221229 bytes).
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on PS5.pdf (13 pages, 238759 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

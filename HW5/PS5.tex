@@ -221,7 +221,7 @@ We can see from the above that $f_4(n)$ will grow faster than $f_2(n)$, such tha
 
 Out of our set of functions we see that:
 \begin{center}
-The functions that grows the fastest: $f_3(n)$ 
+The functions that grows the fastest: $f_3(n)$ \\
 The function that grows the slowest: $f_2(n)$ 
 
 \end{center}
@@ -232,7 +232,84 @@ The function that grows the slowest: $f_2(n)$
     \item \label{1b} $ (\log_7 n)^7 $, \qquad $10 \log_5 n$, \qquad $\log_7 (n^7)$, \qquad $n^{1/1000}$.
     \emph{Hint:} Recall change of logarithmic base formula $\log_a x = \log_b x\cdot\log_a b$
     \begin{proof}[Answer]
+Let us first start by listing out the functions that we will be using:
+\begin{center}
+$f_1(n)$=$ (\log_7 n)^7 $ \\
+$f_2(n)$=$10 \log_5 n$ \\
+$f_3(n)$=$\log_7 (n^7)$ \\
+$f_4(n)$=$n^{1/1000}$ \\
+\end{center}
 
+I will first compare the functions of $f_1(n)$ and $f_3(n)$ using L'hopital's rule:
+\begin{align*}
+\lim_{n \to \infty} \frac{(\log_7 n)^7}{\log_7 (n^{7})} &= \lim_{n \to \infty} \frac{\log_7 n)^7}{\log_7 (n^{7})}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} \frac{\frac{7(\log_7 n)^6}{n\ln7}}{\frac{7}{n\ln7}}\\
+&= \lim_{n \to \infty} \frac{7(\log_7 n)^6}{n\ln7} * \frac{n\ln7}{7} \\
+&= \lim_{n \to \infty} \frac{7(\log_7 n)^6}{7} = \frac{\infty}{7}\\
+&= \infty
+\end{align*} 
+
+We can see from the above that $f_1(n)$ will grow faster than $f_3(n)$, where $f_1(n)$ will be an upper bound of $f_3(n)$, such that $f_3(n) \leq O(f_1(n))$. Thus, $f_1(n) \geq \Omega(f_3(n))$, which is the lower bound. \\
+
+I will now compare f $f_1(n)$ and $f_2(n)$ using L'hopital's rule:\\
+I will first change the base of $f_2(n)$ into $\log_7$ using the log base formula: 
+\begin{align*}
+10\log_5n &= 10(\frac{\log_7n}{\log_7 5}) \\
+&= (\frac{10}{\log_7 5})\log_7 n
+\end{align*}
+I will now compare the two functions after performing the log base formula: \\
+\begin{align*}
+\lim_{n \to \infty} \frac{(\log_7 n)^7}{10\log_5n} &= \lim_{n \to \infty} \frac{\log_7 n)^7}{(\frac{10}{\log_7 5})\log_7 n}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} \frac{(\log_7 n)^7}{\log_7 n}\\
+&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} \frac{(7(\log_7 n)^6) * \frac{1}{n\ln7}}{\frac{1}{n\ln7}}\\
+&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} (7(\log_7 n)^6) = (\frac{10}{\log_7 5})  * \infty\\
+&= \infty
+\end{align*} 
+We can see from the above that $f_1(n)$ will grow faster than $f_2(n)$, where $f_1(n)$ will be an upper bound of $f_2(n)$, such that $f_2(n) \leq O(f_1(n))$. Thus, $f_1(n) \geq \Omega(f_2(n))$, which is the lower bound. \\
+
+I will now compare the functions $f_1(n)$ with $f_4(n)$, using L'hopital's rule: \\
+\begin{align*}
+\lim_{n \to \infty} \frac{(\log_7 n)^7}{n^\frac{1}{1000}} &= \lim_{n \to \infty} \frac{\log_7 n)^7}{n^\frac{1}{1000}}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+\end{align*}
+I will now do the log base formula on $f_1(n)$: \\
+\begin{align*}
+(\log_7n)^{7} = (\frac{\ln n}{\ln 7})^{7}
+\end{align*}
+\begin{align*}
+&= \lim_{n \to \infty} \frac{(\frac{\ln n}{\ln 7})^{7}}{n^{\frac{1}{1000}}} \\ 
+\\
+&= \frac{1}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{7}}{n^{\frac{1}{1000}}} \\ 
+\\
+&= \frac{1}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{7(\ln n)^{6} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{7000}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{6}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{7000}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{6(\ln n)^{5} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{42,000,000}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{5}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{42,000,000}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{5(\ln n)^{4} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{2.1*10^{11}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{4}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{2.1*10^{11}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{4(\ln n)^{3} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{8.4*10^{14}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{3}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{8.4*10^{14}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{3(\ln n)^{2} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{2.52*10^{18}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{2}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{2.52*10^{18}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{2(\ln n)^{1} * \frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{5.04*10^{21}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{(\ln n)^{1}}{n^{\frac{1}{1000}}} \\
+\\
+&= \frac{5.04*10^{21}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{\frac{1}{n}}{\frac{1}{1000}n^{\frac{-999}{1000}}} \\
+\\
+&= \frac{5.04*10^{24}}{(\ln 7)^{7}}\lim_{n \to \infty} \frac{\frac{1}{n}}{n^{\frac{-999}{1000}}} \\
+&= \lim_{n \to \infty} \frac{7(\log_7 n)^6}{7} = \frac{\infty}{7}\\
+&= \infty
+\end{align*} 
     \end{proof}
 \end{enumerate}
 
