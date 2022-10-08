@@ -331,6 +331,73 @@ We can see from the above that the functions $f_2(n)$ and $f_3(n)$ will grow at 
 \subsection{Problem 13\ref{2a}}
         \item \label{2a} $n^{\log_5 n}$, \qquad $4$ ,\qquad $n^{\log_3 n}$,\qquad  $n^{\log_n(n^2)}$, \qquad $ n^{\log_n 5}$ .
         \begin{proof}[Answer]
+I will first define the functions that we will be using:
+\begin{center}
+$f_1(n)$ = $n^{\log_5 n}$ \\
+$f_2(n)$ = 4 \\
+$f_3(n)$ = $n^{\log_3 n}$ \\
+$f_4(n)$ = $n^{\log_n(n^2)}$ \\
+$f_5(n)$ = $ n^{\log_n 5}$ \\
+\end{center}
+
+We will first compare functions $f_1(n)$ and $f_5(n)$ to see which function will grow faster: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^{\log_n 5}} = \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^{\log_n 5}}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^{\log_n 5}}\\
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{5}\\
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{5}\\
+&= \frac {\infty}{5} \\
+&= \infty
+\end{align*} 
+We can see from the above that the function $f_1(n)$ will grow faster than the function $f_5(n)$. Such that $f_5(n) \leq O(f_1(n))$. Further, the function $f_1(n)$ will be an upper bound of $f_5(n)$. Thus, the function $f_1(n) \geq \Omega(f_5(n))$, such that it will be a lower bound. \\
+
+I will now compare the functions of $f_2(n)$ and $f_5(n)$, to see which function will grow faster: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{4}{n^{\log_n 5}} \\
+&= \lim_{n \to \infty} \frac{4}{5} \\
+&= \frac {4}{5}
+\end{align*} 
+We can see from the above that the functions of $f_2(n)$ and $f_5(n)$ will grow at the same rate as each other, such that they will be big theta of one another. Such that it will be $f_2(n) \in \Theta(f_5(n))$.
+
+I will now compare the functions of $f_3(n)$ and $f_1(n)$ to see which function will grow faster: \\
+I will change the base of function $f_3(n)$ using the log base change formula:
+\begin{align*}
+n^{\log_3 n} = \frac{\log_5 n}{\log_5 3}
+\end{align*}
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{\log_3 n}}{n^{\log_5 n}} = \lim_{n \to \infty} \frac{n^{\log_3 n}}{n^{\log_5 n}}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} n^{{\log_3 n}-{\log_5 n}} \\
+&= \lim_{n \to \infty} n^{{\frac{1}{\log_5 3}}-{\log_5 n}} \\
+&= \lim_{n \to \infty} \frac{1}{\log_5 3} - 1 \ge 1 \\
+&= \infty^{\infty} \\
+&= \infty
+\end{align*} 
+We can see from the above that the function $f_3(n)$ will grow faster than the function of f $f_1(n)$, such that it will become $f_1(n) \leq O(f_3(n))$, which will become an upper bound. Further, the function $f_3(n) \leq \Omega(f_1(n))$.
+
+I will now compare the functions of $f_3(n)$ and $f_4(n)$ to see which function will grow faster: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{\log_3 n}}{n^{\log_n(n^2)}} = \lim_{n \to \infty} \frac{n^{\log_3 n}}{n^{\log_n(n^2)}}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} \frac{n^{\log_3 n}}{n^2} \\
+&= \lim_{n \to \infty} n^{{\log_3 n}-{2}} \\
+&= \lim_{n \to \infty} n^{{\log_3 n}-{\log_3 9}} \\
+&= \lim_{n \to \infty} n^{\log_3 \frac{n}{9}}\\
+&= \infty^{\infty}\\
+&= \infty
+\end{align*} 
+From the above we can see that the function $f_3(n)$ will grow faster than the function $f_4(n)$, such that $f_4(n) \leq O(f_3(n))$. Where the function $f_3(n)$ will be an upper bound of $f_4(n)$. Such that $f_3(n) \leq \Omega(f_4(n))$.\\
+
+I will now compare the function of $f_1(n)$ and  $f_4(n)$ to see which function will grow faster: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^{\log_n(n^2)}} = \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^{\log_n(n^2)}}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} \frac{n^{\log_5 n}}{n^2} \\
+&= \lim_{n \to \infty} n^{{\log_5 n}-{2}} \\
+&= \lim_{n \to \infty} n^{{\log_5 n}-{\log_5 25}} \\
+&= \lim_{n \to \infty} n^{\log_5 \frac{n}{25}}\\
+&= \infty^{\infty}\\
+&= \infty
+\end{align*} 
+We can see from the above that the function of $f_1(n)$ will grow faster than the function of $f_4(n)$, such that $f_4(n) \leq O(f_1(n))$, where the function $f_1(n)$ will be an upper bound of the function $f_4(n)$. Further, this will cause for the function $f_4(n)$, to be a lower bound of the function $f_1(n)$, such that $f_1(n) \leq \Omega(f_4(n))$.
+
 
         \end{proof}
         \newpage
