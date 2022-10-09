@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 OCT 2022 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  8 OCT 2022 19:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1393,16 +1393,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
-[11] [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 408--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+
+ []
+
+[12] [13]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 424.
- [13] [14] (./PS5.aux)
+put line 439.
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--470
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--500
+
+ []
+
+[15] [16] (./PS5.aux)
 Package rerunfilecheck Info: File `PS5.out' has not changed.
 (rerunfilecheck)             Checksum: AE4ECE4EC5772B9BDF4A3887022691C4;2365.
  ) 
 Here is how much of TeX's memory you used:
- 37858 strings out of 478268
- 807095 string characters out of 5846347
+ 37860 strings out of 478268
+ 807109 string characters out of 5846347
  1169368 words of memory out of 5000000
  55459 multiletter control sequences out of 15000+600000
  479038 words of font info for 64 fonts, out of 8000000 for 9000
@@ -1427,10 +1487,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS5.pdf (14 pages, 245759 bytes).
+Output written on PS5.pdf (16 pages, 251832 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

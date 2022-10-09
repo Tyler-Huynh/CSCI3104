@@ -398,7 +398,22 @@ I will now compare the function of $f_1(n)$ and  $f_4(n)$ to see which function 
 \end{align*} 
 We can see from the above that the function of $f_1(n)$ will grow faster than the function of $f_4(n)$, such that $f_4(n) \leq O(f_1(n))$, where the function $f_1(n)$ will be an upper bound of the function $f_4(n)$. Further, this will cause for the function $f_4(n)$, to be a lower bound of the function $f_1(n)$, such that $f_1(n) \leq \Omega(f_4(n))$.
 
+Lastly, I will compare the function of $f_4(n)$ and $f_2(n)$, since we know that the function of $f_2(n)$ and $f_5(n)$ will grow at the same rate we can just compare for one of these functions:\\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{\log_n(n^2)}}{4} = \lim_{n \to \infty} \frac{n^{\log_n(n^2)}}{4} = \frac{\infty}{\infty} \qquad Indeterminate  \\
+&= \lim_{n \to \infty} \frac{n^{\log_n(n^2)}}{4}  \\
+&= \lim_{n \to \infty} \frac{n^{2}}{4}\\
+&= \lim_{n \to \infty} \frac{\infty}{4} \\
+&= \infty
+\end{align*} 
+We can see from the above that the function $f_4(n)$ will grow faster than the function $f_2(n)$ and likewise $f_5(n)$ as well. Such that the function $f_2(n) \leq O(f_4n))$ and $f_5(n) \leq O(f_4(n))$. Both the functions $f_2(n)$ and $f_5(n)$ will be the lower bound of the function $f_4(n)$. Thus, $f_4(n) \leq \Omega(f_2(n))$ and $f_4(n) \leq \Omega(f_5(n))$. \\
 
+The final answer after performing the necessary calculation shall be : \\
+\begin{center}
+$f_5(n)$, $f_2(n)$, $f_4(n)$, $f_1(n)$, $f_3(n)$
+\end{center}
+The function above are sorted from the slowest to the fastest growth rates. \\
+The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic rate such that $f_2(n) = \Theta(f_5(n))$
         \end{proof}
         \newpage
 
@@ -432,8 +447,65 @@ Analyze the \textit{worst-case} runtime of the following algorithms. Clearly der
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
-\begin{proof}[Answer]
+\begin{proof}[Answer] \textbf{Referenced Levet notes.} \\
+We will first begin by analyzing the $j$ loop that is present on line 3, such that: \\
+\begin{center}
+The $j$-loop will take one step to initialize j=1.
+\end{center}
+Further from this line I will find how long the loop will take to run: \\
+\begin{center}
+We can see that the loop will be for each iteration: \\
+$n \leq 3^{k}$
+We can solve for k in this case by taking the log of both sides: \\
+$k = \log_3 n$
+\end{center}
+From here we can see that the comparison of $j$ and $n$ will cause for at least one iteration to be added such that: \\
+\begin{center}
+$k = \log_3 n + 1$
+\end{center}
+I will now find what the loop will be doing at each iteration: \\
+\indent -The comparison of $j\leq n$ will add 1 step \\
+\indent - On line 3 the update $j \leftarrow 3 * j$ will take 2 steps, this is because the 1 step will be used to evaluate $3 * j$ and \indent one more step for the assignment of $j \leftarrow$ \\
+\indent - Within this loop it contains the print statement of "Hi" which will create 1 more step. \\
+
+From this we can find the inner loop's time complexity: \\
+\begin{align*}
+1 + \sum_{j=1}^{\log_3 n + 1} (1 + 2 + 1) &= 1 + \sum_{j=1}^{\log_3 n + 1}  4 \\
+&= 1 + 4(\log_3 n + 1) \\
+&= (4\log_3 n + 4) + 1 \\
+&= 4\log_3 n + 5 \\
+\end{align*}
+From the above we can see that this will be the runtime-complexity of the inner loop.
+
+I will now analyze the outer loop to find the runtime complexity of that loop, such that:\\
+\begin{center}
+From this loop we can see that the $i$-loop will take 1 step to initialize $i=1$. \\
+\end{center}
+Further from this I will find how long it will take for this loop to iterate: \\
+\begin{center}
+We can see from this loop that the terminating term will be $n$ such that: \\
+$1+2k > n$, solving for k we get $k = \frac{n-1}{2}$
+\end{center}
+Since the comparison of $i\leq n$ will cause for one step to be added such that: \\
+\begin{center}
+$k = \frac{n-1}{2} + 1$
+\end{center}
 \end{proof}
+
+I will now find what the loop will be doing at each iteration: \\
+\indent -The comparison of $i\leq n$ will add 1 step \\
+\indent - On line 3 the update $i \leftarrow i + 2$ will take 2 steps, this is because the 1 step will be used to evaluate $i + 2$ and \indent one more step for the assignment of $i \leftarrow$ \\
+\indent - The main body of the $i$-loop will be contained within the $j$-loop \\
+I will now find the time complexity of T($n$) with both the loop of $i$ and $j$: \\
+\begin{align*}
+T(n)&= 1 + \sum_{i=1}^{\frac{n-1}{2}} (1 + 2 )  \\
+&= 1 + \sum_{i=1}^{\frac{n-1}{2}} 3 +  4\log_3 n + 5\\
+&= 1 + \sum_{i=1}^{\frac{n-1}{2}} 8 + 4\log_3 n \\
+&= 1 + \sum_{i=1}^{\frac{n-1}{2}} 8 + \sum_{i=1}^{\frac{n-1}{2}} 4\log_3 n \\
+&= 1 + (\frac{n-1}{2})*8 + (\frac{n-1}{2})*(4\log_3 n ) \\
+&= 1+(\frac{8n-8}{2}) + (\frac{4\log_3 n*n-1}{2}) \\
+&= 1 + (4n-4) 
+\end{align*}
 \end{required}
 
 \newpage
