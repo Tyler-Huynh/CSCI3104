@@ -190,7 +190,7 @@ We will first start by comparing $f_1(n)$ with $f_2(n)$ to find which function w
 &= \lim_{n \to \infty} \frac{2n+200}{1} \\
 &= \infty.
 \end{align*}
-We can see from the above that this will be  $f_2(n) \leq O(f_1(n))$, which is representative that $f_1(n)$ will be an upper bound of $f_2(n)$. Thus, $f_1(n) \geq \Omega(f_2(n))$, which is the lower bound. \\
+We can see from the above that this will be  $f_2(n) \in O(f_1(n))$, which is representative that $f_1(n)$ will be an upper bound of $f_2(n)$. Thus, $f_1(n) \in \Omega(f_2(n))$, which is the lower bound. \\
 
 We will now compare $f_1(n)$ with $f_4(n)$ to find which function will grow at a larger rate using L'hopitals rule: \\
 \begin{align*}
@@ -200,7 +200,7 @@ We will now compare $f_1(n)$ with $f_4(n)$ to find which function will grow at a
 &= \lim_{n \to \infty} \frac{2n^{-\frac{1}{2}}}{\frac{3}{4}}  = \frac{\infty}{3}  \\
 &= \infty.
 \end{align*} 
-We can see from the above that this will actually be $f_4(n) \leq O(f_1(n))$, which is representative that $f_1(n)$ will be an upper bound of $f_4(n)$. Thus, $f_1(n) \geq \Omega(f_4(n))$, which is the lower bound. \\
+We can see from the above that this will actually be $f_4(n) \in O(f_1(n))$, which is representative that $f_1(n)$ will be an upper bound of $f_4(n)$. Thus, $f_1(n) \in \Omega(f_4(n))$, which is the lower bound. \\
 
 We will now compare $f_1(n)$ with $f_3(n)$ to find which function will grow at a larger rate using L'hopitals rule: \\
 \begin{align*}
@@ -209,7 +209,7 @@ We will now compare $f_1(n)$ with $f_3(n)$ to find which function will grow at a
 &= \lim_{n \to \infty} \frac{2}{6n-40}  = \frac{2}{\infty}  \\
 &= 0.
 \end{align*} 
-We can see from the above that $f_3(n)$ will actually grow faster than $f_1(n)$, such that $f_1(n) \leq O(f_3(n))$. This shows that $f_3(n)$ will be an upper bound of $f_1(n)$. Thus, $f_3(n) \geq \Omega(f_1(n))$, which is the lower bound. We can see that since $f_3(n)$ will grow faster than $f_1(n)$ and $f_1(n)$ grows faster than both $f_2(n)$ and $f_3(n)$, than we know that it will grow the fastest out of our set of functions. \\
+We can see from the above that $f_3(n)$ will actually grow faster than $f_1(n)$, such that $f_1(n) \in O(f_3(n))$. This shows that $f_3(n)$ will be an upper bound of $f_1(n)$. Thus, $f_3(n) \in \Omega(f_1(n))$, which is the lower bound. We can see that since $f_3(n)$ will grow faster than $f_1(n)$ and $f_1(n)$ grows faster than both $f_2(n)$ and $f_3(n)$, than we know that it will grow the fastest out of our set of functions. \\
 
 We do not know whether $f_2(n)$ or $f_4(n)$ grows faster than each other so we will compare the two functions to each other using L'hopital's rule: \\
 \begin{align*}
@@ -217,7 +217,7 @@ We do not know whether $f_2(n)$ or $f_4(n)$ grows faster than each other so we w
 &= \lim_{n \to \infty} \frac{1}{\frac{3}{2}n^{\frac{1}{2}}}  = \frac{1}{\infty}\\
 &= 0.
 \end{align*} 
-We can see from the above that $f_4(n)$ will grow faster than $f_2(n)$, such that $f_2(n) \leq O(f_4(n))$. This shows that $f_4(n)$ will be an upper bound of $f_2(n)$. Thus, $f_4(n) \geq \Omega(f_2(n))$, which is the lower bound. \\
+We can see from the above that $f_4(n)$ will grow faster than $f_2(n)$, such that $f_2(n) \in O(f_4(n))$. This shows that $f_4(n)$ will be an upper bound of $f_2(n)$. Thus, $f_4(n) \in \Omega(f_2(n))$, which is the lower bound. \\
 
 Out of our set of functions we see that:
 \begin{center}
@@ -250,7 +250,7 @@ I will first compare the functions of $f_1(n)$ and $f_3(n)$ using L'hopital's ru
 &= \infty
 \end{align*} 
 
-We can see from the above that $f_1(n)$ will grow faster than $f_3(n)$, where $f_1(n)$ will be an upper bound of $f_3(n)$, such that $f_3(n) \leq O(f_1(n))$. Thus, $f_1(n) \geq \Omega(f_3(n))$, which is the lower bound. \\
+We can see from the above that $f_1(n)$ will grow faster than $f_3(n)$, where $f_1(n)$ will be an upper bound of $f_3(n)$, such that $f_3(n) \in O(f_1(n))$. Thus, $f_1(n) \in \Omega(f_3(n))$, which is the lower bound. \\
 
 I will now compare f $f_1(n)$ and $f_2(n)$ using L'hopital's rule:\\
 I will first change the base of $f_2(n)$ into $\log_7$ using the log base formula: 
@@ -266,7 +266,7 @@ I will now compare the two functions after performing the log base formula: \\
 &= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} (7(\log_7 n)^6) = (\frac{10}{\log_7 5})  * \infty\\
 &= \infty
 \end{align*} 
-We can see from the above that $f_1(n)$ will grow faster than $f_2(n)$, where $f_1(n)$ will be an upper bound of $f_2(n)$, such that $f_2(n) \leq O(f_1(n))$. Thus, $f_1(n) \geq \Omega(f_2(n))$, which is the lower bound. \\
+We can see from the above that $f_1(n)$ will grow faster than $f_2(n)$, where $f_1(n)$ will be an upper bound of $f_2(n)$, such that $f_2(n) \in O(f_1(n))$. Thus, $f_1(n) \in \Omega(f_2(n))$, which is the lower bound. \\
 
 I will now compare the functions $f_1(n)$ with $f_4(n)$, using L'hopital's rule: \\
 \begin{align*}
@@ -297,7 +297,7 @@ I will now do the log base formula on $f_1(n)$: \\
 &= \frac{5.04*10^{24}}{(\ln 7)^{7}} * 0 \\
 &= 0
 \end{align*} 
-From the above we can see that the function $f_1(n)$ will grow slower than the function $f_4(n)$, such that the function $f_4(n)$ will be an upper bound of $f_1(n)$. This is because as $f_4(n)$ is approaching infinity it will become an upper bound of $f_1(n)$.  Such that  $f_1(n) \leq O(f_3(n))$. Since $f_4(n)$ grows faster than the function $f_1(n)$, we can infer that it will grow the fastest amongst our set of functions. Thus, $f_4(n) \geq \Omega(f_1(n))$, which is the lower bound. \\
+From the above we can see that the function $f_1(n)$ will grow slower than the function $f_4(n)$, such that the function $f_4(n)$ will be an upper bound of $f_1(n)$. This is because as $f_4(n)$ is approaching infinity it will become an upper bound of $f_1(n)$.  Such that  $f_1(n) \in O(f_3(n))$. Since $f_4(n)$ grows faster than the function $f_1(n)$, we can infer that it will grow the fastest amongst our set of functions. Thus, $f_4(n) \in \Omega(f_1(n))$, which is the lower bound. \\
 
 I will now compare the functions of $f_2(n)$ and $f_3(n)$ to see out of these functions which one will grow faster using L'hopital's rule: \\
 I will first change the base of $f_2(n)$ into $\log_7$ using the log base formula: 
@@ -357,7 +357,7 @@ We will first compare functions $f_1(n)$ and $f_5(n)$ to see which function will
 &= \frac {\infty}{5} \\
 &= \infty
 \end{align*} 
-We can see from the above that the function $f_1(n)$ will grow faster than the function $f_5(n)$. Such that $f_5(n) \leq O(f_1(n))$. Further, the function $f_1(n)$ will be an upper bound of $f_5(n)$. Thus, the function $f_1(n) \geq \Omega(f_5(n))$, such that it will be a lower bound. \\
+We can see from the above that the function $f_1(n)$ will grow faster than the function $f_5(n)$. Such that $f_5(n) \in O(f_1(n))$. Further, the function $f_1(n)$ will be an upper bound of $f_5(n)$. Thus, the function $f_1(n) \in \Omega(f_5(n))$, such that it will be a lower bound. \\
 
 I will now compare the functions of $f_2(n)$ and $f_5(n)$, to see which function will grow faster: \\
 \begin{align*}
@@ -380,7 +380,7 @@ n^{\log_3 n} = \frac{\log_5 n}{\log_5 3}
 &= \infty^{\infty} \\
 &= \infty
 \end{align*} 
-We can see from the above that the function $f_3(n)$ will grow faster than the function of f $f_1(n)$, such that it will become $f_1(n) \leq O(f_3(n))$, which will become an upper bound. Further, the function $f_3(n) \leq \Omega(f_1(n))$.
+We can see from the above that the function $f_3(n)$ will grow faster than the function of f $f_1(n)$, such that it will become $f_1(n) \in O(f_3(n))$, which will become an upper bound. Further, the function $f_3(n) \in \Omega(f_1(n))$.
 
 I will now compare the functions of $f_3(n)$ and $f_4(n)$ to see which function will grow faster: \\
 \begin{align*}
@@ -392,7 +392,7 @@ I will now compare the functions of $f_3(n)$ and $f_4(n)$ to see which function 
 &= \infty^{\infty}\\
 &= \infty
 \end{align*} 
-From the above we can see that the function $f_3(n)$ will grow faster than the function $f_4(n)$, such that $f_4(n) \leq O(f_3(n))$. Where the function $f_3(n)$ will be an upper bound of $f_4(n)$. Such that $f_3(n) \leq \Omega(f_4(n))$.\\
+From the above we can see that the function $f_3(n)$ will grow faster than the function $f_4(n)$, such that $f_4(n) \in O(f_3(n))$. Where the function $f_3(n)$ will be an upper bound of $f_4(n)$. Such that $f_3(n) \in \Omega(f_4(n))$.\\
 
 I will now compare the function of $f_1(n)$ and  $f_4(n)$ to see which function will grow faster: \\
 \begin{align*}
@@ -404,7 +404,7 @@ I will now compare the function of $f_1(n)$ and  $f_4(n)$ to see which function 
 &= \infty^{\infty}\\
 &= \infty
 \end{align*} 
-We can see from the above that the function of $f_1(n)$ will grow faster than the function of $f_4(n)$, such that $f_4(n) \leq O(f_1(n))$, where the function $f_1(n)$ will be an upper bound of the function $f_4(n)$. Further, this will cause for the function $f_4(n)$, to be a lower bound of the function $f_1(n)$, such that $f_1(n) \leq \Omega(f_4(n))$.
+We can see from the above that the function of $f_1(n)$ will grow faster than the function of $f_4(n)$, such that $f_4(n) \in O(f_1(n))$, where the function $f_1(n)$ will be an upper bound of the function $f_4(n)$. Further, this will cause for the function $f_4(n)$, to be a lower bound of the function $f_1(n)$, such that $f_1(n) \in \Omega(f_4(n))$.
 
 Lastly, I will compare the function of $f_4(n)$ and $f_2(n)$, since we know that the function of $f_2(n)$ and $f_5(n)$ will grow at the same rate we can just compare for one of these functions:\\
 \begin{align*}
@@ -414,14 +414,14 @@ Lastly, I will compare the function of $f_4(n)$ and $f_2(n)$, since we know that
 &= \lim_{n \to \infty} \frac{\infty}{4} \\
 &= \infty
 \end{align*} 
-We can see from the above that the function $f_4(n)$ will grow faster than the function $f_2(n)$ and likewise $f_5(n)$ as well. Such that the function $f_2(n) \leq O(f_4n))$ and $f_5(n) \leq O(f_4(n))$. Both the functions $f_2(n)$ and $f_5(n)$ will be the lower bound of the function $f_4(n)$. Thus, $f_4(n) \leq \Omega(f_2(n))$ and $f_4(n) \leq \Omega(f_5(n))$. \\
+We can see from the above that the function $f_4(n)$ will grow faster than the function $f_2(n)$ and likewise $f_5(n)$ as well. Such that the function $f_2(n) \in O(f_4n))$ and $f_5(n) \in O(f_4(n))$. Both the functions $f_2(n)$ and $f_5(n)$ will be the lower bound of the function $f_4(n)$. Thus, $f_4(n) \in \Omega(f_2(n))$ and $f_4(n) \leq \Omega(f_5(n))$. \\
 
 The final answer after performing the necessary calculation shall be : \\
 \begin{center}
 $f_5(n)$, $f_2(n)$, $f_4(n)$, $f_1(n)$, $f_3(n)$
 \end{center}
 The functions above are sorted from the slowest to the fastest growth rates. \\
-The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic rate such that $f_2(n) = \Theta(f_5(n))$
+The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic rate such that $f_2(n) \in \Theta(f_5(n))$
         \end{proof}
         \newpage
 
@@ -446,7 +446,7 @@ I will first compare the functions of $f_2(n)$ and $f_3(n)$ to see which functio
 &= \lim_{n \to \infty} \frac{2}{\sqrt[3]2} \\
 &= \frac{2}{\sqrt[3]2} > 1
 \end{align*} 
-From this we can see that this limit will be divergent, by the ratio test such that the function $f_2(n)$ will grow faster than the function of $f_3(n)$, such that $f_3(n) \leq O(f_2(n))$. Where $f_3(n)$ exists as a lower bound of $f_2(n)$, such that $f_3(n) \leq \Omega(f_2(n))$. \\
+From this we can see that this limit will be divergent, by the ratio test such that the function $f_2(n)$ will grow faster than the function of $f_3(n)$, such that $f_3(n) \in O(f_2(n))$. Where $f_3(n)$ exists as a lower bound of $f_2(n)$, such that $f_3(n) \in \Omega(f_2(n))$. \\
 
 I will now compare the functions of $f_2(n)$ and $f_1(n)$, to see which function will grow faster using the ratio test: \\
 \begin{align*}
@@ -456,7 +456,7 @@ I will now compare the functions of $f_2(n)$ and $f_1(n)$, to see which function
 &= \lim_{n \to \infty} \frac{2}{n+1}\\
 &= 0 < 1
 \end{align*} 
-From this we can see that this limit will be convergent, by the ratio test such that the function $f_1(n)$  will grow faster than the function $f_2(n)$. Such that $f_2(n) \leq O(f_1(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_1(n)$, such that $f_1(n) \leq \Omega(f_2(n))$. \\
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_1(n)$  will grow faster than the function $f_2(n)$. Such that $f_2(n) \in O(f_1(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_1(n)$, such that $f_1(n) \in \Omega(f_2(n))$. \\
 
 I will now compare the functions of $f_4(n)$ and $f_2(n)$, to see which function will grow faster by the ratio test: \\
 \begin{align*}
@@ -471,7 +471,7 @@ I will now compare the functions of $f_4(n)$ and $f_2(n)$, to see which function
 &= \frac{2}{\infty} \\
 &= 0 < 1
 \end{align*}
-From this we can see that this limit will be convergent, by the ratio test such that the function $f_4(n)$ will grow faster than the function $f_2(n)$. Such that $f_2(n) \leq O(f_4(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_2(n)$, such that  $f_4(n) \leq \Omega(f_2(n))$. \\
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_4(n)$ will grow faster than the function $f_2(n)$. Such that $f_2(n) \in O(f_4(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_2(n)$, such that  $f_4(n) \in \Omega(f_2(n))$. \\
 
 I will now compare the functions $f_4(n)$ and $f_6(n)$, using the ratio test: \\
 \begin{align*}
@@ -486,7 +486,7 @@ I will now compare the functions $f_4(n)$ and $f_6(n)$, using the ratio test: \\
 &= \lim_{n \to \infty} \frac{1}{e(1+\frac{1}{n})} \\
 &= \frac{1}{e} < 1
 \end{align*}
-From this we can see that this limit will be convergent, by the ratio test such that the function $f_6(n)$ will grow faster than the function $f_4(n)$. Such that $f_4(n) \leq O(f_6(n))$. Where $f_4(n)$ will exist as a lower bound to the function $f_6(n)$, such that  $f_6(n) \leq \Omega(f_4(n))$. \\
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_6(n)$ will grow faster than the function $f_4(n)$. Such that $f_4(n) \in O(f_6(n))$. Where $f_4(n)$ will exist as a lower bound to the function $f_6(n)$, such that  $f_6(n) \in \Omega(f_4(n))$. \\
 
 I will now compare the functions $f_1(n)$ and $f_4(n)$, using L'hopital's rule to determine it as well as Sterling's approximation since we know that $n! \sim \left(\frac{n}{e}\right)^n \sqrt{2 \pi n}$: \\
 \begin{align*}
@@ -500,7 +500,7 @@ I will now compare the functions $f_1(n)$ and $f_4(n)$, using L'hopital's rule t
 &=(\sqrt{2\pi})*0 \\
 &=0
 \end{align*}
-From the above we know that $f_4(n)$ will grow faster than $f_1(n)$, by L'hopital's rule and using Sterling's approximation, we know that the function $f_4(n)$ will be an upper bound of $f_1(n)$, such that $f_1(n) \leq O(f_4(n))$. We know that the function $f_1(n)$ will be a lower bound of $f_4(n)$, such that $f_4(n) \leq \Omega(f_1(n))$.
+From the above we know that $f_4(n)$ will grow faster than $f_1(n)$, by L'hopital's rule and using Sterling's approximation, we know that the function $f_4(n)$ will be an upper bound of $f_1(n)$, such that $f_1(n) \in O(f_4(n))$. We know that the function $f_1(n)$ will be a lower bound of $f_4(n)$, such that $f_4(n) \in \Omega(f_1(n))$.
 
 I will now compare $f_2(n)$ and $f_5(n)$ to see which function will grow faster by using the ratio test: \\
 \begin{align*}
@@ -524,9 +524,9 @@ $f_5(n) = 2^{n-2} $
 The above shows that a constant exists between the functions of $f_2(n)$ and $f_5(n)$, such that: \\
 $\frac{1}{4}$ * $f_2(n)$ \\
 $\frac{1}{4}$ * $2^{n})$ \\
-$f_2(n)$=$\Theta(f_5(n))$ \\
+$f_2(n)$$\in$$\Theta(f_5(n))$ \\
 \end{center}
-From the above we can see that a constant exists between the functions of $f_2(n)$ and $f_5(n)$, since there exists a constant this means that these two functions will grow at the same rate as one another. From this it is shown that  $f_2(n)$=$\Theta(f_5(n))$. \\
+From the above we can see that a constant exists between the functions of $f_2(n)$ and $f_5(n)$, since there exists a constant this means that these two functions will grow at the same rate as one another. From this it is shown that  $f_2(n)$ $\in$ $\Theta(f_5(n))$. \\
 
 Since we know that the function  $f_2(n)$ will grow faster than the function $f_3(n)$, since both the function of  $f_2(n)$ and $f_5(n)$ grow at the same rate than the function $f_5(n)$ must also grow faster than the function $f_3(n)$. \\
 
@@ -535,7 +535,7 @@ The final answer after performing the necessary calculations shall be : \\
 $f_3(n)$, $f_5(n)$, $f_2(n)$, $f_1(n)$, $f_4(n)$, $f_6(n)$
 \end{center}
 The functions above are sorted from the slowest to the fastest growth rates. \\
-The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic rate such that $f_2(n) = \Theta(f_5(n))$
+The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic rate such that $f_2(n) \in \Theta(f_5(n))$
 \end{proof}
 \end{enumerate}
 

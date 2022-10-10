@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{Instructions}{1}{section*.2}%
-\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{2}{section*.3}%
+\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{1}{section*.3}%
 \contentsline {section}{\numberline {12}Standard 12- Asymptotics I (Calculus I techniques)}{3}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Problem 12\ref {1a}}{4}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}Problem 12\ref {1b}}{6}{subsection.12.2}%
