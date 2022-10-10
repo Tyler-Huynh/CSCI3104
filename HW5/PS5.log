@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  8 OCT 2022 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  9 OCT 2022 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1408,66 +1408,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
-[12] [13]
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
+
+ []
+
+[13]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 439.
+put line 456.
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--452
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--470
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--472
+Underfull \hbox (badness 10000) in paragraph at lines 483--487
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--500
+Underfull \hbox (badness 10000) in paragraph at lines 512--517
 
  []
 
-[15] [16] (./PS5.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--528
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 555--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--581
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
+
+ []
+
+[17] (./PS5.aux)
 Package rerunfilecheck Info: File `PS5.out' has not changed.
 (rerunfilecheck)             Checksum: AE4ECE4EC5772B9BDF4A3887022691C4;2365.
  ) 
 Here is how much of TeX's memory you used:
- 37860 strings out of 478268
- 807109 string characters out of 5846347
+ 37861 strings out of 478268
+ 807116 string characters out of 5846347
  1169368 words of memory out of 5000000
  55459 multiletter control sequences out of 15000+600000
  479038 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,94p,1601b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,94p,1601b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1487,10 +1527,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS5.pdf (16 pages, 251832 bytes).
+Output written on PS5.pdf (17 pages, 255376 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 40 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
