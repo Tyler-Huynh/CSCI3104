@@ -432,12 +432,97 @@ $f_6(n)$: $\sqrt{n^{2n+1}}$
 I will first compare the functions of $f_2(n)$ and $f_3(n)$ to see which function will grow faster using the ratio test: \\
 \begin{align*}
 &= \lim_{n \to \infty} \frac{2^{n}}{2^{\frac{n}{3}}} \\
-&= \lim_{n \to \infty} \frac{2^{\frac{n+1}{3}}}{2^{n + 1}} * \frac{2^{n}}{2^{\frac{n}{3}}} \\
-&= \lim_{n \to \infty} \frac{2^{\frac{n}{3}} * 2^{\frac{1}{3}}} {2^{n} * 2} * \frac{2^{n}}{2^{\frac{n}{3}}} \\
-&= \lim_{n \to \infty} \frac{2^{\frac{1}{3}}}{2} \\
-&= \lim_{n \to \infty} \frac{\sqrt[3]2}{2} \\
-&= \frac{\sqrt[3]2}{2} \le 1
+&= \lim_{n \to \infty} \frac{2^{n + 1}}{2^{\frac{n+1}{3}}} * \frac{2^{\frac{n}{3}}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2^{n} * 2} {2^{\frac{n}{3}} * 2^{\frac{1}{3}}} * \frac{2^{\frac{n}{3}}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2}{2^{\frac{1}{3}}} \\
+&= \lim_{n \to \infty} \frac{2}{\sqrt[3]2} \\
+&= \frac{2}{\sqrt[3]2} > 1
 \end{align*} 
+From this we can see that this limit will be divergent, by the ratio test such that the function $f_2(n)$ will grow faster than the function of $f_3(n)$, such that $f_3(n) \leq O(f_2(n))$. Where $f_3(n)$ exists as a lower bound of $f_2(n)$, such that $f_3(n) \leq \Omega(f_2(n))$. \\
+
+I will now compare the functions of $f_2(n)$ and $f_1(n)$, to see which function will grow faster using the ratio test: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{2^{n}}{n!} \\
+&= \lim_{n \to \infty} \frac{2^{n+1}}{(n+1)!} * \frac{n!}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2^{n} * 2}{n!(n+1)} * \frac{n!}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2}{n+1}\\
+&= 0 < 1
+\end{align*} 
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_1(n)$  will grow faster than the function $f_2(n)$. Such that $f_2(n) \leq O(f_1(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_1(n)$, such that $f_1(n) \leq \Omega(f_2(n))$. \\
+
+I will now compare the functions of $f_4(n)$ and $f_2(n)$, to see which function will grow faster by the ratio test: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{2^{n}}{n^{n}} \\
+&= \lim_{n \to \infty} \frac{2^{n+1}}{(n+1)^{n+1}} * \frac{n^{n}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2^{n} * 2}{n+1^{n+1}} * \frac{n^{n}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2}{n+1^{n+1}} * n^{n} \\
+&= \lim_{n \to \infty} \frac{2}{n+1} * (\frac{n}{n+1})^{n} \\
+&= \lim_{n \to \infty} \frac{2}{n+1} * (\frac{1^{n}}{1+\frac{1}{n}^{n}}) \qquad (1+\frac{1}{n})^{n} = e \\
+&= \lim_{n \to \infty} \frac{2}{n+1} * (\frac{1}{e}) \\
+&= \lim_{n \to \infty} \frac{2}{en+e} \\
+&= \frac{2}{\infty} \\
+&= 0 < 1
+\end{align*}
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_4(n)$ will grow faster than the function $f_2(n)$. Such that $f_2(n) \leq O(f_4(n))$. Where $f_2(n)$ will exist as a lower bound to the function $f_2(n)$, such that  $f_4(n) \leq \Omega(f_2(n))$. \\
+
+I will now compare the functions $f_4(n)$ and $f_6(n)$, using the ratio test: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n^{n}}{\sqrt {n^{2n+1}}} \\
+&= \lim_{n \to \infty} \frac{(n+1)^{\frac{2n+3}{2}}}{(n+1)^{n+1}} * \frac{n^n}{n^{\frac{2n+1}{2}}}\\
+&= \lim_{n \to \infty} \frac{n^{\frac{2n}{2}}*n^{\frac{3}{2}}}{(n+1)^{n+1}} * \frac{n^{n}}{n^{\frac{2n}{2}}*n^{\frac{1}{2}}} \\
+&= \lim_{n \to \infty} \frac{n^{\frac{3}{2}}}{(n+1)(n+1)^{n}} * \frac{n^{n}}{n^{\frac{1}{2}}} \\
+&= \lim_{n \to \infty} \frac{n^{\frac{3}{2}}}{(n+1)(n^{\frac{1}{2}})} * (\frac{n}{n+1})^{n} \\ 
+&= \lim_{n \to \infty} \frac{n^{\frac{3}{2}}}{(n+1)(n^{\frac{1}{2}})} * (\frac{1^{n}}{1+\frac{1}{n}^{n}}) \qquad (1+\frac{1}{n})^{n} = e \\
+&= \lim_{n \to \infty} \frac{n}{n+1} * (\frac{1}{e}) \\
+&= \lim_{n \to \infty} \frac{n}{n(1+\frac{1}{n})} * (\frac{1}{e}) \\
+&= \lim_{n \to \infty} \frac{1}{e(1+\frac{1}{n})} \\
+&= \frac{1}{e} < 1
+\end{align*}
+From this we can see that this limit will be convergent, by the ratio test such that the function $f_6(n)$ will grow faster than the function $f_4(n)$. Such that $f_4(n) \leq O(f_6(n))$. Where $f_4(n)$ will exist as a lower bound to the function $f_6(n)$, such that  $f_6(n) \leq \Omega(f_4(n))$. \\
+
+I will now compare the functions $f_1(n)$ and $f_4(n)$, using L'hopital's rule to determine it as well as Sterling's approximation since we know that $n! \sim \left(\frac{n}{e}\right)^n \sqrt{2 \pi n}$: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{n!}{n^{n}}\\
+&= \lim_{n \to \infty} \frac{(\frac{n}{e})^{n} * \sqrt {2\pi n}}{n^{n}} \\
+&= \lim_{n \to \infty} \frac{(\frac{1}{e}^{n})*(n^{n})*(\sqrt{2\pi})*(\sqrt{n})}{n^{n}} \\
+&=(\sqrt{2\pi})* \lim_{n \to \infty} (\frac{1}{e}^{n})*(n^{\frac{1}{2}}) \\
+&=(\sqrt{2\pi})* \lim_{n \to \infty} (\frac{n^{\frac{1}{2}}}{e^{n}}) \\
+&=(\sqrt{2\pi})* \lim_{n \to \infty} (\frac{\frac{1}{2}n^{-\frac{1}{2}}}{e^{n}}) \\
+&=(\sqrt{2\pi})* \lim_{n \to \infty} (\frac{1}{2e^{n^\frac{1}{2}}}) \\
+&=(\sqrt{2\pi})*0 \\
+&=0
+\end{align*}
+From the above we know that $f_4(n)$ will grow faster than $f_1(n)$, by L'hopital's rule and using Sterling's approximation, we know that the function $f_4(n)$ will be an upper bound of $f_1(n)$, such that $f_1(n) \leq O(f_4(n))$. We know that the function $f_1(n)$ will be a lower bound of $f_4(n)$, such that $f_4(n) \leq \Omega(f_1(n))$.
+
+I will now compare $f_2(n)$ and $f_5(n)$ to see which function will grow faster by using the ratio test: \\
+\begin{align*}
+&= \lim_{n \to \infty} \frac{2^n}{2^{n-2}} \\
+&= \lim_{n \to \infty} \frac{2^{n+1}}{2^{n-1}} * \frac{2^{n-2}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2*2^{n}}{2^{n}*2^{-1}} * \frac{2^{n}*2^{-2}}{2^{n}} \\
+&= \lim_{n \to \infty} \frac{2}{\frac{1}{2}} * \frac{1}{4}\\
+&= \lim_{n \to \infty} \frac{2}{4*\frac{1}{2}} \\
+&= \lim_{n \to \infty} \frac{2}{2} \\
+&= 1 = 1
+\end{align*}
+From the above we see that the limit of the functions $f_2(n)$ and $f_5(n)$, by the ratio test will be inconclusive so we will have to use a different test, I will find a constant between the two functions to see which function will grow faster: \\
+\begin{center}
+$f_5(n) = 2^{n-2} $
+\end{center} 
+\begin{align*}
+2^{2n-2} &= (2^n) * (2^{-2}) \\
+&= \frac{1}{4} * (2^n) \\
+\end{align*}
+\begin{center}
+The above shows that a constant exists between the functions of $f_2(n)$ and $f_5(n)$, such that: \\
+$\frac{1}{4}$ * $f_2(n)$ \\
+$\frac{1}{4}$ * $2^{n})$ \\
+$f_2(n)$ = $f_5(n)$ \\
+\end{center}
+From the above we can see that a constant exists between the functions of $f_2(n)$ and $f_5(n)$, since they equal each other this means that these two functions will grow at the same rate as one another. From this it is shown that  $f_2(n)$=$\Theta(f_5(n))$. \\
+
+Since we know that the function  $f_2(n)$ will grow faster than the function $f_3(n)$, since both the function of  $f_2(n)$ and $f_5(n)$ grow at the same rate than the function $f_5(n)$ must also grow faster than the function $f_3(n)$. \\
+
+Our final 
 \end{proof}
 \end{enumerate}
 
