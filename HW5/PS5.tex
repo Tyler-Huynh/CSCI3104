@@ -98,7 +98,7 @@ Prof. Grochow and Nagesh} \\
 Due Date \dotfill Monday October 10, 2022 8pm MT \\
 Name \dotfill \textbf{Tyler Huynh} \\
 Student ID \dotfill \textbf{109603994} \\
-Collaborators \dotfill \textbf{List Your Collaborators Here}
+Collaborators \dotfill \textbf{N/A}
 
 \tableofcontents
 
@@ -261,9 +261,9 @@ I will first change the base of $f_2(n)$ into $\log_7$ using the log base formul
 I will now compare the two functions after performing the log base formula: \\
 \begin{align*}
 \lim_{n \to \infty} \frac{(\log_7 n)^7}{10\log_5n} &= \lim_{n \to \infty} \frac{\log_7 n)^7}{(\frac{10}{\log_7 5})\log_7 n}  = \frac{\infty}{\infty} \qquad Indeterminate  \\
-&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} \frac{(\log_7 n)^7}{\log_7 n}\\
-&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} \frac{(7(\log_7 n)^6) * \frac{1}{n\ln7}}{\frac{1}{n\ln7}}\\
-&= (\frac{10}{\log_7 5}) * \lim_{n \to \infty} (7(\log_7 n)^6) = (\frac{10}{\log_7 5})  * \infty\\
+&= (\frac{\log_7 5}{10}) * \lim_{n \to \infty} \frac{(\log_7 n)^7}{\log_7 n}\\
+&= (\frac{\log_7 5}{10}) * \lim_{n \to \infty} \frac{(7(\log_7 n)^6) * \frac{1}{n\ln7}}{\frac{1}{n\ln7}}\\
+&= (\frac{\log_7 5}{10}) * \lim_{n \to \infty} (7(\log_7 n)^6) = (\frac{\log_7 5}{10})  * \infty\\
 &= \infty
 \end{align*} 
 We can see from the above that $f_1(n)$ will grow faster than $f_2(n)$, where $f_1(n)$ will be an upper bound of $f_2(n)$, such that $f_2(n) \in O(f_1(n))$. Thus, $f_1(n) \in \Omega(f_2(n))$, which is the lower bound. \\
@@ -414,7 +414,7 @@ Lastly, I will compare the function of $f_4(n)$ and $f_2(n)$, since we know that
 &= \lim_{n \to \infty} \frac{\infty}{4} \\
 &= \infty
 \end{align*} 
-We can see from the above that the function $f_4(n)$ will grow faster than the function $f_2(n)$ and likewise $f_5(n)$ as well. Such that the function $f_2(n) \in O(f_4n))$ and $f_5(n) \in O(f_4(n))$. Both the functions $f_2(n)$ and $f_5(n)$ will be the lower bound of the function $f_4(n)$. Thus, $f_4(n) \in \Omega(f_2(n))$ and $f_4(n) \leq \Omega(f_5(n))$. \\
+We can see from the above that the function $f_4(n)$ will grow faster than the function $f_2(n)$ and likewise $f_5(n)$ as well. Such that the function $f_2(n) \in O(f_4n))$ and $f_5(n) \in O(f_4(n))$. Both the functions $f_2(n)$ and $f_5(n)$ will be the lower bound of the function $f_4(n)$. Thus, $f_4(n) \in \Omega(f_2(n))$ and $f_4(n) \in \Omega(f_5(n))$. \\
 
 The final answer after performing the necessary calculation shall be : \\
 \begin{center}
@@ -430,12 +430,12 @@ The functions of both $f_2(n)$ and $f_5(n)$ will grow at the same asymptomatic r
 \begin{proof}[Answer]
 I will first define the functions that we will be using to compare: \\
 \begin{center}
-$f_1(n)$: $n!$
-$f_2(n)$: $2^n$
-$f_3(n)$: $2^{n/3}$
-$f_4(n)$: $n^n$
-$f_5(n)$: $2^{n-2}$
-$f_6(n)$: $\sqrt{n^{2n+1}}$   
+$f_1(n)$= $n!$ \\
+$f_2(n)$= $2^n$\\
+$f_3(n)$= $2^{n/3}$\\
+$f_4(n)$= $n^n$\\
+$f_5(n)$= $2^{n-2}$\\
+$f_6(n)$= $\sqrt{n^{2n+1}}$\\
 \end{center}
 I will first compare the functions of $f_2(n)$ and $f_3(n)$ to see which function will grow faster using the ratio test: \\
 \begin{align*}
