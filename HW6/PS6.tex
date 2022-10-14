@@ -124,9 +124,9 @@ Instructors: Prof. Grochow and Nagesh} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 Due Date \dotfill October 17, 2022 \\
-Name \dotfill \textbf{Your Name} \\
-Student ID \dotfill \textbf{Your Student ID} \\
-Collaborators \dotfill \textbf{List Your Collaborators Here}
+Name \dotfill \textbf{Tyler Huynh} \\
+Student ID \dotfill \textbf{109603994} \\
+Collaborators \dotfill \textbf{N/A}
 
 \renewcommand{\thesubsection}{\arabic{section}(\alph{subsection}). }
 
@@ -164,7 +164,7 @@ On my honor, my submission reflects the following:
 \end{requiredHC}
 
 \begin{proof}[Honor Pledge]
-%%Replace this comment with the Honor Pledge
+I, \textbf{Tyler Huynh} on my honor pledge that my submission is a reflection of my own understanding of the material, any and all collaborations/sources have been properly cited, I have not posted any material to external sources, and I have not copied other solutions as my own.
 \end{proof}
 
 
@@ -202,10 +202,45 @@ For each algorithm, write down the recurrence relation for the number of times t
 \end{algorithmic}
 \end{algorithm}
 
-\begin{proof}[Answer]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% YOUR ANSWER GOES HERE: type your answer in below                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}[Answer] \textbf{Referenced Levet Notes} \\
+\textbf{Base Case:} \\
+For the base case it will just return n, such that it will be: \\
+\begin{center}
+$T(0)$ = $\Theta(1)$ \\
+$T(1)$ = $\Theta(1)$ \\ 
+$T(2)$ = $\Theta(1)$ \\
+$T(3)$ = $\Theta(1)$ \\
+$T(4)$ = $\Theta(1)$ \\ 
+$T(5)$ = $\Theta(1)$ \\
+\end{center}
+From the above that we can see that for the base case when it returns n it will take $\Theta(1)$  to run. \\
+
+\textbf{Recursive Case:} \\
+\indent-On line 8 for the recursive case the function will take 1 step to initialize i at 1 \\
+\indent-It will also take 2 steps, 1 step  to evaluate $i + 1$ and 1 more step for the assignment of $i \gets$ on line 8 \\
+\indent-It will take 1 step to print "Welcome" on line 9 \\
+
+The function will run a total 3n times. \\
+From this we can find the total runtime complexity of the for loop: \\
+\begin{align*}
+1 + \sum_{i=1}^{3n} (1 + 2 + 1) &= 1 + \sum_{i=1}^{3n}  4 + 3n \\
+&= \Theta(n)
+\end{align*}
+
+I will now find the runtime complexity of the function in general: \\
+\begin{align*}
+T(n) &= T(\frac{n}{10}) + T(\frac{n}{5}) + T(\frac{n}{5}) + \Theta(n)\\
+&= 2T(\frac{n}{5}) + T(\frac{n}{10}) + \Theta(n)
+\end{align*}
+
+$$
+T(n) = \begin{cases}
+\Theta(n) & : n < 3, \\
+2T(\frac{n}{2}) + T(\frac{n}{10}) + \Theta(n) & : n \geq 3.
+\end{cases}
+$$
+
+From the above this is final answer for the runtime complexity of the function.
 \end{proof}
 
 \newpage
@@ -234,9 +269,42 @@ For each algorithm, write down the recurrence relation for the number of times t
 \end{algorithm}
 
 \begin{proof}[Answer]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% YOUR ANSWER GOES HERE: type your answer in below                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Base Case:} \\
+For the base case it will just, such that: \\
+\begin{center}
+$T(0)$ = $\Theta(1)$ \\
+$T(1)$ = $\Theta(1)$ \\ 
+$T(2)$ = $\Theta(1)$ \\
+$T(3)$ = $\Theta(1)$ \\
+$T(4)$ = $\Theta(1)$ \\ 
+$T(5)$ = $\Theta(1)$ \\
+$T(6)$ = $\Theta(1)$ \\
+$T(7)$ = $\Theta(1)$ \\
+\end{center}
+From the above we can see that for the base case when it returns n it will take $\Theta(1)$ to run. \\
+
+\textbf{Recursive Case:} \\
+Inner Loop: \\
+\indent -We see that initializing j at 1 will take 1 step on line 8\\
+\indent -We see that the evaluation of j * 3 will take 1 step and the 1 more step for the assignment of $j \gets$ \\
+\indent -We see that the print statement "Welcome" will take 1 step 
+
+Outer Loop: \\
+\indent -We see that initializing i at 1 will take 1 step on line 7\\
+\indent -We see that the evaluation of i * 2 will take 1 step and the 1 more step for the assignment of $i \gets$ \\
+\indent -For the rest of the steps it will exist within the inner loop of j \\
+
+The function will run n times in total. \\
+
+I will now find the runtime complexity of the inner loop: \\
+\begin{align*}
+1 + \sum_{j=1}^{n} (1 + 2 + 1) &= 1 + \sum_{i=1}^{3n}  4 + n \\
+&= \Theta(n)
+\end{align*}
+
+
+
+
 \end{proof}
 
 \end{enumerate}
@@ -261,7 +329,7 @@ T(n) = \begin{cases}
 $$
 
 \begin{proof}[Answer]
-% YOUR ANSWER HERE
+From the piecewise function we see that 
 \end{proof}
 
 
@@ -275,7 +343,29 @@ T(n) &= \begin{cases}
 \end{cases}
 \end{align*}
 
-\begin{proof}[Answer] % YOUR ANSWER HERE
+\begin{proof}[Answer] 
+From the piecewise function we see that 2 will be subtracted multiple times in a row up to k, such that: \\
+\begin{align*}
+T(n-2) &= n - 2 - 2 - 2 - 2 - 2 - 2 - 2 \\
+n - 2 - 2 - 2 - 2 - 2 - 2 - 2 &= k \\
+\end{align*}
+From this we can find the steps of $T(n)$, such that: \\
+\begin{align*}
+T(n) &= 7T(n-2) + 9  \\
+T(n-2) &= 7T(n-4) + 9 \\
+T(n-4) &= 7T(n-6) + 9 \\
+T(n-6) &= 7T(n-8) + 9 \\
+\end{align*}
+From this we can then find the function such that $T(n) \in \Theta(f(n))$: \\
+\begin{align*}
+T(n) &= 7T(n-2) + 9  \\
+&= 7[7T(n-4) + 9] +9 \\
+&= 7[7[7T(n-6) + 9] +9] + 9
+\end{align*}
+To save us time we can sum this data up into a summation such that: \\
+\begin{align*}
+T(n) &= \sum_{i=0}^{\frac{9}{5}} (n-2i) * 7^{i} + 9
+\end{align*}
 \end{proof}
 \end{enumerate}
 \end{required}
