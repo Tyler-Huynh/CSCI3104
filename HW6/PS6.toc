@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {16}Standard 16 - Analyzing Code: Writing Down Recurrences}{3}{section.16}%
 \contentsline {subsection}{\numberline {16(a). }Problem 16\ref {wdr1}}{3}{subsection.16.1}%
 \contentsline {subsection}{\numberline {16(b). }Problem 16\ref {wdr2}}{5}{subsection.16.2}%
-\contentsline {section}{\numberline {17}Standard 17 - Solving Recurrences I: Unrolling}{6}{section.17}%
-\contentsline {subsection}{\numberline {17(a). }Problem 17(a)}{6}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17(b). }Problem 17(b)}{7}{subsection.17.2}%
-\contentsline {section}{\numberline {18}Standard 18 - Divide and Conquer: Counterexamples}{8}{section.18}%
+\contentsline {section}{\numberline {17}Standard 17 - Solving Recurrences I: Unrolling}{7}{section.17}%
+\contentsline {subsection}{\numberline {17(a). }Problem 17(a)}{7}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17(b). }Problem 17(b)}{8}{subsection.17.2}%
+\contentsline {section}{\numberline {18}Standard 18 - Divide and Conquer: Counterexamples}{9}{section.18}%

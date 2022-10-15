@@ -223,7 +223,8 @@ From the above that we can see that for the base case when it returns n it will 
 The function will run a total 3n times. \\
 From this we can find the total runtime complexity of the for loop: \\
 \begin{align*}
-1 + \sum_{i=1}^{3n} (1 + 2 + 1) &= 1 + \sum_{i=1}^{3n}  4 + 3n \\
+1 + \sum_{i=1}^{3n} (1 + 2 + 1) &= 1 + \sum_{i=1}^{3n}  4 \\
+&= 1+ 12n \\
 &= \Theta(n)
 \end{align*}
 
@@ -235,8 +236,8 @@ T(n) &= T(\frac{n}{10}) + T(\frac{n}{5}) + T(\frac{n}{5}) + \Theta(n)\\
 
 $$
 T(n) = \begin{cases}
-\Theta(n) & : n < 3, \\
-2T(\frac{n}{2}) + T(\frac{n}{10}) + \Theta(n) & : n \geq 3.
+\Theta(1) & : n \leq 5, \\
+2T(\frac{n}{2}) + T(\frac{n}{10}) + \Theta(n) & : n > 5.
 \end{cases}
 $$
 
@@ -287,20 +288,48 @@ From the above we can see that for the base case when it returns n it will take 
 Inner Loop: \\
 \indent -We see that initializing j at 1 will take 1 step on line 8\\
 \indent -We see that the evaluation of j * 3 will take 1 step and the 1 more step for the assignment of $j \gets$ \\
-\indent -We see that the print statement "Welcome" will take 1 step 
+\indent -We see that the print statement "Welcome" will take 1 step \\
+\indent -The inner loop will run $\log_3 n$ times
 
 Outer Loop: \\
 \indent -We see that initializing i at 1 will take 1 step on line 7\\
 \indent -We see that the evaluation of i * 2 will take 1 step and the 1 more step for the assignment of $i \gets$ \\
 \indent -For the rest of the steps it will exist within the inner loop of j \\
+\indent -The outer loop will run $\log_2 n$ times
 
-The function will run n times in total. \\
+
 
 I will now find the runtime complexity of the inner loop: \\
 \begin{align*}
-1 + \sum_{j=1}^{n} (1 + 2 + 1) &= 1 + \sum_{i=1}^{3n}  4 + n \\
-&= \Theta(n)
+1 + \sum_{j=1}^{\log_3 n} (1 + 2 + 1) &= 1 + \sum_{j=1}^{\log_3 n}  4 \\
+&= 1 + 4(\log_3 n)\\
+&= 1 + 4\log_3 n\\
+&= \Theta(\log n) \\
 \end{align*}
+
+Runtime complexity of the outer loop: \\
+\begin{align*}
+1 + \sum_{i=1}^{\log_2 n} (1 + 2) + (1 + (4\log_3 n))&= 1 + \sum_{i=1}^{\log_2 n}  (1 + 2) +  (1 + (4\log_3 n))\\
+&=1 + \sum_{i=1}^{\log_2 n} 4 + (4\log_3 n)\\
+&= 1 + \sum_{i=1}^{\log_2 n} 4 + 4\sum_{i=1}^{\log_2 n} \log_3 n \\
+&= 1 + 4(\log_2 n) + 4(\log_2 n)(\log_3 n) \qquad \log_3 n = \frac{\log_2 n}{\log_2 3}\\
+&= 1 + 4\log_2 n + 4(\log_2 n)(\frac{\log_2 n}{\log_2 3}) \\
+&= 1 + 4\log_2 n + (\frac{4}{\log_2 3})((\log_2 n)^2) \\
+&= \Theta((\log n)^2)
+\end{align*}
+From the above we have found the run time of the two loops, I will now write out our recurrence relation: \\
+\begin{align*}
+T(n) &= T(\frac{n}{14}) + T(\frac{n}{14}) + \Theta((\log_n)^2)\\
+&= 2T(\frac{n}{14}) + \Theta((\log_n)^2)
+\end{align*}
+Thus, we have our final runtime complexity of the function: \\
+$$
+T(n) = \begin{cases}
+\Theta(1) & : n \leq7, \\
+2T(\frac{n}{14}) + \Theta((\log_n)^2) & : n > 7.
+\end{cases}
+$$
+
 
 
 
@@ -329,7 +358,11 @@ T(n) = \begin{cases}
 $$
 
 \begin{proof}[Answer]
-From the piecewise function we see that 
+From the piecewise function we see that that 2 will be divided multiple times up to k, such that: \\
+\begin{align*}
+T(\frac{n}{2}) &= \\
+n - 2 - 2 - 2 - 2 - 2 - 2 - 2 &= k \\
+\end{align*}
 \end{proof}
 
 
@@ -344,6 +377,13 @@ T(n) &= \begin{cases}
 \end{align*}
 
 \begin{proof}[Answer] 
+ will now find how many times we must unroll first up to k: \\
+\begin{center}
+We will hit a base case when: \\
+$n-2k < 2$
+I will now solve for k such that: \\
+$k > \frac{n-2}{2}$
+\end{center}
 From the piecewise function we see that 2 will be subtracted multiple times in a row up to k, such that: \\
 \begin{align*}
 T(n-2) &= n - 2 - 2 - 2 - 2 - 2 - 2 - 2 \\
@@ -364,8 +404,9 @@ T(n) &= 7T(n-2) + 9  \\
 \end{align*}
 To save us time we can sum this data up into a summation such that: \\
 \begin{align*}
-T(n) &= \sum_{i=0}^{\frac{9}{5}} (n-2i) * 7^{i} + 9
+T(n) &= \sum_{i=1}^{\frac{n-2}{2}} (n-2i) * 7^{i} +9
 \end{align*}
+I
 \end{proof}
 \end{enumerate}
 \end{required}
