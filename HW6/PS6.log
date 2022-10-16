@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  14 OCT 2022 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  16 OCT 2022 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1440,34 +1440,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-(./PS6.toc
-Overfull \hbox (7.2594pt too wide) detected at line 5
-\OT1/cmr/m/n/10.95 16(a).  
- []
 
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-Overfull \hbox (7.86774pt too wide) detected at line 6
-\OT1/cmr/m/n/10.95 16(b).  
- []
-
-
-Overfull \hbox (7.2594pt too wide) detected at line 8
-\OT1/cmr/m/n/10.95 17(a).  
- []
-
-
-Overfull \hbox (7.86774pt too wide) detected at line 9
-\OT1/cmr/m/n/10.95 17(b).  
- []
-
-)
 \tf@toc=\write8
 \openout8 = `PS6.toc'.
 
- [1
+[1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
+
+LaTeX Warning: Reference `wdr1' on page 3 undefined on input line 182.
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 186.
 
@@ -1496,6 +1481,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--232
  []
 
 [3] [4]
+
+LaTeX Warning: Reference `wdr2' on page 5 undefined on input line 248.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
  []
@@ -1551,20 +1540,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--400
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
 
  []
 
-[8] [9] (./PS6.aux)
-Package rerunfilecheck Info: File `PS6.out' has not changed.
-(rerunfilecheck)             Checksum: 3414F90967CFE15A69A08BAA1F5BA74B;1932.
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
+
+ []
+
+[9] [10] (./PS6.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `PS6.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `PS6.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  3744C54B1B04B6A1A8FCF3178810B305;1910.
  ) 
 Here is how much of TeX's memory you used:
- 56816 strings out of 478268
- 1371667 string characters out of 5846347
- 1946252 words of memory out of 5000000
- 74323 multiletter control sequences out of 15000+600000
- 478870 words of font info for 63 fonts, out of 8000000 for 9000
+ 56813 strings out of 478268
+ 1371623 string characters out of 5846347
+ 1945984 words of memory out of 5000000
+ 74319 multiletter control sequences out of 15000+600000
+ 479547 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,94p,1601b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1585,10 +1591,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS6.pdf (9 pages, 215284 bytes).
+Output written on PS6.pdf (10 pages, 216329 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

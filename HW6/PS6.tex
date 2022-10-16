@@ -400,13 +400,26 @@ From this we can then find the function such that $T(n) \in \Theta(f(n))$: \\
 \begin{align*}
 T(n) &= 7T(n-2) + 9  \\
 &= 7[7T(n-4) + 9] +9 \\
-&= 7[7[7T(n-6) + 9] +9] + 9
+&= 7[7[7T(n-6) + 9] +9] + 9 \\
+&= 7^3(T(n-6)) +7^2(9) + 7^1(9) + 7^0(9)
 \end{align*}
 To save us time we can sum this data up into a summation such that: \\
 \begin{align*}
-T(n) &= \sum_{i=1}^{\frac{n-2}{2}} (n-2i) * 7^{i} +9
+T(n) &= \sum_{i=0}^{\frac{n-2}{2}} 7^{i} * 9 \\
 \end{align*}
-I
+
+\begin{align*}
+T(n) &= \textrm{(cost of base case) · (number of times the base case is reached)} + \sum_{i=0}^{\frac{n-2}{2}} 7^{i} * 9 \\
+&= 5 * 7^{\frac{n-2}{2}} + 9 *  \sum_{i=0}^{\frac{n-2}{2}} 7^{i} \\
+&= 5 * 7^{\frac{n-2}{2}} + 9 * \frac{1 - 7^{\frac{n-2}{2}+1}}{1-7} \\
+&= 5 * 7^{\frac{n-2}{2}} + \frac{9 - 9*7^{\frac{n-2}{2}+\frac{2}{2}}}{-6} \\
+&= 5 * 7^{\frac{n-2}{2}}  + \frac{9-9*7^{\frac{n}{2}}}{-6} \\
+\end{align*}
+From the above we can observe that the highest component of the function is: \\
+\begin{align*}
+T(n) &= \Theta(7^{\frac{n}{2}})
+\end{align*}
+Thus, my final answer is $T(n) = \Theta(7^{\frac{n}{2}})$
 \end{proof}
 \end{enumerate}
 \end{required}
