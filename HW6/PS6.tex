@@ -358,11 +358,25 @@ T(n) = \begin{cases}
 $$
 
 \begin{proof}[Answer]
-From the piecewise function we see that that 2 will be divided multiple times up to k, such that: \\
+I will first begin by finding how many times we must unroll up to k: \\
+\begin{center}
+We will hit a base case when: \\
+$\frac{n}{2^k} < 3$
+I will now solve for k such that: \\
+$k > \log_2 (\frac{n}{3})$ \\
+\end{center} 
+
+I will now begin the unrolling process: \\
 \begin{align*}
-T(\frac{n}{2}) &= \\
-n - 2 - 2 - 2 - 2 - 2 - 2 - 2 &= k \\
+T(n) &= 2T(\frac{n}{2}) + 4n  \\
+T(\frac{n}{2}) &= 2T(\frac{\frac{n}{2}}{2}) + 4(\frac{n}{2})  \\
+&= 2T(\frac{n}{4}) + 4(\frac{n}{2}) \\
+T(\frac{n}{4}) &= 2T(\frac{\frac{n}{4}}{2}) + 4(\frac{n}{4})  \\
+&= 2T(\frac{n}{8}) + 4(\frac{n}{4}) \\
 \end{align*}
+
+From the above I will now 
+
 \end{proof}
 
 
@@ -377,7 +391,7 @@ T(n) &= \begin{cases}
 \end{align*}
 
 \begin{proof}[Answer] 
- will now find how many times we must unroll first up to k: \\
+ We will now find how many times we must unroll first up to k: \\
 \begin{center}
 We will hit a base case when: \\
 $n-2k < 2$

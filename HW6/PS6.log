@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  16 OCT 2022 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  16 OCT 2022 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1519,33 +1519,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--400
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--407
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
 
  []
 
@@ -1591,7 +1596,7 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS6.pdf (10 pages, 216329 bytes).
+Output written on PS6.pdf (10 pages, 217158 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  122 compressed objects within 2 object streams
