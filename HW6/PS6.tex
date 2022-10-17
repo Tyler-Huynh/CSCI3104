@@ -237,7 +237,7 @@ T(n) &= T(\frac{n}{10}) + T(\frac{n}{5}) + T(\frac{n}{5}) + \Theta(n)\\
 $$
 T(n) = \begin{cases}
 \Theta(1) & : n \leq 5, \\
-2T(\frac{n}{2}) + T(\frac{n}{10}) + \Theta(n) & : n > 5.
+2T(\frac{n}{5}) + T(\frac{n}{10}) + \Theta(n) & : n > 5.
 \end{cases}
 $$
 
@@ -375,8 +375,34 @@ T(\frac{n}{4}) &= 2T(\frac{\frac{n}{4}}{2}) + 4(\frac{n}{4})  \\
 &= 2T(\frac{n}{8}) + 4(\frac{n}{4}) \\
 \end{align*}
 
-From the above I will now 
+From the above I will now find the function such that $T(n) \in \Theta(f(n))$: \\
+\begin{align*}
+T(n) &= 2T(\frac{n}{2}) + 4n  \\
+&= 2[ 2T(\frac{n}{4}) + 4(\frac{n}{2}) ] + 4n \\
+&= 2[2[2T(\frac{n}{8}) + 4(\frac{n}{4}) ] +4(\frac{n}{2})] + 4n \\
+&= 2^{3}(T(\frac{n}{8})) + 2^{2}(4n) + 2^{1}(4n) + 2^{0}(4n) \\
+\end{align*}
 
+I will now sum this up into a summation: \\
+\begin{align*}
+T(n) &= \sum_{i=0}^{\log_2 (\frac{n}{3})} 2^{i} * 4n \\
+\end{align*}
+
+\begin{align*}
+T(n) &= \textrm{(cost of base case) · (number of times the base case is reached)} + \sum_{i=0}^{\log_2 (\frac{n}{3})} 2^{i} * 4n \\
+&= 3n*2^{\log_2 (\frac{n}{3})} + \sum_{i=0}^{\log_2 (\frac{n}{3})} 2^{i} * 4n \\
+&= 3n*2^{\log_2 (\frac{n}{3})} + 4n(\frac{1-2^{\log_2 (\frac{n}{3})-1}}{1-2}) \\
+&= 3n*2^{\log_2 (\frac{n}{3})} + 4n(\frac{1-2^{\log_2 (\frac{n}{6})}}{-1}) \\
+&= 3n*2^{\log_2 (\frac{n}{3})} + \frac{4n-4n(2^{\log_2 (\frac{n}{6})})}{-1}\\
+&= 3n*\frac{n}{3} + \frac{4n-4n(\frac{n}{6})}{-1} \\
+&= n^2 + -4n+\frac{2n^2}{3} \\
+\end{align*}
+
+From the above we can see that the highest component of the function would be:\\
+\begin{align*}
+T(n) &= \Theta(n^2)
+\end{align*}
+Thus, my final answer is $T(n) = \Theta(n^2)$
 \end{proof}
 
 
@@ -484,8 +510,39 @@ $n \gets len(L)$
 \end{algorithmic}
 \end{algorithm}
 
-\begin{proof}
-% YOUR ANSWER HERE
+\begin{proof} Referenced Levet Notes\\ 
+Here we will create our input list at length 6 such that: \\
+\begin{center}
+[7, 9, 6, 4, 3, 2]
+\end{center}
+\begin{itemize}
+\item (i1, sum1) = MaxPairSum([7, 9, 6])
+\begin{itemize}
+\item (i1, sum1) = MaxPairSum([7]) - This would just return because the length of the list is 1.
+\item (i2, sum2) = MaxPairSum([9, 6])
+\begin{itemize}
+\item (1, 15) - This would be returned because this is the sum of index 1 and index 2 and the length of the list is 2.
+\end{itemize}
+\end{itemize}
+\item(i2, sum2) = MaxPairSum([4, 3, 2])
+\begin{itemize}
+\item (i1, sum1) = MaxPairSum([4])  - This would just return because the length of the list is 1.
+\item (i2, sum2) = MaxPairSum([3, 2])
+\begin{itemize}
+\item (1, 5) - This would be returned because this is the sum of index 1 and index 2 and the length of the list is 2.
+\end{itemize}
+\end{itemize}
+i1 $\geq$ i2 Where i1 and i2 are both equal to 1 
+\begin{itemize}
+\item (1, 15) - This comparison returns (1, 15), but the MaxPairSum for our list should be (1, 16), thus this function fails.
+\end{itemize}
+\end{itemize}
+From the above we can see that the function fails because it is not finding the MaxPairSum of the list that it is being given. This is because on line 6 by comparing the index 1 and index 2 it does not allow for us to find the MaxPairSum, because we should be comparing the sums at these indexes instead. \\
+
+Also, the indexes that are returned are not relative to the entire list itself, but instead it is relative to the sublist that arises when it is divided that is passed into the function. Further, depending on how the odd length list is divided it will influence what is returned, since some comparisons will not computed such that: \\
+\begin{center}
+If we had partitioned it into ([7, 9]) and ([6]) we would have arrived at the correct answer.
+\end{center}
 \end{proof}
 \end{required}
 
