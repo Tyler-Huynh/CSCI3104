@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  17 OCT 2022 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  21 OCT 2022 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**PS6.tex
-(./PS6.tex
+**PS7.tex
+(./PS7.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -1315,8 +1315,8 @@ File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \c@definition=\count415
 \c@required=\count416
 \c@ex=\count417
- (./PS6.aux)
-\openout1 = `PS6.aux'.
+ (./PS7.aux)
+\openout1 = `PS7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
 LaTeX Font Info:    ... okay on input line 108.
@@ -1417,9 +1417,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 108.
 LaTeX Info: Redefining \pageref on input line 108.
 LaTeX Info: Redefining \nameref on input line 108.
- (./PS6.out) (./PS6.out)
+ (./PS7.out) (./PS7.out)
 \@outlinefile=\write7
-\openout7 = `PS6.out'.
+\openout7 = `PS7.out'.
 
 
 Package chemgreek Info: Activating mapping `default' on line 108.
@@ -1440,173 +1440,115 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-(./PS6.toc
-Overfull \hbox (7.2594pt too wide) detected at line 5
-\OT1/cmr/m/n/10.95 16(a).  
+(./PS7.toc
+Overfull \hbox (7.2594pt too wide) detected at line 6
+\OT1/cmr/m/n/10.95 20(a).  
  []
 
 
-Overfull \hbox (7.86774pt too wide) detected at line 6
-\OT1/cmr/m/n/10.95 16(b).  
+Overfull \hbox (7.86774pt too wide) detected at line 7
+\OT1/cmr/m/n/10.95 20(b).  
  []
 
 
-Overfull \hbox (7.2594pt too wide) detected at line 8
-\OT1/cmr/m/n/10.95 17(a).  
- []
-
-
-Overfull \hbox (7.86774pt too wide) detected at line 9
-\OT1/cmr/m/n/10.95 17(b).  
+Overfull \hbox (6.65106pt too wide) detected at line 8
+\OT1/cmr/m/n/10.95 20(c).  
  []
 
 )
 \tf@toc=\write8
-\openout8 = `PS6.toc'.
+\openout8 = `PS7.toc'.
 
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 186.
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
+
+ []
+
+<IMG_F40695BF3954-1.jpeg, id=69, 1973.3725pt x 1003.75pt>
+File: IMG_F40695BF3954-1.jpeg Graphic file (type jpg)
+<use IMG_F40695BF3954-1.jpeg>
+Package pdftex.def Info: IMG_F40695BF3954-1.jpeg  used on input line 203.
+(pdftex.def)             Requested size: 325.2183pt x 165.41249pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--222
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+[3 <./IMG_F40695BF3954-1.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+<IMG_D7646ABE293A-1.jpeg, id=87, 1308.89pt x 1003.75pt>
+File: IMG_D7646ABE293A-1.jpeg Graphic file (type jpg)
+<use IMG_D7646ABE293A-1.jpeg>
+Package pdftex.def Info: IMG_D7646ABE293A-1.jpeg  used on input line 262.
+(pdftex.def)             Requested size: 325.2183pt x 249.38997pt.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+[5 <./IMG_D7646ABE293A-1.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--440
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 457--459
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-[11] [12] (./PS6.aux)
-Package rerunfilecheck Info: File `PS6.out' has not changed.
-(rerunfilecheck)             Checksum: 3414F90967CFE15A69A08BAA1F5BA74B;1932.
+[8] (./PS7.aux)
+Package rerunfilecheck Info: File `PS7.out' has not changed.
+(rerunfilecheck)             Checksum: AFF564C48B369567F641E4228ED2BAD2;1439.
  ) 
 Here is how much of TeX's memory you used:
- 56828 strings out of 478268
- 1371807 string characters out of 5846347
- 1949255 words of memory out of 5000000
- 74330 multiletter control sequences out of 15000+600000
- 479547 words of font info for 65 fonts, out of 8000000 for 9000
+ 56791 strings out of 478268
+ 1371472 string characters out of 5846347
+ 1944174 words of memory out of 5000000
+ 74303 multiletter control sequences out of 15000+600000
+ 479248 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1601b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,94p,1601b,1104s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1619,16 +1561,14 @@ ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS6.pdf (12 pages, 226002 bytes).
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on PS7.pdf (8 pages, 650593 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,8 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{Instructions}{1}{section*.2}%
+\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{2}{section*.3}%
+\contentsline {section}{\numberline {19}Standard 19 - Solving Recurrences: Tree Method}{3}{section.19}%
+\contentsline {section}{\numberline {20}Standard 20 - QuickSort}{5}{section.20}%
+\contentsline {subsection}{\numberline {20(a). }Part \ref {S20a}}{5}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20(b). }Part \ref {S20b}}{7}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20(c). }Part \ref {S20c} (Also credit towards S17 or S19)}{8}{subsection.20.3}%

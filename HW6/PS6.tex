@@ -539,10 +539,13 @@ i1 $\geq$ i2 Where i1 and i2 are both equal to 1
 \end{itemize}
 From the above we can see that the function fails because it is not finding the MaxPairSum of the list that it is being given. This is because on line 6 by comparing the index 1 and index 2 it does not allow for us to find the MaxPairSum, because we should be comparing the sums at these indexes instead. \\
 
-Also, the indexes that are returned are not relative to the entire list itself, but instead it is relative to the sublist that arises when it is divided that is passed into the function. Further, depending on how the odd length list is divided it will influence what is returned, since some comparisons will not computed such that: \\
+Also, the indexes that are returned are not relative to the entire list itself, but instead it is relative to the sublist that arises when it is divided that is passed into the function. \\
+
+Further, depending on how the odd length list is divided it will influence what is returned, since some comparisons will not computed such that: 
 \begin{center}
 If we had partitioned it into ([7, 9]) and ([6]) we would have arrived at the correct answer.
 \end{center}
+Because the code above will split the array based on the floor of ($\frac{n}{2}$), then, not all possible pairs of the list or sublist are explored, such that we can miss the correct answer.
 \end{proof}
 \end{required}
 

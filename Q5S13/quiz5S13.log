@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  17 OCT 2022 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  19 OCT 2022 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**PS6.tex
-(./PS6.tex
+**quiz5S13.tex
+(./quiz5S13.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -928,54 +928,12 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@zref@counter=\count336
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryautomata.code.tex
-File: tikzlibraryautomata.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodepartlowerbox=\box81
-\pgfnodeparttwobox=\box82
-\pgfnodepartthreebox=\box83
-\pgfnodepartfourbox=\box84
-\pgfnodeparttwentybox=\box85
-\pgfnodepartnineteenbox=\box86
-\pgfnodeparteighteenbox=\box87
-\pgfnodepartseventeenbox=\box88
-\pgfnodepartsixteenbox=\box89
-\pgfnodepartfifteenbox=\box90
-\pgfnodepartfourteenbox=\box91
-\pgfnodepartthirteenbox=\box92
-\pgfnodeparttwelvebox=\box93
-\pgfnodepartelevenbox=\box94
-\pgfnodeparttenbox=\box95
-\pgfnodepartninebox=\box96
-\pgfnodeparteightbox=\box97
-\pgfnodepartsevenbox=\box98
-\pgfnodepartsixbox=\box99
-\pgfnodepartfivebox=\box100
-)))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarybackgrounds.code.tex
-File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@layerbox@background=\box101
-\pgf@layerboxsaved@background=\box102
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryquotes.code.tex
-File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip131
 \enit@outerparindent=\dimen307
 \enit@toks=\toks55
-\enit@inbox=\box103
+\enit@inbox=\box81
 \enit@count@id=\count337
 \enitdp@description=\count338
 )
@@ -1008,7 +966,7 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
 (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \c@tracingmulticols=\count343
-\mult@box=\box104
+\mult@box=\box82
 \multicol@leftmargin=\dimen312
 \c@unbalance=\count344
 \c@collectmore=\count345
@@ -1021,13 +979,35 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \postmulticols=\dimen316
 \multicolsep=\skip142
 \multicolbaselineskip=\skip143
-\partial@page=\box105
-\last@line=\box106
+\partial@page=\box83
+\last@line=\box84
 \maxbalancingoverflow=\dimen317
-\mult@rightbox=\box107
-\mult@grightbox=\box108
-\mult@firstbox=\box109
-\mult@gfirstbox=\box110
+\mult@rightbox=\box85
+\mult@grightbox=\box86
+\mult@firstbox=\box87
+\mult@gfirstbox=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
 \@tempa=\box111
 \@tempa=\box112
 \@tempa=\box113
@@ -1042,154 +1022,15 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box122
 \@tempa=\box123
 \@tempa=\box124
-\@tempa=\box125
-\@tempa=\box126
-\@tempa=\box127
-\@tempa=\box128
-\@tempa=\box129
-\@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\@tempa=\box136
-\@tempa=\box137
-\@tempa=\box138
-\@tempa=\box139
-\@tempa=\box140
-\@tempa=\box141
-\@tempa=\box142
-\@tempa=\box143
-\@tempa=\box144
-\@tempa=\box145
-\@tempa=\box146
 \c@minrows=\count349
 \c@columnbadness=\count350
 \c@finalcolumnbadness=\count351
 \last@try=\dimen318
 \multicolovershoot=\dimen319
 \multicolundershoot=\dimen320
-\mult@nat@firstbox=\box147
-\colbreak@box=\box148
+\mult@nat@firstbox=\box125
+\colbreak@box=\box126
 \mc@col@check@num=\count352
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/forest/forest.sty
-Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.callouts.code.tex
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.callouts.code.tex)))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
-ctions.code.tex
-\pgf@intersect@solutions=\count353
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgfopts/pgfopts.sty
-Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks56
-\pgfopts@list@add@b@toks=\toks57
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/elocalloc/elocalloc.sty
-Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/inlinedef/inlinedef.sty
-Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
-\ID@toks=\toks58
-\ID@count=\count354
-)
-\ID@usercommands=\toks59
-\safeloop@depth=\count355
-\safeRKloop@depth=\count356
-\forest@temp@dimen=\dimen321
-\forest@temp@count=\count357
-\forest@n=\count358
-\forest@temp@global@count=\count359
-\forest@temp@toks=\toks60
-\forest@temparray@M=\count360
-\forest@temparray@N=\count361
-\forest@global@temparray@M=\count362
-\forest@global@temparray@N=\count363
-\forest@isnum@count=\count364
-\forest@isdim@nonintpart=\count365
-\forest@isdim@dimen=\dimen322
-\forest@sort@m=\count366
-\forest@sort@k=\count367
-\forest@sort@p=\count368
-\bracket@content=\toks61
-\bracket@afterthought=\toks62
-\forest@node@maxid=\count369
-\forest@process@left@M=\count370
-\forest@process@left@N=\count371
-\forest@process@right@M=\count372
-\forest@process@right@N=\count373
-\forest@process@saved@M=\count374
-\forest@process@saved@N=\count375
-\forest@process@result@M=\count376
-\forest@process@result@N=\count377
-\forest@process@n=\count378
-\forest@nodewalk@branch@toks=\toks63
-\forest@nodewalk@shortsteps@resolution=\toks64
-\forest@do@dynamics=\toks65
-\forest@box=\box149
-\forest@xg=\dimen323
-\forest@yg=\dimen324
-\forest@xs=\dimen325
-\forest@ys=\dimen326
-\forest@pi@toks=\toks66
-\forest@segment@toks=\toks67
-\forest@PIi@toks=\toks68
-\forest@PIii@toks=\toks69
-\forest@copy@in=\read5
-\forest@copy@out=\write5
-\forest@externalize@max@outer@n=\count379
-\forest@externalize@inner@n=\count380
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
@@ -1197,75 +1038,92 @@ Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count381
-\l_MT_multwidth_dim=\dimen327
+\g_MT_multlinerow_int=\count353
+\l_MT_multwidth_dim=\dimen321
 \origjot=\skip144
-\l_MT_shortvdotswithinadjustabove_dim=\dimen328
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen329
-\l_MT_above_intertext_sep=\dimen330
-\l_MT_below_intertext_sep=\dimen331
-\l_MT_above_shortintertext_sep=\dimen332
-\l_MT_below_shortintertext_sep=\dimen333
-\xmathstrut@box=\box150
-\xmathstrut@dim=\dimen334
+\l_MT_shortvdotswithinadjustabove_dim=\dimen322
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen323
+\l_MT_above_intertext_sep=\dimen324
+\l_MT_below_intertext_sep=\dimen325
+\l_MT_above_shortintertext_sep=\dimen326
+\l_MT_below_shortintertext_sep=\dimen327
+\xmathstrut@box=\box127
+\xmathstrut@dim=\dimen328
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write6
+\CommentStream=\write5
 
 Excluding comment 'comment')
-(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
+(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count354
+\algocf@hangindent=\skip145
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count382
-\float@exts=\toks70
-\float@box=\box151
-\@float@everytoks=\toks71
-\@floatcapt=\box152
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count355
 )
-\@float@every@algorithm=\toks72
-\c@algorithm=\count383
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count384
-\c@ALG@rem=\count385
-\c@ALG@nested=\count386
-\ALG@tlm=\skip145
-\ALG@thistlm=\skip146
-\c@ALG@Lnr=\count387
-\c@ALG@blocknr=\count388
-\c@ALG@storecount=\count389
-\c@ALG@tmpcounter=\count390
-\ALG@tmplength=\skip147
+(/usr/local/texlive/2022/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
 )
-Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count391
-\lst@gtempboxa=\box153
-\lst@token=\toks73
-\lst@length=\count392
+\skiptotal=\skip146
+\skiplinenumber=\skip147
+\skiprule=\skip148
+\skiphlne=\skip149
+\skiptext=\skip150
+\skiplength=\skip151
+\algomargin=\skip152
+\skipalgocfslide=\skip153
+\algowidth=\dimen329
+\inoutsize=\dimen330
+\inoutindent=\dimen331
+\interspacetitleruled=\dimen332
+\interspacealgoruled=\dimen333
+\interspacetitleboxruled=\dimen334
+\algocf@ruledwidth=\skip154
+\algocf@inoutbox=\box128
+\algocf@inputbox=\box129
+\AlCapSkip=\skip155
+\AlCapHSkip=\skip156
+\algoskipindent=\skip157
+\algocf@nlbox=\box130
+\algocf@hangingbox=\box131
+\algocf@untilbox=\box132
+\algocf@skipuntil=\skip158
+\algocf@capbox=\box133
+\algocf@lcaptionbox=\skip159
+\algoheightruledefault=\skip160
+\algoheightrule=\skip161
+\algotitleheightruledefault=\skip162
+\algotitleheightrule=\skip163
+\c@algocfline=\count356
+\c@algocfproc=\count357
+\c@algocf=\count358
+\algocf@algoframe=\box134
+\algocf@algobox=\box135
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count359
+\lst@gtempboxa=\box136
+\lst@token=\toks56
+\lst@length=\count360
 \lst@currlwidth=\dimen335
-\lst@column=\count393
-\lst@pos=\count394
+\lst@column=\count361
+\lst@pos=\count362
 \lst@lostspace=\dimen336
 \lst@width=\dimen337
-\lst@newlines=\count395
-\lst@lineno=\count396
+\lst@newlines=\count363
+\lst@lineno=\count364
 \lst@maxwidth=\dimen338
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count397
-\lst@skipnumbers=\count398
-\lst@framebox=\box154
+\c@lstnumber=\count365
+\lst@skipnumbers=\count366
+\lst@framebox=\box137
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1294,48 +1152,48 @@ code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \arrowsize=\dimen339
 ))
-\c@tkz@gr@a=\count399
-\c@tkz@gr@b=\count400
-\c@tkz@gr@c=\count401
-\c@tkz@gr@e=\count402
-\c@tkz@gr@d=\count403
-\c@tkz@gr@p=\count404
-\c@tkz@gr@i=\count405
-\c@tkz@gr@n=\count406
-\c@tkz@gr@ta=\count407
-\c@tkz@gr@tb=\count408
+\c@tkz@gr@a=\count367
+\c@tkz@gr@b=\count368
+\c@tkz@gr@c=\count369
+\c@tkz@gr@e=\count370
+\c@tkz@gr@d=\count371
+\c@tkz@gr@p=\count372
+\c@tkz@gr@i=\count373
+\c@tkz@gr@n=\count374
+\c@tkz@gr@ta=\count375
+\c@tkz@gr@tb=\count376
 )
-\c@tkz@bg@cnt=\count409
-\c@tkza@tmp=\count410
+\c@tkz@bg@cnt=\count377
+\c@tkza@tmp=\count378
 )
-\c@prop=\count411
-\c@thm=\count412
-\c@lemma=\count413
-\c@cor=\count414
-\c@definition=\count415
-\c@required=\count416
-\c@ex=\count417
- (./PS6.aux)
-\openout1 = `PS6.aux'.
+\c@prop=\count379
+\c@thm=\count380
+\c@lemma=\count381
+\c@cor=\count382
+\c@definition=\count383
+\c@required=\count384
+\c@ex=\count385
+ (./quiz5S13.aux)
+\openout1 = `quiz5S13.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1346,11 +1204,11 @@ LaTeX Font Info:    ... okay on input line 108.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 704.63249pt, 54.2025pt)
+* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=542.02501pt
-* \textheight=704.63249pt
+* \textheight=722.7pt
 * \oddsidemargin=-36.135pt
 * \evensidemargin=-36.135pt
 * \topmargin=-73.135pt
@@ -1373,17 +1231,17 @@ LaTeX Font Info:    ... okay on input line 108.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count418
+\scratchcounter=\count386
 \scratchdimen=\dimen340
-\scratchbox=\box155
-\nofMPsegments=\count419
-\nofMParguments=\count420
-\everyMPshowfont=\toks74
-\MPscratchCnt=\count421
+\scratchbox=\box138
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count389
 \MPscratchDim=\dimen341
-\MPnumerator=\count422
-\makeMPintoPDFobject=\count423
-\everyMPtoPDFconversion=\toks75
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks58
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1399,8 +1257,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 108.
-Package hyperref Info: Link coloring OFF on input line 108.
+or `english'. on input line 83.
+Package hyperref Info: Link coloring OFF on input line 83.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1412,27 +1270,27 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count424
+\c@section@level=\count392
 )
-LaTeX Info: Redefining \ref on input line 108.
-LaTeX Info: Redefining \pageref on input line 108.
-LaTeX Info: Redefining \nameref on input line 108.
- (./PS6.out) (./PS6.out)
-\@outlinefile=\write7
-\openout7 = `PS6.out'.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
+ (./quiz5S13.out) (./quiz5S13.out)
+\@outlinefile=\write6
+\openout6 = `quiz5S13.out'.
 
 
-Package chemgreek Info: Activating mapping `default' on line 108.
+Package chemgreek Info: Activating mapping `default' on line 83.
 
-\c@lstlisting=\count425
-LaTeX Font Info:    Trying to load font information for U+msa on input line 118
-.
+\c@lstlisting=\count393
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 118
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1440,195 +1298,63 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-(./PS6.toc
-Overfull \hbox (7.2594pt too wide) detected at line 5
-\OT1/cmr/m/n/10.95 16(a).  
- []
+(./quiz5S13.toc)
+\tf@toc=\write7
+\openout7 = `quiz5S13.toc'.
 
 
-Overfull \hbox (7.86774pt too wide) detected at line 6
-\OT1/cmr/m/n/10.95 16(b).  
- []
 
+Package hyperref Warning: Suppressing empty link on input line 119.
 
-Overfull \hbox (7.2594pt too wide) detected at line 8
-\OT1/cmr/m/n/10.95 17(a).  
- []
-
-
-Overfull \hbox (7.86774pt too wide) detected at line 9
-\OT1/cmr/m/n/10.95 17(b).  
- []
-
-)
-\tf@toc=\write8
-\openout8 = `PS6.toc'.
-
- [1
+[1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 186.
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
-
+Overfull \hbox (2.56192pt too wide) in paragraph at lines 150--152
+[][]\OT1/cmr/bx/n/10.95 Problem 13. []\OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.
+95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/
+it/10.95 n[]$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (
+\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 ) = 7[]$. De-ter-mine the re-la-tion-sh
+ip that best ap-plies: $\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
+10.95 n\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 O\OT1/cmr
+/m/n/10.95 (\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/
+cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 ; f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
+n\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--440
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 457--459
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-[11] [12] (./PS6.aux)
-Package rerunfilecheck Info: File `PS6.out' has not changed.
-(rerunfilecheck)             Checksum: 3414F90967CFE15A69A08BAA1F5BA74B;1932.
+<Huynh_Q5S13_CSCI3104.pdf, id=41, 614.295pt x 744.7825pt>
+File: Huynh_Q5S13_CSCI3104.pdf Graphic file (type pdf)
+<use Huynh_Q5S13_CSCI3104.pdf>
+Package pdftex.def Info: Huynh_Q5S13_CSCI3104.pdf  used on input line 160.
+(pdftex.def)             Requested size: 487.8192pt x 591.45149pt.
+[3 <./Huynh_Q5S13_CSCI3104.pdf>] (./quiz5S13.aux)
+Package rerunfilecheck Info: File `quiz5S13.out' has not changed.
+(rerunfilecheck)             Checksum: 50CE27798883F1FC569D354A454CBA74;700.
  ) 
 Here is how much of TeX's memory you used:
- 56828 strings out of 478268
- 1371807 string characters out of 5846347
- 1949255 words of memory out of 5000000
- 74330 multiletter control sequences out of 15000+600000
- 479547 words of font info for 65 fonts, out of 8000000 for 9000
+ 47568 strings out of 478268
+ 1090642 string characters out of 5846347
+ 1650818 words of memory out of 5000000
+ 65177 multiletter control sequences out of 15000+600000
+ 478264 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1601b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,6n,94p,484b,766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PS6.pdf (12 pages, 226002 bytes).
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on quiz5S13.pdf (3 pages, 455665 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 42 words of extra memory for PDF output out of 10000 (max. 10000000)
 
