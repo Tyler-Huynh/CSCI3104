@@ -5,4 +5,4 @@
 \contentsline {section}{\numberline {20}Standard 20 - QuickSort}{5}{section.20}%
 \contentsline {subsection}{\numberline {20(a). }Part \ref {S20a}}{5}{subsection.20.1}%
 \contentsline {subsection}{\numberline {20(b). }Part \ref {S20b}}{7}{subsection.20.2}%
-\contentsline {subsection}{\numberline {20(c). }Part \ref {S20c} (Also credit towards S17 or S19)}{8}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20(c). }Part \ref {S20c} (Also credit towards S17 or S19)}{9}{subsection.20.3}%

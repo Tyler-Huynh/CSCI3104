@@ -288,11 +288,43 @@ $T(n) = \Theta(n\log n)$
 % YOUR ANSWER BELOW
 \begin{align*}
 T(n) = \begin{cases}
-\text{Your answer} & : n \leq ?, \\
-\text{Your answer} & : n > ?.
+\Theta(1) & : n \leq 2, \\
+T(n-1) + T(1) + \Theta(n) & : n > 2.
 \end{cases}
 \end{align*}
-The worst-case running time of QuickSort is.... % YOUR ANSWER HERE 
+The worst-case running time of QuickSort is.... when the partition algorithm chooses the last element in the list at each iteration, below I will show how I came to this conclusion: \\
+
+I will solve my recurrence relation to find the runtime of T(n) by using the unrolling method: \\
+I will first begin by finding how many times until we reach the base case of k: \\
+\begin{align*}
+n-k &\leq 2 \\
+n &\leq 2+k \\
+n-2 &\leq k \\
+\end{align*}
+From the above this will be how many times it will run, until we reach the base case of k. 
+I will now find how many times T(n) will run: \\
+I will change $T(n)$ and $\Theta(n)$into $c_1 $ and $c_2 n$ \\
+
+\begin{align*}
+T(n) &= T(n-1) + c_1  + c_2 n \\
+T(n-1) &= T(n-2) + c_1  + c_2 (n-1) \\
+T(n-2) &= T(n-3) + c_1  + c_2 (n-2) \\
+\end{align*}
+I will now find T(n): \\
+\begin{align*}
+T(n) &= \textrm{(cost of base case) · (number of times the base case is reached)} + \sum_{i=0}^{n - 2} T(1) + c_2 (n-i) \\
+&= \Theta(1) * 2^k + \sum_{i=0}^{n - 2} c_1 + c_2 (n-i) \\
+&= \Theta(1) * 2^{n-2} + \sum_{i=0}^{n - 2} c_1 + c_2(\sum_{i=0}^{n - 2} n - \sum_{i=0}^{n - 2} i)\\
+&= \Theta(1) * \frac{2^n}{4} + c_1(n-2) + c_2[n(n-2) - (\frac{(n-2)(n-2+1)}{2})] \\
+&= \Theta(1) * \frac{2^n}{4} + c_1(n-2) + c_2[n^2 - 2n -(\frac{(n-2)(n-1)}{2})] \\
+&= \Theta(1) * \frac{2^n}{4} + c_1(n-2) + c_2[n^2 - 2n - (\frac{n^2 - 3n + 2}{2})] \\
+&= \Theta(1) * \frac{2^n}{4} + c_1(n-2) + c_2[n^2 - 2n - (\frac{n^2 -3n}{2} + 1)] \\
+T(n) &= \Theta(n^2)
+\end{align*}
+From the above we can see that the highest component is $n^2$, such that our final answer for the worst case runtime scenario of T(n): \\
+\begin{center}
+$T(n) = \Theta(n^2)$
+\end{center}
 \end{proof}
 
 
