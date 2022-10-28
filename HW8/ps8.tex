@@ -188,8 +188,23 @@ The goal of this standard is to practice identifying the recursive structure. To
 
 \noindent \\ \textbf{Your job} is to clearly identify the recursive structure. That is, suppose we are solving the subproblem at stair $s_{k}$. What precise sub-problems do we need to consider?
 
-\begin{proof}[Answer]
+\begin{proof}[Answer] \textbf{Referenced Levet Notes} \\
+I will begin by providing an example: \\ 
 
+We are currently on stair $s_k$ where we can jump forward i stairs. Our precise subproblem will consist of when we are at stair $s_k$ how many ways it will take to get from the next step of $s_{k+i}$ ,where $i \in \{ 1, 2, \ldots, a_{k}\}$, to the  step of $s_n$, the last step. \\
+
+Below I will show an arbitrary example: \\
+Suppose we are at stair $s_k$,  $T(k)$ represents the number of ways to reach $s_n$ from $s_k$, such that: \\
+\begin{center}
+When we recurse on $T(k)$ we need to consider the case of $T(k+i)$ for all $i \in \{ 1, 2, \ldots, a_{k}\}$, in order to determine how many steps it will take us to get to $s_n$ from $s_{k+i}$. This will represent our precise subproblem for this problem\\
+\end{center}
+From this we can see that when we are at the base case of $s_n$ there will only be one way to get to $s_n$ from $s_n$. \\
+
+From the above we can see that our precise subproblem for this problem would be how many ways it will take us to reach $s_n$ from $s_{k+i}$ for all $i \in \{ 1, 2, \ldots, a_{k}\}$ \\
+
+Our base case for this problem would be $s_n$ where we know that there only exists one way to get to $s_n$ from $s_n$\\
+
+Our recursive structure for $T(k)$ would be to find $T(k+i)$ for all $i \in \{ 1, 2, \ldots, a_{k}\}$.
 \end{proof}
 
 \newpage
