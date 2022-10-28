@@ -1,0 +1,381 @@
+\documentclass[11pt]{article} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in,top=0.5in,bottom=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[siunitx]{circuitikz}
+\usepackage{tikz}
+\usepackage[colorinlistoftodos, color=orange!50]{todonotes}
+\usepackage{hyperref}
+\usepackage[numbers, square]{natbib}
+\usepackage{fancybox}
+\usepackage{epsfig}
+\usepackage{soul}
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{positioning, automata, backgrounds}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,backgrounds,calc,quotes}
+\usepackage[shortlabels]{enumitem}
+\usepackage[version=4]{mhchem}
+\usepackage{multicol}
+\usepackage{forest}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{subfiles}
+\usepackage{tkz-berge}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{cor}{Corollary}[prop]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{required}{Problem}
+\newtheorem*{requiredHC}{Problem HC}
+
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+
+\newcommand{\interval}[4]{\draw (#2, #1) -- (#3, #1); % Usage: \interval{height}{start}{end}{label}
+\draw (#2, #1-0.11) -- (#2, #1+0.11); % draw left whisker
+\draw (#3, #1-0.11) -- (#3, #1+0.11); % draw right whisker
+\node[] at (#2-0.25, #1) {#4};
+}
+
+\tikzset{>={Stealth[length=7pt]}}
+\tikzset{
+    vertex/.style={circle,draw,minimum size=16,inner sep=0pt,font=\normalsize},
+    edgelabel/.style={rectangle,draw=none,font=\footnotesize,outer sep=0pt},
+    every node/.style={vertex},
+    every edge quotes/.append style={edgelabel},
+    every to/.append style={every node/.style={edgelabel}},
+    wide/.style={line width=4pt,>={Stealth[length=18pt]}},
+    directed/.style={arrows={->},font=\small},
+    caption/.style={text width=6cm,align=center,rectangle,draw},
+}
+
+
+\setlength{\marginparwidth}{3.4cm}
+%#########################################################
+
+%To use symbols for footnotes
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%To change footnotes back to numbers uncomment the following line
+%\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Enable this command to adjust line spacing for inline math equations.
+% \everymath{\displaystyle}
+
+% _______ _____ _______ _      ______ 
+%|__   __|_   _|__   __| |    |  ____|
+%   | |    | |    | |  | |    | |__   
+%   | |    | |    | |  | |    |  __|  
+%   | |   _| |_   | |  | |____| |____ 
+%   |_|  |_____|  |_|  |______|______|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+\normalfont \normalsize 
+\textsc{CSCI 3104 Fall 2022 \\ 
+Instructors: Prof. Grochow and Chandra Kanth Nagesh} \\
+[10pt] 
+\rule{\linewidth}{0.5pt} \\[6pt] 
+\huge Problem Set 8 \\
+\rule{\linewidth}{2pt}  \\[10pt]
+}
+%\author{}
+\date{}
+
+\begin{document}
+
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\definecolor{processred}{rgb}{200, 0, 0}
+\definecolor{processgreen}{rgb}{0, 255, 0}
+\DeclareGraphicsExtensions{.png}
+\DeclareGraphicsExtensions{.gif}
+\DeclareGraphicsExtensions{.jpg}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%FILL IN YOUR NAME%%%%%%%
+%%%%%%%%%%AND STUDENT ID%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+Due Date \dotfill November 1, 2022 \\
+Name \dotfill \textbf{Tyler Huynh} \\
+Student ID \dotfill \textbf{109603994} \\
+Collaborators \dotfill \textbf{N/A}
+
+\tableofcontents
+
+\section*{Instructions}
+\addcontentsline{toc}{section}{Instructions}
+ \begin{itemize}
+	\item The solutions \textbf{must be typed}, using proper mathematical notation. We cannot accept hand-written solutions. Useful links and references on \LaTeX can be found \href{https://canvas.colorado.edu/courses/75824/pages/latex}{here on Canvas}.
+	\item You should submit your work through the \textbf{class Canvas page} only. Please submit one PDF file, compiled using this \LaTeX \ template.
+	\item You may not need a full page for your solutions; pagebreaks are there to help Gradescope automatically find where each problem is. Even if you do not attempt every problem, please submit this document with no fewer pages than the blank template (or Gradescope has issues with it).
+
+	\item You are welcome and encouraged to collaborate with your classmates, as well as consult outside resources. You must \textbf{cite your sources in this document.} \textbf{Copying from any source is an Honor Code violation. Furthermore, all submissions must be in your own words and reflect your understanding of the material.} If there is any confusion about this policy, it is your responsibility to clarify before the due date. 
+
+	\item Posting to \textbf{any} service including, but not limited to Chegg, Reddit, StackExchange, etc., for help on an assignment is a violation of the Honor Code.
+
+	\item You \textbf{must} virtually sign the Honor Code (see Section \hyperlink{HonorCode}{Honor Code}). Failure to do so will result in your assignment not being graded.
+\end{itemize}
+
+
+\section*{Honor Code (Make Sure to Virtually Sign the Honor Pledge)} 
+\addcontentsline{toc}{section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}
+\hypertarget{HonorCode}{}
+
+\begin{requiredHC}
+On my honor, my submission reflects the following:
+\begin{itemize}
+\item My submission is in my own words and reflects my understanding of the material.
+\item Any collaborations and external sources have been clearly cited in this document.
+\item I have not posted to external services including, but not limited to Chegg, Reddit, StackExchange, etc.
+\item I have neither copied nor provided others solutions they can copy.
+\end{itemize}
+
+\noindent In the specified region below, clearly indicate that you have upheld the Honor Code. Then type your name. 
+\end{requiredHC}
+
+\begin{proof}[Honor Pledge]
+I, \textbf{Tyler Huynh} on my honor pledge that my submission is a reflection of my own understanding of the material, any and all collaborations/sources have been properly cited, I have not posted any material to external sources, and I have not copied other solutions as my own.\end{proof}
+
+
+\newpage
+\setcounter{section}{20}
+\section{Standard 21 -- Dynamic Programming: Identify precise subproblems}
+
+\setcounter{required}{20}
+\begin{required}
+The goal of this standard is to practice identifying the recursive structure. To be clear, you are \textbf{not} being asked for a precise mathematical recurrence. Rather, you are being asked to clearly and precisely identify the cases to consider. Identifying the cases can sometimes provide enough information to design a dynamic programming solution.
+
+
+\subsection*{Problem 21(a)}
+\addcontentsline{toc}{subsection}{Problem 21(a)}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}
+\item Consider the \textsf{Stair Climbing} problem, defined as follows.
+\begin{itemize}
+\item \textsf{Instance:} Suppose we have $n$ stairs, labeled $s_{1}, \ldots, s_{n}$. Associated with each stair $s_{k}$ is a number $a_{k} \geq 1$. At stair $s_{k}$, we may jump forward $i$ stairs, where $i \in \{ 1, 2, \ldots, a_{k}\}$. You start on $s_{1}$.
+
+\item \textsf{Solution:} The number of ways to to reach $s_{n}$ from $s_{1}$.
+\end{itemize}
+
+\noindent \\ \textbf{Your job} is to clearly identify the recursive structure. That is, suppose we are solving the subproblem at stair $s_{k}$. What precise sub-problems do we need to consider?
+
+\begin{proof}[Answer]
+
+\end{proof}
+
+\newpage
+\subsection*{Problem 21(b)}
+\addcontentsline{toc}{subsection}{Problem 21(b)}
+
+\item Fix $n \in \mathbb{N}$. The \textit{Trust Game} on $n$ rounds is a two-player dynamic game. Here, Player I starts with \$100. The game proceeds as follows.
+\begin{itemize}
+\item \textbf{Round 1:} Player I takes a fraction of the \$100 (which could be nothing) to give to Player II. The money Player I gives to Player II is multiplied by 1.5 before Player II receives it. Player I keeps the remainder. (So for example, if Player I gives \$20 to Player II, then Player II receives \$30 and Player I is left with \$80).
+
+\item \textbf{Round 2:} Player II can choose a fraction of the money they received to offer to Player I. The money offered to Player I increases by a multiple of $1.5$  before Player I receives it. Player II keeps the remainder.
+\end{itemize}
+
+\noindent More generally, at round $i$, the Player at the current round (Player I if $i$ is odd, and Player II if $i$ is even) takes a fraction of the money in the current pile to send to the other Player and keeps the rest. That money increases by a factor of $1.5$ before the other player receives it. The game terminates if the current player does not send any money to the other player, or if round $n$ is reached. At round $n$, the money in the pile is split evenly between the two players. \\
+
+\noindent Each individual player wishes to maximize the total amount of money they receive. \\
+
+\noindent \textbf{Your job} is to clearly identify the recursive structure. That is, at round $i$, what precise sub-problems does the current player need to consider? [\textbf{Hint:} Do we have a smaller instance of the Trust Game after each round?]
+
+\begin{proof}[Answer]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUR ANSWER GOES HERE                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{proof}
+\end{enumerate}
+\end{required}
+
+\newpage
+\section{Standard 22 -- Dynamic Programming: Write Down Recurrences}
+
+\subsection*{Problem 22(a)}
+\addcontentsline{toc}{subsection}{Problem 22(a)}
+
+Suppose we have an $m$-letter alphabet $\Sigma = \{0, 1, \ldots, m-1\}$. Let $W_{n}$ be the set of strings $\omega \in \Sigma^{n}$ such that $\omega$ does not have $00$ as a substring. Let $f_{n} := |W_{n}|$. Write down an \textbf{explicit recurrence for $f_{n}$, including the base cases.} Clearly justify each recursive term.
+    
+\begin{proof}[Answer]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUR ANSWER GOES HERE                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{proof}
+
+\newpage
+\subsection*{Problem 22(b)}
+\addcontentsline{toc}{subsection}{Problem 22(b)}
+
+Suppose we have the alphabet $\Sigma = \{x, y\}$. For $n \geq 0$, let $W_{n}$ be the set of strings $\omega \in \{x, y\}^{n}$ where $\omega$ contains $yyy$ as a substring. Let $f_{n} := |W_{n}|$. Write down an explicit recurrence for $f_{n}$, including the base cases. Clearly justify each recursive term.
+
+\begin{proof}[Answer]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUR ANSWER GOES HERE                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{proof}
+
+\newpage
+\section{Standard 23 -- Dynamic Programming: Using Recurrences to Solve}
+
+\subsection*{Problem 23(a)}
+\addcontentsline{toc}{subsection}{Problem 23(a)}
+
+Given the following directed acyclic graph. Use dynamic programming to fill in a \textbf{one-dimensional} lookup table that counts number of paths from each node $j$ to 14, for $j \geq 1$. Note that a single vertex is considered a path of length $0$. \textbf{Fill in the lookup table for all vertices 1-14; and in addition, clearly show work for vertices 9-14}.
+
+\begin{center}
+	\begin {tikzpicture}[-latex ,auto ,node distance =2 cm and 3cm ,on grid ,
+	semithick ,
+	state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+	draw,processblue , text=blue , minimum width =1 cm}]
+
+	\node[state] (1) {$1$};
+	\node[state] (2) [right = of 1] {$2$};
+	\node[state] (3) [right = of 2] {$3$};
+	\node[state] (4) [right = of 3] {$4$};
+	\node[state] (5) [right = of 4] {$5$};
+	\node[state] (6) [right = of 5] {$6$};
+	
+	\node[state] (7) [below = of 2] {7};
+	\node[state] (8) [right = of 7] {8};	
+	\node[state] (9) [right = of 8] {9};	
+	\node[state] (10) [right = of 9] {10};	
+	\node[state] (11) [right = of 10] {11};	
+	
+	\node[state] (12) [below = of 9] {12};
+	\node[state] (13) [right = of 12] {13};
+	\node[state] (14) [right = of 13] {14};
+	
+	\path (1) edge (2);
+	\path (1) edge (7);
+	\path (2) edge (3);
+	\path (2) edge (7);
+	\path (2) edge (8);
+	\path (3) edge (4);
+	\path (3) edge (8);
+	\path (4) edge (5);
+	\path (4) edge (9);
+	\path (4) edge (10);
+	\path (5) edge (6);
+	\path (5) edge (11);
+	\path (6) edge (11);
+	\path (7) edge (8);
+	\path (8) edge (9);
+	\path (8) edge (12);
+	\path (9) edge (10);
+	\path (9) edge (12);
+	\path (9) edge (13);
+	\path (10) edge (11);
+	\path (10) edge (13);
+	\path (11) edge (14);
+	\path (12) edge (13);
+	\path (13) edge (14);
+	\end{tikzpicture}  
+\end{center}
+
+\begin{proof}[Answer]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUR ANSWER GOES HERE                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{proof}
+
+\newpage
+\subsection{Problem 23(b)}
+\addcontentsline{toc}{subsection}{Problem 23(b)}
+
+Consider the following directed acyclic graph (the same as in the previous problem). Use dynamic programming to fill in a \textbf{one-dimensional} lookup table that computes the length of the longest path from each node $j$ to 14, for $j \geq 1$. You may use the recurrence
+\[
+L[j] = \begin{cases}
+0 & j = 14 \\
+1 + \max\{L[k] : (j,k) \in E(G)\} & j < 14
+\end{cases}.
+\]
+
+Note that a single vertex is considered a path of length $0$. \textbf{Fill in the lookup table for all vertices 1-14; and in addition, clearly show work for vertices 9-14}.
+
+\begin{center}
+	\begin {tikzpicture}[-latex ,auto ,node distance =2 cm and 3cm ,on grid ,
+	semithick ,
+	state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+	draw,processblue , text=blue , minimum width =1 cm}]
+
+	\node[state] (1) {$1$};
+	\node[state] (2) [right = of 1] {$2$};
+	\node[state] (3) [right = of 2] {$3$};
+	\node[state] (4) [right = of 3] {$4$};
+	\node[state] (5) [right = of 4] {$5$};
+	\node[state] (6) [right = of 5] {$6$};
+	
+	\node[state] (7) [below = of 2] {7};
+	\node[state] (8) [right = of 7] {8};	
+	\node[state] (9) [right = of 8] {9};	
+	\node[state] (10) [right = of 9] {10};	
+	\node[state] (11) [right = of 10] {11};	
+	
+	\node[state] (12) [below = of 9] {12};
+	\node[state] (13) [right = of 12] {13};
+	\node[state] (14) [right = of 13] {14};
+	
+	\path (1) edge (2);
+	\path (1) edge (7);
+	\path (2) edge (3);
+	\path (2) edge (7);
+	\path (2) edge (8);
+	\path (3) edge (4);
+	\path (3) edge (8);
+	\path (4) edge (5);
+	\path (4) edge (9);
+	\path (4) edge (10);
+	\path (5) edge (6);
+	\path (5) edge (11);
+	\path (6) edge (11);
+	\path (7) edge (8);
+	\path (8) edge (9);
+	\path (8) edge (12);
+	\path (9) edge (10);
+	\path (9) edge (12);
+	\path (9) edge (13);
+	\path (10) edge (11);
+	\path (10) edge (13);
+	\path (11) edge (14);
+	\path (12) edge (13);
+	\path (13) edge (14);
+	\end{tikzpicture}  
+\end{center}
+
+\begin{proof}[Answer]
+% YOUR ANSWER HERE
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document} % NOTHING AFTER THIS LINE IS PART OF THE DOCUMENT

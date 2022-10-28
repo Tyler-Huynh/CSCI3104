@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{Instructions}{1}{section*.2}%
+\contentsline {section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}{2}{section*.3}%
+\contentsline {section}{\numberline {21}Standard 21 -- Dynamic Programming: Identify precise subproblems}{3}{section.21}%
+\contentsline {subsection}{Problem 21(a)}{3}{section*.4}%
+\contentsline {subsection}{Problem 21(b)}{4}{section*.5}%
+\contentsline {section}{\numberline {22}Standard 22 -- Dynamic Programming: Write Down Recurrences}{5}{section.22}%
+\contentsline {subsection}{Problem 22(a)}{5}{section*.6}%
+\contentsline {subsection}{Problem 22(b)}{6}{section*.7}%
+\contentsline {section}{\numberline {23}Standard 23 -- Dynamic Programming: Using Recurrences to Solve}{7}{section.23}%
+\contentsline {subsection}{Problem 23(a)}{7}{section*.8}%
+\contentsline {subsection}{\numberline {23.1}Problem 23(b)}{8}{subsection.23.1}%
+\contentsline {subsection}{Problem 23(b)}{8}{subsection.23.1}%
