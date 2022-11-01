@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  1 NOV 2022 03:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  1 NOV 2022 03:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1639,32 +1639,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 539--541
  []
 
 
-Overfull \hbox (35.5579pt too wide) in paragraph at lines 542--565
+Overfull \hbox (32.99869pt too wide) in paragraph at lines 542--565
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--576
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 581--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--587
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
+Underfull \hbox (badness 10000) in paragraph at lines 592--594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--597
+Underfull \hbox (badness 10000) in paragraph at lines 599--601
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
 
  []
 
@@ -1675,7 +1680,7 @@ Package rerunfilecheck Info: File `ps8.out' has not changed.
 Here is how much of TeX's memory you used:
  57342 strings out of 478268
  1381568 string characters out of 5846347
- 1987821 words of memory out of 5000000
+ 1984821 words of memory out of 5000000
  74854 multiletter control sequences out of 15000+600000
  478876 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1696,7 +1701,7 @@ xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on ps8.pdf (11 pages, 210396 bytes).
+Output written on ps8.pdf (11 pages, 210456 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams

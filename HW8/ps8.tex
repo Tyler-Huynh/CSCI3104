@@ -539,7 +539,7 @@ Note that a single vertex is considered a path of length $0$. \textbf{Fill in th
 \begin{proof}[Answer]Referenced \\
 I will begin by first creating the lookup table to finds the longest path of each node from $j$ to 14, as follows: \\
 \begin{center}
-\resizebox{20.3cm}{!}{
+\resizebox{20.21cm}{!}{
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
  \hline
  Vertices: & 1 & 2 &  3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14\\ 
@@ -563,6 +563,24 @@ I will begin by first creating the lookup table to finds the longest path of eac
 \end{tabular}
 }
 \end{center}
+From the above the last line of our lookup table for the vertices from $1-14$ will be: \\
+\begin{center}
+1 = 7 \\
+2 = 6 \\
+3 = 5 \\
+4 = 4 \\
+5 = 3 \\
+6 = 2 \\
+7 = 5 \\
+8 = 4 \\
+9 = 3 \\
+10 = 2 \\
+11 = 1 \\
+12 = 2 \\
+13 = 1 \\
+14 = 0 \\
+\end{center}
+I
 From the above I have created the one-dimensional lookup table that computes the longest path from each node $j$ to 14, I will now show my work for vertices $9 - 14$, such that: \\
 For vertex 14, by the definition of our recurrence $L[j]$, we know that if j were to equal 14, than the path would be 0. \\
 For vertex 13 the work we have is: \\
