@@ -302,9 +302,36 @@ m^2 - 1 & : n = 2, \\
 Suppose we have the alphabet $\Sigma = \{x, y\}$. For $n \geq 0$, let $W_{n}$ be the set of strings $\omega \in \{x, y\}^{n}$ where $\omega$ contains $yyy$ as a substring. Let $f_{n} := |W_{n}|$. Write down an explicit recurrence for $f_{n}$, including the base cases. Clearly justify each recursive term.
 
 \begin{proof}[Answer]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% YOUR ANSWER GOES HERE                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I will first begin by identifying the base cases for the problem such that: \\
+\begin{center}
+The first base case will be when n = 0. In this case there are no strings that contain the substring $yyy$ because they are not large enough.\\
+The second base case will be when n = 1. In this case there are no strings that contain the substring $yyy$ because they are not large enough.\\
+The third base case will be when n=2. In this case there are no strings that contain the substring $yyy$ because they are not large enough.
+\end{center}
+Let $W_n$ be the set of string of length n which do contain the substring $yyy$, such that we have the following cases: \\
+\begin{itemize}
+\item \textbf{Case 1:} \\
+We have that $w_0 \neq y$, from this we can see that if the first index in the substring were to not equal y then it must be $x$, which is just one option.
+
+For the rest of the characters in the string, it can be any string that does contain $yyy$ of size $n-1$. This will be the same as $W_{n-1}$, we know the size of $W_{n-1}$ will be equal to the size of $f_{n-1}$, our recursive structure for this case will be: \\
+\begin{center}
+$f_n = 1 * f_{n-1}$
+\end{center}
+\item \textbf{Case 2a:} \\
+We have that when $w_0 = y$ and $w_1 \neq y$, from this we can see that if the second index in the substring were to not equal y or equal y than the characters after it must be within the set of string $\omega \in \{x, y\}^{n}$. 
+
+For the rest of the characters in the string, it can be any string that does contain the substring $yyy$ of size $n-2$. This will be the same as $W_{n-2}$, we know the size of $W_{n-2}$ will be equal to the size of $f_{n-2}$, our recursive structure for this case will be: \\
+\begin{center}
+$f_n = 1 * 1 * f_{n-2}$
+\end{center}
+\item \textbf{Case 2b:} \\
+We have that when $w_0 = y$ and $w_1 = y$, from this we can see that if the second index in the substring were to not equal y or equal y than the characters after it must be within the set of string $\omega \in \{x, y\}^{n}$. 
+
+For the rest of the characters in the string, it can be any string that does contain the substring $yyy$ of size $n-2$. This will be the same as $W_{n-2}$, we know the size of $W_{n-2}$ will be equal to the size of $f_{n-2}$, our recursive structure for this case will be: \\
+\begin{center}
+$f_n = 1 * 1 * f_{n-2}$
+\end{center}
+\end{itemize}
 \end{proof}
 
 \newpage
@@ -365,11 +392,60 @@ Given the following directed acyclic graph. Use dynamic programming to fill in a
 	\end{tikzpicture}  
 \end{center}
 
-\begin{proof}[Answer]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% YOUR ANSWER GOES HERE                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}[Answer] Referenced \\
+I will first begin by creating the lookup table for vertices $1-14$ as follows: \\
 
+\begin{center}
+\resizebox{20.21cm}{!}{
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+ \hline
+ Vertices: & 1 & 2 &  3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14\\ 
+ \hline
+ $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + X_{8, 14}$ & $X_{4, 14} + X_{8, 14}$ & $X_{5, 14} + X_{9, 14} + X_{10, 14}$ & $X_{6, 14} + X_{11, 14}$ & $X_{11, 14}$ & $X_{8, 14}$ & $X_{9, 14} + X_{12, 14}$ & $X_{10, 14} + X_{12, 14} + X_{13, 14} $ & $X_{11, 14} + X_{13, 14}$ & $X_{14, 14}$ & $X_{13, 14}$ & $X_{14, 14}$ & 1   \\  
+ \hline
+  $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + X_{8, 14}$ & $X_{4, 14} + X_{8, 14}$ & $X_{5, 14} + X_{9, 14} + X_{10, 14}$ & $X_{6, 14} + X_{11, 14}$ & $X_{11, 14}$ & $X_{8, 14}$ & $X_{9, 14} + X_{12, 14}$ & $X_{10, 14} + X_{12, 14} + X_{13, 14} $ & $X_{11, 14} + X_{13, 14}$ & 1 & $X_{13, 14}$ & 1 & 1   \\  
+ \hline
+  $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + X_{8, 14}$ & $X_{4, 14} + X_{8, 14}$ & $X_{5, 14} + X_{9, 14} + X_{10, 14}$ & $X_{6, 14} + 1$& 1 & $X_{8, 14}$ & $X_{9, 14} + X_{12, 14}$ & $X_{10, 14} + X_{12, 14} + 1$ & 2 & 1 & 1 & 1 & 1   \\  
+  \hline
+   $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + X_{8, 14}$ & $X_{4, 14} + X_{8, 14}$ & $X_{5, 14} + X_{9, 14} + 2$ & 2 & 1 & $X_{8, 14}$ & $X_{9, 14} + 1$ & 4 & 2 & 1 & 1 & 1 & 1   \\  
+   \hline
+   $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + X_{8, 14}$ & $X_{4, 14} + X_{8, 14}$ & 8 & 2 & 1 & $X_{8, 14}$ & 5 & 4 & 2 & 1 & 1 & 1 & 1   \\ 
+   \hline
+   $X_{j, 14}$ & $X_{2, 14} + X_{7, 14}$  & $X_{3, 14} + X_{7, 14} + 5$ & 13 & 8 & 2 & 1 & 5 & 5 & 4 & 2 & 1 & 1 & 1 & 1   \\ 
+   \hline
+   $X_{j, 14}$ & $X_{2, 14} + 5$  & 23 & 13 & 8 & 2 & 1 & 5 & 5 & 4 & 2 & 1 & 1 & 1 & 1   \\ 
+   \hline
+    $X_{j, 14}$ & 28  & 23 & 13 & 8 & 2 & 1 & 5 & 5 & 4 & 2 & 1 & 1 & 1 & 1   \\ 
+    \hline
+\end{tabular}
+}
+\end{center}
+From the above the last line of our lookup table for the vertices from $1-14$ will be: \\
+\begin{center}
+1 = 28 \\
+2 = 23 \\
+3 = 13 \\
+4 = 8 \\
+5 = 2 \\
+6 = 1 \\
+7 = 5 \\
+8 = 5 \\
+9 = 4 \\
+10 = 2 \\
+11 = 1 \\
+12 = 1 \\
+13 = 1 \\
+14 = 1 \\
+\end{center}
+I will now show my work for vertices $9 - 14$, such that:\\
+For vertex 14 I know that since this is t
+For vertex 9 the work we have is: \\
+\begin{align*}
+X_{9, 14} &= X_{10, 14} + X_{12, 14} + X_{13, 14} \\
+X_{9, 14} &= X_{10, 14} + X_{12, 14} + 1 \\
+X_{9, 14} &= X_{10, 14} + 1 + 1 \\
+X_{9, 14} &= X_2 + 1 + 1 \\
+\end{align*}
 \end{proof}
 
 \newpage
