@@ -191,7 +191,7 @@ The goal of this standard is to practice identifying the recursive structure. To
 \begin{proof}[Answer] \textbf{Referenced Levet Notes} \\
 I will begin by providing an example: \\ 
 
-We are currently on stair $s_k$ where we can jump forward i stairs. Our precise subproblem will consist of when we are at stair $s_k$ how many ways it will take to get from the next step of $s_{k+i}$ ,where $i \in \{ 1, 2, \ldots, a_{k}\}$, to the  step of $s_n$, the last step. \\
+We are currently on stair $s_k$ where we can jump forward i stairs. When we are at stair $s_k$ our precise subproblems will consist of how many ways there are to get to $s_n$ from the next step of $s_{k+i}$ ,where $i \in \{ 1, 2, \ldots, a_{k}\}$.\\
 
 Below I will show an arbitrary example: \\
 Suppose we are at stair $s_k$,  $T(k)$ represents the number of ways to reach $s_n$ from $s_k$, such that: \\
@@ -224,7 +224,7 @@ Our recursive structure for $T(k)$ would be to find $T(k+i)$ for all $i \in \{ 1
 
 \noindent \textbf{Your job} is to clearly identify the recursive structure. That is, at round $i$, what precise sub-problems does the current player need to consider? [\textbf{Hint:} Do we have a smaller instance of the Trust Game after each round?]
 
-\begin{proof}[Answer]
+\begin{proof}[Answer] \textbf{Referenced Levet Notes:} \\
 To begin I will provide an example: \\
 
 Based off of this question we can see that the base cases for the question would be: \\
@@ -284,7 +284,7 @@ From the above two cases we can then compile our explicit recurrence for $f_n$ c
 \begin{center}
 $f_n = (m-1)(f_{n-2}) + (m-1)(f_{n-1})$
 \end{center}
-Then our final explicit recurrence and including base cases: \\
+Then our final explicit recurrence and including base cases: 
 \begin{align*}
 f_n = \begin{cases}
 1 & : n = 0, \\
@@ -301,7 +301,7 @@ m^2 - 1 & : n = 2, \\
 
 Suppose we have the alphabet $\Sigma = \{x, y\}$. For $n \geq 0$, let $W_{n}$ be the set of strings $\omega \in \{x, y\}^{n}$ where $\omega$ contains $yyy$ as a substring. Let $f_{n} := |W_{n}|$. Write down an explicit recurrence for $f_{n}$, including the base cases. Clearly justify each recursive term.
 
-\begin{proof}[Answer]
+\begin{proof}[Answer] \textbf{Referenced Recitation 10 solutions and Levet notes:} \\
 I will first begin by identifying the base cases for the problem such that: \\
 \begin{center}
 The first base case will be when n = 0. In this case there are no strings that contain the substring $yyy$ because they are not large enough.\\
@@ -317,21 +317,49 @@ For the rest of the characters in the string, it can be any string that does con
 \begin{center}
 $f_n = 1 * f_{n-1}$
 \end{center}
-\item \textbf{Case 2a:} \\
-We have that when $w_0 = y$ and $w_1 \neq y$, from this we can see that if the second index in the substring were to not equal y or equal y than the characters after it must be within the set of string $\omega \in \{x, y\}^{n}$. 
+\item \textbf{Case 2 (Subcases):} \\
+\begin{itemize}
+\item \textbf{2a:} \\
+We have that when $w_0 = y$ and $w_1 \neq y$, from this we can see that the second index in the string is not equal y.
 
 For the rest of the characters in the string, it can be any string that does contain the substring $yyy$ of size $n-2$. This will be the same as $W_{n-2}$, we know the size of $W_{n-2}$ will be equal to the size of $f_{n-2}$, our recursive structure for this case will be: \\
 \begin{center}
 $f_n = 1 * 1 * f_{n-2}$
 \end{center}
-\item \textbf{Case 2b:} \\
-We have that when $w_0 = y$ and $w_1 = y$, from this we can see that if the second index in the substring were to not equal y or equal y than the characters after it must be within the set of string $\omega \in \{x, y\}^{n}$. 
+\item \textbf{2b(More subcases):} \\
+We have that when $w_0 = y$ and $w_1 = y$, from this we can see that the second index in the string is equal to y.
 
-For the rest of the characters in the string, it can be any string that does contain the substring $yyy$ of size $n-2$. This will be the same as $W_{n-2}$, we know the size of $W_{n-2}$ will be equal to the size of $f_{n-2}$, our recursive structure for this case will be: \\
+\begin{itemize}
+\item \textbf{2b$i$:} \\
+We have that when $w_0 = y$ and $w_1 = y$ and $w_2 \neq y$, from this we can see that the third index in the string is not equal to y. Such that the remaining characters within the string, must be a string of size $n-3$, that does contain the substring of $yyy$. \\
+
+This will be the same as $W_{n-3}$, we know the size of $W_{n-3}$ will be equal to the size of $f_{n-3}$, our recursive structure for this case will be: \\
 \begin{center}
-$f_n = 1 * 1 * f_{n-2}$
+$f_n = 1 * 1 * f_{n-3}$
 \end{center}
+\item \textbf{2b$ii$:} \\
+We have that when $w_0 = y$ and $w_1 = y$ and $w_2 = y$, from this we can see that the third index in the string is equal to y. Such that the remaining characters in the string, can be any combination of $x, y$, from within the set of strings $\{x, y\}^{n-3}$. \\
+
+From this we know that the size of the string must be of size $n-3$, where our entire string now contains the substring of $yyy$, thus we do not care about the remaining characters within the string that contains the substring of $yyy$. \\
+
+The total combinations of strings of size $n-3$ is $2^{n-3}$. \\
+
+\begin{center}
+$f_n = 1 * 1 * 1 * 2^{n-3}$
+\end{center}
+\end{itemize} 
 \end{itemize}
+\end{itemize}
+
+From the above cases for this recurrence we have that our final explicit recurrence for $f_n$, including the base cases will be: \\
+\begin{align*}
+f_n = \begin{cases}
+0 & : n = 0, \\
+0 & : n = 1, \\
+0 & : n = 2, \\
+f_{n-1} + f_{n-2} + f_{n-3} + 2^{n-3 }& : n > 2.
+\end{cases}
+\end{align*}
 \end{proof}
 
 \newpage
@@ -392,7 +420,7 @@ Given the following directed acyclic graph. Use dynamic programming to fill in a
 	\end{tikzpicture}  
 \end{center}
 
-\begin{proof}[Answer] Referenced \\
+\begin{proof}[Answer] \textbf{Referenced https://sites.santafe.edu/\~aaronc/courses/3104/csci3104\_S2018\_L6.pdf} \\
 I will first begin by creating the lookup table for vertices $1-14$ as follows: \\
 
 \begin{center}
@@ -536,7 +564,7 @@ Note that a single vertex is considered a path of length $0$. \textbf{Fill in th
 	\end{tikzpicture}  
 \end{center}
 
-\begin{proof}[Answer]Referenced \\
+\begin{proof}[Answer]\textbf{Referenced https://sites.santafe.edu/~aaronc/courses/3104/csci3104\_S2018\_L6.pdf} \\\\
 I will begin by first creating the lookup table to finds the longest path of each node from $j$ to 14, as follows: \\
 \begin{center}
 \resizebox{20.21cm}{!}{
@@ -611,7 +639,7 @@ L[10] &= 1 + max(L[11], L[13]) \\
 &= 1 + 1 \\
 L[10] &= 2
 \end{align*}
-For vertex 13 the work we have is: \\
+For vertex 9 the work we have is: \\
 \begin{align*}
 L[9] &= 1 + max(L[10], L[12], L[13]) \\
 &= 1 + max(2, 1, 1) \\
