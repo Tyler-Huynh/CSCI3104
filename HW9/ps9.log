@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  4 NOV 2022 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 NOV 2022 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1468,33 +1468,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--198
+
+ []
+
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+<IMG_5D67C562AAD8-1.jpeg, id=80, 2114.90125pt x 1003.75pt>
+File: IMG_5D67C562AAD8-1.jpeg Graphic file (type jpg)
+<use IMG_5D67C562AAD8-1.jpeg>
+Package pdftex.def Info: IMG_5D67C562AAD8-1.jpeg  used on input line 224.
+(pdftex.def)             Requested size: 325.2183pt x 154.33905pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--227
 
  []
 
 
-Overfull \hbox (760.52345pt too wide) detected at line 229
-[]
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-[5] [6] [7] (./ps9.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+[4 <./IMG_5D67C562AAD8-1.jpeg>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+
+ []
+
+[9] [10] (./ps9.aux)
 Package rerunfilecheck Info: File `ps9.out' has not changed.
 (rerunfilecheck)             Checksum: 2EDD7992177FFA6452D4AAEAD207967B;1929.
  ) 
 Here is how much of TeX's memory you used:
- 57170 strings out of 478268
- 1378313 string characters out of 5846347
- 1962822 words of memory out of 5000000
- 74681 multiletter control sequences out of 15000+600000
- 480001 words of font info for 68 fonts, out of 8000000 for 9000
+ 57177 strings out of 478268
+ 1378490 string characters out of 5846347
+ 1964827 words of memory out of 5000000
+ 74685 multiletter control sequences out of 15000+600000
+ 479380 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1601b,1033s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,94p,1601b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1511,10 +1622,10 @@ xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on ps9.pdf (7 pages, 195496 bytes).
+Output written on ps9.pdf (10 pages, 698796 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
