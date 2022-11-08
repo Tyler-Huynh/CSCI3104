@@ -162,14 +162,14 @@ On my honor, my submission reflects the following:
 \end{requiredHC}
 
 \begin{proof}[Honor Code]
-Tyler Huynh
+I, \textbf{Tyler Huynh} on my honor pledge that my submission is a reflection of my own understanding of the material, any and all collaborations/sources have been properly cited, I have not posted any material to external sources, and I have not copied other solutions as my own.
 \end{proof}
 
 \newpage
 \section{Standard 23: Dynamic Programming: Using Recurrences to Solve}
 Consider the \textsc{Knapsack} problem from lecture. Fill in the dynamic programming table for the following input: $[(1, 3), (2, 3), (2, 2), (3, 3), (4, 5)], W=7$. Here, each pair $(v_i, w_i)$ denotes an item with value $v_i$ and weight $w_i$. What is the value of the optimal knapsack choice? (You \textbf{do not} need to fill in back-pointers.)
 
-\begin{proof}[Answer]
+\begin{proof}[Answer] Referenced: \textbf{https://www.youtube.com/watch?v=8LusJS5-AGot=490s}\\
 %% YOU MAY FIND THE FOLLOWING TABLE FORMATTED IN LATEX USEFUL, THOUGH YOU'LL NEED TO CREATE MORE ROWS BY COPYING THE LINE "0 & & & & & & & &  \\ \hline"
 I will first specify what the items, weight, and values are for our input: \\
 \begin{center}
@@ -349,13 +349,13 @@ L[i, j]& 0, u& 1, z& 2, w& 3, f& 4, z& 5, b& 6, u \\
 
 From the above we can see that the combination of uz(possible options include f, w)zu would be the most optimal solution via backtracking, such that: \\
 \begin {itemize}
-\item \textbf{Step 1:} We will begin at j=6 and i=0 where we can see that 5 will be the longest reflective subsequence of the string $x = \texttt{uzwfzbu} $. \\
+\item \textbf{Step 1:} We will begin at i = 0 and j = 6 where we can see that 5 will be the longest reflective subsequence of the string $x = \texttt{uzwfzbu} $. \\
 
-\item \textbf{Step 2:} We will back track by comparing $j = 6$ and $i = 0$ to the cell below it and the cell to the left of it, we can see that this is \textbf{not} equal to either so we will refer to our algorithm and see that since we got the value from case 1 from our recurrence relation where case 1 dictates that since $x_i$ and $x_j$ are of the same character, but we know that at least one character exists between these indexes. So we increment $i$ and decrement $j$ by 1, from here we are looking at a string that does not include either $x_i$ or $x_j$, since we know that these subsequence will already have these characters within it, so we add 2. From here we know that since we had to use case 1 from our recurrence relation we backtrack to $j = 5$ and $i = 1$. This means that both u's is in the longest reflective subsequence so our current subsequence is uu.\\
+\item \textbf{Step 2:} We will back track by comparing $i = 0$ and $j = 6$ to the cell below it and the cell to the left of it, we can see that this is \textbf{not} equal to either so we will refer to our algorithm and see that since we got the value from case 1 from our recurrence relation where case 1 dictates that since $x_i$ and $x_j$ are of the same character, but we know that at least one character exists between these indexes. So we increment $i$ and decrement $j$ by 1, from here we are looking at a string that does not include either $x_i$ or $x_j$, since we know that these subsequence will already have these characters within it, so we add 2. From here we know that since we had to use case 1 from our recurrence relation we backtrack to $i = 1$ and $j = 5$. This means that both u's is in the longest reflective subsequence so our current subsequence is uu.\\
 
 \item \textbf{Step 3:} We compare the index  $i = 2$ and $j = 5$, to the cell below it and the cell to the left of it. Since it is equal to the cell to the left of it, this index's value came from the cell at $i=1$, $j=4$. Hence we will backtrack to this cell to find the most optimal solution. \\
 
-\item \textbf{Step 4:} We will now compare the index at $i = 1$ and $j = 4$, to the cell below it and to the left we can see that this value is not equal to either. This is case 1 where since $x_i=x_j$ are on the same character, but there exists at least one character in between them. We must increment $i$ and decrement $j$ by 1, from here we are looking at a string that does not include either $x_i$ or $x_j$, since we know that these subsequence will already have these characters within it, so we add 2. From here we know that since we had to use case 1 from our recurrence relation we backtrack to $i = 2$ and $j = 3$. We also know that both z's must be in our subsequence. So, our current subsequence is uzzu.\\
+\item \textbf{Step 4:} We will now compare the index at $i = 1$ and $j = 4$, to the cell below it and to the left we can see that this value is not equal to either. This is case 1 where since $x_i=x_j$ are the same character, but there exists at least one character in between them. We must increment $i$ and decrement $j$ by 1, from here we are looking at a string that does not include either $x_i$ or $x_j$, since we know that these subsequence will already have these characters within it, so we add 2. From here we know that since we had to use case 1 from our recurrence relation we backtrack to $i = 2$ and $j = 3$. We also know that both z's must be in our subsequence. So, our current subsequence is uzzu.\\
 
 \item \textbf{Step 5:} From here we compare the index of $i = 2$ and $j = 3$ to the cell below it and the cell to the left of it , we can see that since these values are equal, there exists two possible solutions here as the index of $i = 2$ and $j = 3$, got its values from either of these indexes since they are equal. 
 
