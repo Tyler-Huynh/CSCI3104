@@ -122,7 +122,7 @@ Instructors: Prof. Grochow and Chandra Kanth Nagesh} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 Due Date \dotfill November 14, 2022 \\
-Name \dotfill \textbf{Tyler Huyng} \\
+Name \dotfill \textbf{Tyler Huynh} \\
 Student ID \dotfill \textbf{109603994} \\
 Collaborators \dotfill \textbf{N/A}
 
@@ -173,18 +173,19 @@ Suppose this is going to be used to hash words from a large body of English text
 	
 \textbf{List at least 4 reasons} why $h(x)$ is a bad hash function relative to the ideal behavior of uniform hashing.
 
-\begin{proof}[Answer]
+\begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
 We know that the best performance for a hashing function is to be able to achieve "random-like" operations such that $h(x)$ satisfies the uniform hashing assumptions. \\
 
 In regards to this question $h(x)$ is a bad hash function relative to the ideal behaviour of uniform hashing for the following reasons: \\
 \begin{itemize}
 \item \textbf{Reason 1:}
-\item \textbf{Reason 2:}
 For this hash function we can see that the runtime for this hashing function will take $\Theta(m)$ times to run since to sum up the index values of the characters of a string $x$ and map that onto $\ell$ buckets it must iterate through the cells within the hashing function to do so first. Where $m$ represents the number of characters in the string. We know that an optimized has function should take $\Theta(1)$, to run.
+\item \textbf{Reason 2:}
+The third reason would be that there exists a large amount of possibilities to where collisions can exist, such that it does not minimimize collisions, take for example the following strings of: D, AC, CA, BB, AAAA all the indexes sum to 4, such that it hashes to $4mod\ell$. From this our hashing function will hash these strings to the same bucket, although these strings are different from each other.
 \item \textbf{Reason 3:}
-The third reason would be that when trying to solve collisions in our hash table it must be able to solve it efficiently, to solve this efficiently and to avoid collisions we would have to increase the size of $A$ or in this case the alphabet to avoid collisions, as per the hashing function is has $\frac{1}{26}$ chance of mapping the same value onto the same position. This number will further get smaller as we iterate through the alphabet as well, creating more collisions which would increase the runtime of our operations of search, insertion, and deletion. 
+The fourth reason that $h(x)$ is a bad hash function is that no two strings are truly independent within $U$ or the universe of strings. Since no two strings are completely independent or different than there is a chance that they can both be used by our hashing function, such that it will map similar strings onto the same buckets creating a collision. Take for example, the string Tyler and Relyt, both of these strings are of the same length and contains the same characters, but the hashing function will not distribute the values uniformly into $\ell$ buckets because the hashing function will distribute these two strings into the same bucket.
 \item \textbf{Reason 4:}
-The fourth reason that $h(x)$ is a bad hash function is that no two strings are truly independent within $U$ or the universe of strings. Since no two strings are completely independent or different than there is a chance that they can both be used by our hashing function, such that it will map the same values onto the same positions creating a collision.
+Another reason would be that since there exists a large amount of collisions within our buckets and that the hash function does not distribute the strings uniformly, this would increase the runtime of the operations of lookup and deletion, since there exists so many collisions.
 \end{itemize}
 \end{proof}
 
@@ -195,26 +196,22 @@ Consider a chaining hash table $A$ with $b$ buckets that holds data from a fixed
 	\begin{enumerate}[label=(\alph*)]
 	  \item What is the worst case for the number of elements that collide in a single bucket? Give an exact answer and justify it.     \textbf{Do not assume the uniform hashing assumption for this question.}
 
-    \begin{proof}[Answer]
+    \begin{proof}[Answer] Referenced from \textbf{Levet notes} \\
     The worst case in this scenario would be if all $n$ number of elements were to collide with each other in a single bucket. Such that when the hashing algorithm enters the data from the finite universe $U$, all the elements will collide with each other in the bucket since they are all hashed under the same key into the same bucket $b$.
     \end{proof}
 
 \vfill
 	  \item Calculate the worst-case total cost of these $n$ insertions into $A$, and give your answer as $\Theta(f(n))$ for a suitable function $f$. Justify your answer.
 
-    \begin{proof}[Answer]
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR ANSWER GOES HERE                          %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
+      To calculate the worst-case total cost of these $n$ insertions into $A$, we must first find the upper bound of the worst case for the insertion operation in hash tables by the definition of worst-case analysis. We can see that expected or the best case for insertion will be $\Theta(1)$, since it is a chaining hash table. The worst case total cost of the insertion operation, will be $\Theta(n)$, since we will being $n$ where each insertion will take $\Theta(1)$ times to run this operation.
     \end{proof}
     
     \vfill
 	
 	\item \textbf{For this part only, assume the uniform hashing assumption, and that the elements added were chosen uniformly at random from $U$.} After the $n$ insertions, suppose that $m$ \texttt{find} operations are performed. What is the total cost of these $m$ find operations? Give your answer as $\Theta(f(n))$ for a suitable function $f$, and justify your answer.
-    \begin{proof}[Answer]
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR ANSWER GOES HERE                          %
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
+    Assuming that the uniform hashing assumption is valid and that the elements are chosen uniformly at random from $U$, after $n$ insertions, the $m$ find operations performed will have a total cost of, $\Theta(m + n)$. I came to this conclusion because assuming that the hash function satisfies the uniform hashing assumption, we know that the average case runtime for the lookup operation will be $\Theta(1+\frac{n}{m})$, taking into account that after $n$ operations have been performed, the $m$ find operations would have to be account for.
     \end{proof}
 
 \vfill
@@ -229,7 +226,7 @@ Hash tables and balanced binary trees can be both be used to implement a diction
     \begin{enumerate}[label=(\alph*)]
     \item A hash table with hash function $h_1(x)=1$ for all keys $x$.
     
-    \begin{proof}[Answer]
+    \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
         For this question we know that the runtime for a balanced binary tree containing $n$ elements will have a runtime of $\Theta(\log n)$ for all operations. In a dictionary implementing a hash table while also using chaining to solve collisions which makes use of doubly-linked lists, we know that the runtime of the insertion, deletion, and lookup operations will be: \\
 \begin{center}
 \textbf{Insertion: $\Theta(1)$} \\
@@ -257,7 +254,7 @@ $\Theta(n) > \Theta(\log n)$
     
     \vskip 15pt
     \item A hash table with a hash function $h_2$ that satisfies the Simple Uniform Hashing Assumption, and where the number $m$ of buckets is $\Theta(n)$.
-\begin{proof}[Answer]
+\begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
 For this question we know that the runtime for the insertion operation in a dictionary implementing a hash table while also using chaining to solve collisions which makes use of doubly-linked lists, the runtime of insertion, deletion, and lookup operations considering that the runtime of both the deletion and lookup operations have been changed since $h_2$ satisfies the Simple Uniform Hashing Assumption, such that the runtime of all three operations will be:   \\
 \begin{center}
 \textbf{Insertion: $\Theta(1)$} \\
@@ -283,7 +280,7 @@ $\Theta(2) <\Theta(\log n)$
     
     \vskip 15pt	
     \item A hash table with a hash function $h_3$ that satisfies the Simple Uniform Hashing Assumption, and where the number $m$ of buckets is $\Theta(n^{3/4})$.
-    \begin{proof}[Answer]
+    \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
         For this question we can see that the runtime of deletion and lookup will be $\Theta(1+\alpha)$ because $h_3$ satisfies the Simple Uniform Hashing Assumption, such that the runtime for deletion and lookup considering that the number of $m$ buckets is $\Theta(n^{3/4})$, will be: \\
         \begin{center}
         \textbf{Insertion: $\Theta(1)$} \\
