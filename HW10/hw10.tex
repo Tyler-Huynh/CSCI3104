@@ -1,0 +1,328 @@
+\documentclass[11pt]{article} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in,top=0.5in,bottom=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[siunitx]{circuitikz}
+\usepackage{tikz}
+\usepackage[colorinlistoftodos, color=orange!50]{todonotes}
+\usepackage{hyperref}
+\usepackage[numbers, square]{natbib}
+\usepackage{fancybox}
+\usepackage{epsfig}
+\usepackage{soul}
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{positioning, automata, backgrounds}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,backgrounds,calc,quotes}
+\usepackage[shortlabels]{enumitem}
+\usepackage[version=4]{mhchem}
+\usepackage{multicol}
+\usepackage{forest}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{subfiles}
+\usepackage{tkz-berge}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{cor}{Corollary}[prop]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{required}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+
+\newcommand{\interval}[4]{\draw (#2, #1) -- (#3, #1); % Usage: \interval{height}{start}{end}{label}
+\draw (#2, #1-0.11) -- (#2, #1+0.11); % draw left whisker
+\draw (#3, #1-0.11) -- (#3, #1+0.11); % draw right whisker
+\node[] at (#2-0.25, #1) {#4};
+}
+
+\tikzset{>={Stealth[length=7pt]}}
+\tikzset{
+    vertex/.style={circle,draw,minimum size=16,inner sep=0pt,font=\normalsize},
+    edgelabel/.style={rectangle,draw=none,font=\footnotesize,outer sep=0pt},
+    every node/.style={vertex},
+    every edge quotes/.append style={edgelabel},
+    every to/.append style={every node/.style={edgelabel}},
+    wide/.style={line width=4pt,>={Stealth[length=18pt]}},
+    directed/.style={arrows={->},font=\small},
+    caption/.style={text width=6cm,align=center,rectangle,draw},
+}
+
+
+\setlength{\marginparwidth}{3.4cm}
+%#########################################################
+
+%To use symbols for footnotes
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%To change footnotes back to numbers uncomment the following line
+%\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Enable this command to adjust line spacing for inline math equations.
+% \everymath{\displaystyle}
+
+% _______ _____ _______ _      ______ 
+%|__   __|_   _|__   __| |    |  ____|
+%   | |    | |    | |  | |    | |__   
+%   | |    | |    | |  | |    |  __|  
+%   | |   _| |_   | |  | |____| |____ 
+%   |_|  |_____|  |_|  |______|______|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+\normalfont \normalsize 
+\textsc{CSCI 3104 Fall 2022 \\ 
+Instructors: Prof. Grochow and Chandra Kanth Nagesh} \\
+[10pt] 
+\rule{\linewidth}{0.5pt} \\[6pt] 
+\huge Problem Set 10 \\
+\rule{\linewidth}{2pt}  \\[10pt]
+}
+%\author{}
+\date{}
+
+\begin{document}
+
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\definecolor{processred}{rgb}{200, 0, 0}
+\definecolor{processgreen}{rgb}{0, 255, 0}
+\DeclareGraphicsExtensions{.png}
+\DeclareGraphicsExtensions{.gif}
+\DeclareGraphicsExtensions{.jpg}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%FILL IN YOUR NAME%%%%%%%
+%%%%%%%%%%AND STUDENT ID%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+Due Date \dotfill November 14, 2022 \\
+Name \dotfill \textbf{Tyler Huyng} \\
+Student ID \dotfill \textbf{109603994} \\
+Collaborators \dotfill \textbf{N/A}
+
+\tableofcontents
+
+\section*{Instructions}
+\addcontentsline{toc}{section}{Instructions}
+ \begin{itemize}
+	\item The solutions \textbf{must be typed}, using proper mathematical notation. We cannot accept hand-written solutions. Useful links and references on \LaTeX can be found \href{https://canvas.colorado.edu/courses/75824/pages/latex}{here on Canvas}.
+	\item You should submit your work through the \textbf{class Canvas page} only. Please submit one PDF file, compiled using this \LaTeX \ template.
+	\item You may not need a full page for your solutions; pagebreaks are there to help Gradescope automatically find where each problem is. Even if you do not attempt every problem, please submit this document with no fewer pages than the blank template (or Gradescope has issues with it).
+
+	\item You are welcome and encouraged to collaborate with your classmates, as well as consult outside resources. You must \textbf{cite your sources in this document.} \textbf{Copying from any source is an Honor Code violation. Furthermore, all submissions must be in your own words and reflect your understanding of the material.} If there is any confusion about this policy, it is your responsibility to clarify before the due date. 
+
+	\item Posting to \textbf{any} service including, but not limited to Chegg, Reddit, StackExchange, etc., for help on an assignment is a violation of the Honor Code.
+
+	\item You \textbf{must} virtually sign the Honor Code (see Section \hyperlink{HonorCode}{Honor Code}). Failure to do so will result in your assignment not being graded.
+\end{itemize}
+
+
+\section*{Honor Code (Make Sure to Virtually Sign the Honor Pledge)} 
+\addcontentsline{toc}{section}{Honor Code (Make Sure to Virtually Sign the Honor Pledge)}
+\hypertarget{HonorCode}{}
+
+\textbf{Problem HC.} 
+On my honor, my submission reflects the following:
+\begin{itemize}
+\item My submission is in my own words and reflects my understanding of the material.
+\item Any collaborations and external sources have been clearly cited in this document.
+\item I have not posted to external services including, but not limited to Chegg, Reddit, StackExchange, etc.
+\item I have neither copied nor provided others solutions they can copy.
+\end{itemize}
+
+\noindent In the specified region below, clearly indicate that you have upheld the Honor Code. Then type your name. 
+
+\begin{proof}[Honor Code]
+I, \textbf{Tyler Huynh} on my honor pledge that my submission is a reflection of my own understanding of the material, any and all collaborations/sources have been properly cited, I have not posted any material to external sources, and I have not copied other solutions as my own.\end{proof}
+
+
+\newpage
+\setcounter{section}{25}
+\section{Standard 26 -- Hash Tables}
+
+\subsection{Problem 1}
+Consider the following hash function. Let $U$ be the universe of strings composed of the characters from the alphabet $\Sigma=[${\tt A}$,\dots,${\tt Z}$]$, and let the function $f(x_{i})$ return the index of a letter $x_{i}\in \Sigma$, e.g., $f(${\tt A}$)=1$ and $f(${\tt Z}$)=26$. Finally, for an $m$-character string $x\in \Sigma^{m}$, define $h(x) = \left(\left[\sum_{i=1}^{m}f(x_{i})\right]\!\! \mod \ell\right)$, where $\ell$ is the number of buckets in the hash table. That is, our hash function sums up the index values of the characters of a string $x$ and maps that value onto one of the $\ell$ buckets.
+
+Suppose this is going to be used to hash words from a large body of English text.
+	
+\textbf{List at least 4 reasons} why $h(x)$ is a bad hash function relative to the ideal behavior of uniform hashing.
+
+\begin{proof}[Answer]
+We know that the best performance for a hashing function is to be able to achieve "random-like" operations such that $h(x)$ satisfies the uniform hashing assumptions. \\
+
+In regards to this question $h(x)$ is a bad hash function relative to the ideal behaviour of uniform hashing for the following reasons: \\
+\begin{itemize}
+\item \textbf{Reason 1:}
+\item \textbf{Reason 2:}
+For this hash function we can see that the runtime for this hashing function will take $\Theta(m)$ times to run since to sum up the index values of the characters of a string $x$ and map that onto $\ell$ buckets it must iterate through the cells within the hashing function to do so first. Where $m$ represents the number of characters in the string. We know that an optimized has function should take $\Theta(1)$, to run.
+\item \textbf{Reason 3:}
+The third reason would be that when trying to solve collisions in our hash table it must be able to solve it efficiently, to solve this efficiently and to avoid collisions we would have to increase the size of $A$ or in this case the alphabet to avoid collisions, as per the hashing function is has $\frac{1}{26}$ chance of mapping the same value onto the same position. This number will further get smaller as we iterate through the alphabet as well, creating more collisions which would increase the runtime of our operations of search, insertion, and deletion. 
+\item \textbf{Reason 4:}
+The fourth reason that $h(x)$ is a bad hash function is that no two strings are truly independent within $U$ or the universe of strings. Since no two strings are completely independent or different than there is a chance that they can both be used by our hashing function, such that it will map the same values onto the same positions creating a collision.
+\end{itemize}
+\end{proof}
+
+\newpage
+\subsection{Problem 2}
+Consider a chaining hash table $A$ with $b$ buckets that holds data from a fixed, finite universe $U$. Recall the definition of worst-case analysis, and consider starting with $A$ empty and inserting $n$ elements into $A$ under the assumption that $|U|\le bn$. 
+    
+	\begin{enumerate}[label=(\alph*)]
+	  \item What is the worst case for the number of elements that collide in a single bucket? Give an exact answer and justify it.     \textbf{Do not assume the uniform hashing assumption for this question.}
+
+    \begin{proof}[Answer]
+    The worst case in this scenario would be if all $n$ number of elements were to collide with each other in a single bucket. Such that when the hashing algorithm enters the data from the finite universe $U$, all the elements will collide with each other in the bucket since they are all hashed under the same key into the same bucket $b$.
+    \end{proof}
+
+\vfill
+	  \item Calculate the worst-case total cost of these $n$ insertions into $A$, and give your answer as $\Theta(f(n))$ for a suitable function $f$. Justify your answer.
+
+    \begin{proof}[Answer]
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR ANSWER GOES HERE                          %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \end{proof}
+    
+    \vfill
+	
+	\item \textbf{For this part only, assume the uniform hashing assumption, and that the elements added were chosen uniformly at random from $U$.} After the $n$ insertions, suppose that $m$ \texttt{find} operations are performed. What is the total cost of these $m$ find operations? Give your answer as $\Theta(f(n))$ for a suitable function $f$, and justify your answer.
+    \begin{proof}[Answer]
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR ANSWER GOES HERE                          %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \end{proof}
+
+\vfill
+	\end{enumerate} 
+
+\newpage
+\subsection{Problem 3}
+Hash tables and balanced binary trees can be both be used to implement a dictionary data structure, which supports insertion, deletion, and lookup operations. In balanced binary trees containing $n$ elements, the runtime of all operations is $\Theta(\log n)$.  \\
+
+    \noindent For each of the following three scenarios, compare the average-case performance of a dictionary implemented with a hash table (which resolves collisions with chaining using doubly-linked lists) to a dictionary implemented with a balanced binary tree.
+        
+    \begin{enumerate}[label=(\alph*)]
+    \item A hash table with hash function $h_1(x)=1$ for all keys $x$.
+    
+    \begin{proof}[Answer]
+        For this question we know that the runtime for a balanced binary tree containing $n$ elements will have a runtime of $\Theta(\log n)$ for all operations. In a dictionary implementing a hash table while also using chaining to solve collisions which makes use of doubly-linked lists, we know that the runtime of the insertion, deletion, and lookup operations will be: \\
+\begin{center}
+\textbf{Insertion: $\Theta(1)$} \\
+\textbf{Deletion: $\Theta(n)$} \\
+\textbf{Lookup: $\Theta(n)$}
+\end{center}
+From the above it is shown that the hash function will hash all keys to 1, such that all of these keys will be on the same index.
+From this I will now compare the average-case performance of a dictionary implementing a hash table to a dictionary implementing a balanced-binary tree, such that: \\
+\begin{itemize}
+\item \textbf{Insertion:} The runtime of the insertion operation for a hash table that is using chaining to solve collisions while using a doubly linked list will have a runtime of $\Theta(1)$. $\Theta(1)$ will run faster than the runtime of the insertion operation from a balanced binary tree such that: \\
+\begin{center}
+$\Theta(1) < \Theta(\log n)$
+\end{center}
+\item \textbf{Deletion:} The runtime of the deletion operation for a hash table that is using chaining to solve collisions while using a doubly linked list will have a runtime of $\Theta(n)$. $\Theta(n)$ will take more time to run than the deletion operation from a balanced binary tree such that: \\
+\begin{center}
+$\Theta(n) >\Theta(\log n)$
+\end{center}
+\item \textbf{Lookup:} The runtime of the lookup operation for a hash table that is using chaining to solve collisions while using a doubly linked list will have a runtime of $\Theta(n)$.$\Theta(n)$ will take more time to run than the lookup operation from a balanced binary tree such that: \\
+\begin{center}
+$\Theta(n) > \Theta(\log n)$
+\end{center}
+\end{itemize}
+    \end{proof}
+    
+    
+    \vskip 15pt
+    \item A hash table with a hash function $h_2$ that satisfies the Simple Uniform Hashing Assumption, and where the number $m$ of buckets is $\Theta(n)$.
+\begin{proof}[Answer]
+For this question we know that the runtime for the insertion operation in a dictionary implementing a hash table while also using chaining to solve collisions which makes use of doubly-linked lists, the runtime of insertion, deletion, and lookup operations considering that the runtime of both the deletion and lookup operations have been changed since $h_2$ satisfies the Simple Uniform Hashing Assumption, such that the runtime of all three operations will be:   \\
+\begin{center}
+\textbf{Insertion: $\Theta(1)$} \\
+\textbf{Deletion:} For this operation the runtime will be different because $h_2$ satisfies the Simple Uniform Hashing Assumption, such that the runtime for this operation will be: $\Theta(1+\alpha)$, where $\alpha$ represents the the number of elements $n$ over the number of $m$ buckets such that $\alpha = \frac{n}{m} = \frac{n}{n} = 1$. Then the total runtime for this operation will be $\Theta(1+\alpha) = \Theta(2)$.\\
+\textbf{Lookup:} For this operation the runtime will be different because $h_2$ satisfies the Simple Uniform Hashing Assumption, such that the runtime for this operation will be: $\Theta(1+\alpha)$, where $\alpha$ represents the the number of elements $n$ over the number of $m$ buckets such that $\alpha = \frac{n}{m} = \frac{n}{n} = 1$.  Then the total runtime for this operation will be $\Theta(1+\alpha) = \Theta(2)$.
+\end{center}
+From the above I will now compare the average-case performance of a dictionary implementing a hash table that solves collisions with a doubly linked list to a dictionary implementing a balanced-binary tree, where $h_2$ satisfies the Simple Uniform Hashing Assumption such that: \\
+\begin{itemize}
+\item \textbf{Insertion:} The runtime of the insertion operation for a hash table that is using chaining to solve collisions while using a doubly linked list will have a runtime of $\Theta(1)$ since the operation is using constant time to run. $\Theta(1)$ will run faster than the runtime of the insertion operation from a balanced binary tree such that: \\
+\begin{center}
+$\Theta(1) < \Theta(\log n)$
+\end{center}
+\item \textbf{Deletion:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the deletion operation in a hashing function will run faster than the deletion in balanced binary tree, as follows: \\
+\begin{center}
+$\Theta(2) < \Theta(\log n)$
+\end{center}
+\item \textbf{Lookup:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the lookup operation in a hashing function will run faster than the lookup in balanced binary tree, as follows: \\
+\begin{center}
+$\Theta(2) <\Theta(\log n)$
+\end{center}
+\end{itemize}
+\end{proof}
+    
+    \vskip 15pt	
+    \item A hash table with a hash function $h_3$ that satisfies the Simple Uniform Hashing Assumption, and where the number $m$ of buckets is $\Theta(n^{3/4})$.
+    \begin{proof}[Answer]
+        For this question we can see that the runtime of deletion and lookup will be $\Theta(1+\alpha)$ because $h_3$ satisfies the Simple Uniform Hashing Assumption, such that the runtime for deletion and lookup considering that the number of $m$ buckets is $\Theta(n^{3/4})$, will be: \\
+        \begin{center}
+        \textbf{Insertion: $\Theta(1)$} \\
+        \textbf{Deletion:} For deletion since it satisfies the Simple Uniform Hashing Assumption, we know that the runtime will be $\Theta(1+\alpha)$. Now we must find $\alpha$ first so considering that the equation for $\alpha$t is $\alpha = \frac{n}{m}$, where $m = n^{\frac{3}{4}}$. We can solve for $\alpha$, such that $\alpha = \frac{n}{n^{3/4}}$, from this $\alpha = n^{1/4}$, such that the runtime will be $\Theta(1+ n^{1/4})$ \\
+        \textbf{Lookup: } For lookup since it satisfies the Simple Uniform Hashing Assumption, we know that the runtime will be $\Theta(1+\alpha)$. Now we must find $\alpha$ first so considering that the equation for $\alpha$t is $\alpha = \frac{n}{m}$, where $m = n^{\frac{3}{4}}$. We can solve for $\alpha$, such that $\alpha = \frac{n}{n^{3/4}}$, from this $\alpha =  n^{1/4}$, such that the runtime will be $\Theta(1+ n^{1/4})$ \\
+        \end{center}
+        
+        From the above now we can compare the average-case performance of a dictionary implemented with a hash table and a dictionary implemented with a balanced binary tree, such that: \\
+        \begin{itemize}
+        \item \textbf{Insertion:} The runtime of the insertion operation for a hash table that is using chaining to solve collisions while using a doubly linked list will have a runtime of $\Theta(1)$ since the operation is using constant time to run. $\Theta(1)$ will grow larger than the runtime of the insertion operation from a balanced binary tree such that: \\
+\begin{center}
+$\Theta(1) > \Theta(\log n)$
+\end{center}
+Thus, we know that the balanced binary tree will perform this operation slower.
+\item \textbf{Deletion:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(1+ n^{1/4})$ , I will do a comparison test and make use of L'hopital's rule on both function to see which function will grow faster, such that: \\
+\begin{align*}
+\lim_{n \to \infty} \frac{1 + n^{1/4}}{\log n} &= \lim_{n \to \infty} \frac{1 + n^{1/4}}{\log n} = \frac{\infty}{\infty} \qquad Indeterminate \\
+&= \frac{\frac{1}{4n^{3/4}}}{\frac{1}{n\ln(10)}} \\
+&= \frac{n\ln(10)}{4n^{3/4}} = \frac{\infty}{\infty} \qquad \\
+&= \frac{\ln(10)}{\frac{3}{n^{1/4}}} \\
+& = \frac{ln(10) n^{1/4}}{3}\\
+&= \frac{\infty}{3} \\
+&= \infty
+\end{align*}
+From the above comparison test and use of L'hopital's rule we can see that $\Theta(\log n)$  of the balanced binary tree will grow slower than $\Theta(1+ n^{1/4})$ of the hash table, such that: \\
+\begin{center}
+$\Theta(1+n^{1/4}) > \Theta(\log n)$ \\
+\end{center}
+Thus, we know that the balanced binary tree will perform this operation faster.
+\item \textbf{Lookup:} The runtime of the lookup operation for a hash table that satisfies the Simple Uniform Hasing Assumption will have a runtime of $\Theta(1+n^{1/4})$, from our work on the deletion operation of a hash table, since both of these operations have the same runtime we can say that: \\
+\begin{center}
+$\Theta(1+n^{1/4}) > \Theta(\log n)$
+\end{center}
+Thus, we know that the balanced binary tree will perform this operation faster.
+        \end{itemize}
+    \end{proof}
+    \end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document} % NOTHING AFTER THIS LINE IS PART OF THE DOCUMENT
