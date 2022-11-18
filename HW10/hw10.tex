@@ -179,11 +179,11 @@ We know that the best performance for a hashing function is to be able to achiev
 In regards to this question $h(x)$ is a bad hash function relative to the ideal behaviour of uniform hashing for the following reasons: \\
 \begin{itemize}
 \item \textbf{Reason 1:}
-For this hash function we can see that the runtime for this hashing function will take $\Theta(m)$ times to run since to sum up the index values of the characters of a string $x$ and map that onto $\ell$ buckets it must iterate through the cells within the hashing function to do so first. Where $m$ represents the number of characters in the string. We know that an optimized has function should take $\Theta(1)$, to run.
+The first reason, for this hash function we can see that the runtime for this hashing function will take $\Theta(m)$ times to run since to sum up the index values of the characters of a string $x$ and map that onto $\ell$ buckets it must iterate through the cells within the hashing function to do so first. Where $m$ represents the number of characters in the string. We know that an optimized hash function should take $\Theta(1)$, to run.
 \item \textbf{Reason 2:}
-The third reason would be that there exists a large amount of possibilities to where collisions can exist, such that it does not minimimize collisions, take for example the following strings of: D, AC, CA, BB, AAAA all the indexes sum to 4, such that it hashes to $4mod\ell$. From this our hashing function will hash these strings to the same bucket, although these strings are different from each other.
+The second reason would be that there exists a large amount of possibilities to where collisions can exist, such that it does not minimimize collisions, take for example the following strings of: D, AC, CA, BB, AAAA all the indexes sum to 4, such that it hashes to $4mod\ell$. From this our hashing function will hash these strings to the same bucket, although these strings are different from each other.
 \item \textbf{Reason 3:}
-The fourth reason that $h(x)$ is a bad hash function is that no two strings are truly independent within $U$ or the universe of strings. Since no two strings are completely independent or different than there is a chance that they can both be used by our hashing function, such that it will map similar strings onto the same buckets creating a collision. Take for example, the string Tyler and Relyt, both of these strings are of the same length and contains the same characters, but the hashing function will not distribute the values uniformly into $\ell$ buckets because the hashing function will distribute these two strings into the same bucket.
+The third reason that $h(x)$ is a bad hash function is that no two strings are truly independent within $U$ or the universe of strings. Since no two strings are completely independent or different than there is a chance that they can both be used by our hashing function, such that it will map similar strings onto the same buckets creating a collision. Take for example, the string Tyler and Relyt, both of these strings are of the same length and contains the same characters, but the hashing function will not distribute the values uniformly into $\ell$ buckets because the hashing function will distribute these two strings into the same bucket.
 \item \textbf{Reason 4:}
 Another reason would be that since there exists a large amount of collisions within our buckets and that the hash function does not distribute the strings uniformly, this would increase the runtime of the operations of lookup and deletion, since there exists so many collisions.
 \end{itemize}
@@ -204,14 +204,14 @@ Consider a chaining hash table $A$ with $b$ buckets that holds data from a fixed
 	  \item Calculate the worst-case total cost of these $n$ insertions into $A$, and give your answer as $\Theta(f(n))$ for a suitable function $f$. Justify your answer.
 
     \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
-      To calculate the worst-case total cost of these $n$ insertions into $A$, we must first find the upper bound of the worst case for the insertion operation in hash tables by the definition of worst-case analysis. We can see that expected or the best case for insertion will be $\Theta(1)$, since it is a chaining hash table. The worst case total cost of the insertion operation, will be $\Theta(n)$, since we will being $n$ where each insertion will take $\Theta(1)$ times to run this operation.
+      To calculate the worst-case total cost of these $n$ insertions into $A$, we must first find the upper bound of the worst case for the insertion operation in hash tables by the definition of worst-case analysis. We can see that expected or the best case for insertion will be $\Theta(1)$, since it is a chaining hash table. The worst case total cost of $n$ insertions into $A$ will be $\Theta(n)$, because we are performing $n$ insertions where the runtime of a single insertion will be $\Theta(1)$.
     \end{proof}
     
     \vfill
 	
 	\item \textbf{For this part only, assume the uniform hashing assumption, and that the elements added were chosen uniformly at random from $U$.} After the $n$ insertions, suppose that $m$ \texttt{find} operations are performed. What is the total cost of these $m$ find operations? Give your answer as $\Theta(f(n))$ for a suitable function $f$, and justify your answer.
     \begin{proof}[Answer] Referenced from \textbf{Levet notes}\\
-    Assuming that the uniform hashing assumption is valid and that the elements are chosen uniformly at random from $U$, after $n$ insertions, the $m$ find operations performed will have a total cost of, $\Theta(m + n)$. I came to this conclusion because assuming that the hash function satisfies the uniform hashing assumption, we know that the average case runtime for the lookup operation will be $\Theta(1+\frac{n}{m})$, taking into account that after $n$ operations have been performed, the $m$ find operations would have to be account for.
+    Assuming that the uniform hashing assumption is valid and that the elements are chosen uniformly at random from $U$, after $n$ insertions, the $m$ find operations performed will have a total cost of, $\Theta(m + n)$. I came to this conclusion because assuming that the hash function satisfies the uniform hashing assumption, we know that the average case runtime for the find operation will be $\Theta(1+\frac{n}{m})$, where we are performing $m$ find operations. 
     \end{proof}
 
 \vfill
@@ -267,11 +267,11 @@ From the above I will now compare the average-case performance of a dictionary i
 \begin{center}
 $\Theta(1) < \Theta(\log n)$
 \end{center}
-\item \textbf{Deletion:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the deletion operation in a hashing function will run faster than the deletion in balanced binary tree, as follows: \\
+\item \textbf{Deletion:} The runtime of the deletion operation for a hash table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the deletion operation in a hashing function will run faster than the deletion in balanced binary tree, as follows: \\
 \begin{center}
 $\Theta(2) < \Theta(\log n)$
 \end{center}
-\item \textbf{Lookup:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the lookup operation in a hashing function will run faster than the lookup in balanced binary tree, as follows: \\
+\item \textbf{Lookup:} The runtime of the deletion operation for a hash table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(2)$, such that the runtime of the lookup operation in a hashing function will run faster than the lookup in balanced binary tree, as follows: \\
 \begin{center}
 $\Theta(2) <\Theta(\log n)$
 \end{center}
@@ -295,7 +295,7 @@ $\Theta(2) <\Theta(\log n)$
 $\Theta(1) > \Theta(\log n)$
 \end{center}
 Thus, we know that the balanced binary tree will perform this operation slower.
-\item \textbf{Deletion:} The runtime of the deletion operation for a has table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(1+ n^{1/4})$ , I will do a comparison test and make use of L'hopital's rule on both function to see which function will grow faster, such that: \\
+\item \textbf{Deletion:} The runtime of the deletion operation for a hash table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(1+ n^{1/4})$ , I will do a comparison test and make use of L'hopital's rule on both function to see which function will grow faster, such that: \\
 \begin{align*}
 \lim_{n \to \infty} \frac{1 + n^{1/4}}{\log n} &= \lim_{n \to \infty} \frac{1 + n^{1/4}}{\log n} = \frac{\infty}{\infty} \qquad Indeterminate \\
 &= \frac{\frac{1}{4n^{3/4}}}{\frac{1}{n\ln(10)}} \\
@@ -310,7 +310,7 @@ From the above comparison test and use of L'hopital's rule we can see that $\The
 $\Theta(1+n^{1/4}) > \Theta(\log n)$ \\
 \end{center}
 Thus, we know that the balanced binary tree will perform this operation faster.
-\item \textbf{Lookup:} The runtime of the lookup operation for a hash table that satisfies the Simple Uniform Hasing Assumption will have a runtime of $\Theta(1+n^{1/4})$, from our work on the deletion operation of a hash table, since both of these operations have the same runtime we can say that: \\
+\item \textbf{Lookup:} The runtime of the lookup operation for a hash table that satisfies the Simple Uniform Hashing Assumption will have a runtime of $\Theta(1+n^{1/4})$, from our work on the deletion operation of a hash table, since both of these operations have the same runtime we can say that: \\
 \begin{center}
 $\Theta(1+n^{1/4}) > \Theta(\log n)$
 \end{center}
